@@ -1,0 +1,383 @@
+/* CSS for default phone screen size */
+
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
+/*----------- apply a natural box layout model to all elements --------------*/
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+
+/* DEFINE SOME COLORS */
+:root {
+    /* colors from my palette */
+    --primary-color: #93BF53;
+    --secondary-color: #0e382f;
+    --background-color: #051325;
+}
+
+
+/*----------- BODY --------------*/
+
+body {
+    font-size: 20px;
+    font-family: 'Quicksand', Verdana, sans-serif;
+    background-color: black;
+    color: white;
+    max-width: 90rem;
+}
+
+
+
+h1, h2, h3, h4{
+    font-family: 'Playfair Display', serif;
+    margin: 0;
+    padding: 1rem;
+}
+
+.body-back {
+    background-color: var(--background-color);
+}
+
+/*----------- HEADER --------------*/
+
+header {
+ display: flex;
+ z-index: 10;
+ background-color: var(--background-color);
+ position: absolute;
+ top:0;
+ width: 100%;
+ padding-bottom: 1em;
+ max-width: 90rem;
+}
+
+header img {
+    object-fit:scale-down;
+    margin-left:1em;
+}
+
+header h1 {
+    font-size: 1.2em;
+}
+/*----------- NAVIGATION --------------*/
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    max-width: 90rem;
+    overflow:hidden;
+    z-index: 100;
+}
+
+nav {
+    z-index: 100;
+    display: flex;
+    justify-content: right;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    max-width: 175px;
+}
+
+nav ul li a {
+    display: block;
+    color: #eee;
+    padding: .5rem 1.5em;
+    text-decoration: none;
+    text-align: right;
+    transition: 0.5s;
+}
+
+nav ul {
+    background: linear-gradient(0deg, rgba(38, 204, 255, 0), rgb(59, 89, 99));
+    background-size: 100% 160px;
+    background-position-y: 48px;
+    background-position-x: 40px;
+    background-repeat: no-repeat;
+}
+
+/* hamburger menu item style*/
+.ham {
+    font-size: 1.4em;
+    padding-right: 1em;
+    background: linear-gradient(90deg, rgba(38, 204, 255, 0) 10%, rgb(23, 39, 44));
+}
+
+/* hover colors */
+nav ul li a:hover {
+    background: linear-gradient(90deg, rgba(38, 204, 255, 0) , rgba(38, 204, 255, 1));
+    color: black;
+    font-weight: bold;
+}
+nav ul li.active a {
+    background: linear-gradient(90deg, rgba(38, 204, 255, 0) 15%, rgb(63, 193, 236));
+    color: #fff;
+}
+
+/* animate horizontal rules to slide over when menu is opened */
+.responsive hr:nth-child(1) {
+    animation: slide-down 0.3s ease-out;
+    margin: 0;
+    padding: 30;
+}
+
+@keyframes slide-down {
+0% { transform: translateX(100%);}
+100% {transform: translateX(0%);}
+}
+
+
+/* Code for responsive hamburger menu ***************/
+.navigation li:first-child {
+	display: block;
+}
+.navigation li {
+    display: none;
+}
+/* the onclick JS toggles the .reponsive class from display none (.navigation li) to display block because the responsive class is added to the end of the class list like this in HTML.
+  <ul class="navigation responsive">
+*/
+.responsive li {
+	display: block;
+}
+/* *************** end hamburger */
+
+
+/*----------- MAIN --------------*/
+
+/* reused */
+.text-center{
+    text-align:center;
+}
+.text-right{
+    text-align: right;
+}
+.text-left{
+    text-align: left;
+}
+
+.huge-title{
+    font-size: 4em;
+}
+
+.content {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+/* specific */
+
+main {
+    padding: 0;
+    min-height: 10rem;
+}
+
+main img{
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.8);
+}
+
+#portfolio-title-container {
+    margin: 1em 0  3em 0;
+    padding: 5em 0 5em 0;
+    position: relative;
+    z-index: 1;
+}
+
+#portfolio-title-container h1{
+margin-bottom: 0.3em;
+transform: translateY(calc(var(--scroll-y, 0) * -0.3px));
+
+}
+
+#portfolio-title-container canvas{
+    animation: appear 1s ease-out;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+#port-gradient-back {
+    background: linear-gradient(var(--background-color) 30%, rgb(9, 26, 46) 50%, var(--background-color) 70%, #00000000);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+@keyframes appear {
+0% { opacity: 0;}
+100% {aopacity:100;}
+}
+
+
+
+/* content applies to both left and right grid */
+.content img {
+    width: 100%;
+}
+.content h2{
+    font-size: 2em;
+}
+.content p {
+    margin-top: 0.1em;
+}
+
+.content  figure{
+    margin: 8%;
+}
+
+/* right grid */
+.right-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 1rem 4%;
+    grid-gap: 2em;
+}
+
+.right-grid div:nth-child(1){ /*Aside*/
+    margin-top: -1em;
+    font-size: 0.9em;
+    margin-bottom: 1.5em;
+}
+
+.right-grid div:nth-child(11){ /*For more information*/
+    display: none;
+}
+
+.right-grid div:nth-child(11) p{
+    padding: 1em;
+}
+
+
+
+/* section coding */
+#sect-coding-background {
+    background-image: linear-gradient(155deg, rgba(255, 255, 255, 0) 18.8%, #204d77 calc(18.8% + 2px),rgb(59, 107, 179) 25%, var(--background-color) 55%);
+    width: 90rem;
+    height: 2900px;
+    position:absolute;
+    right: 0;
+    top: 0;
+    z-index: 1;
+}
+#section-coding {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    z-index: 10;
+}
+
+#sect-coding-backtext{
+    position:fixed;
+    top: -3em;
+    z-index: -0.9;
+    overflow: hidden;
+}
+#sect-coding-backtext div{
+
+    color:rgb(20, 42, 75);
+    font-size: calc(0.5vw + 0.9em);
+    font-weight:bold;
+    line-height: 1.4em;
+    transform: rotate(-25deg);
+}
+
+
+
+
+
+/* section graphics */
+#sect-graphics-background {
+    background-image: linear-gradient(205deg, var(--background-color) 18.8%, #772049 calc(18.8% + 2px),rgb(179, 59, 133) 25%, var(--background-color) 55%);
+    width: 90rem;
+    height: 2900px;
+    position:absolute;
+    left: 0;
+    top: 0;
+}
+
+#section-graphics {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+/* left grid */
+.left-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 1rem 4%;
+    grid-gap: 2em;
+}
+
+.left-grid div:nth-child(1){ /*Aside*/
+    margin-top: -1em;
+    font-size: 0.9em;
+    margin-bottom: 1.5em;
+}
+
+.left-grid div:nth-child(11){ /*For more information*/
+    display: none;
+}
+
+.left-grid div:nth-child(11) p{
+    padding: 1em;
+}
+
+
+
+
+/* git slideshow */
+#git-repo-slideshow {
+    background-color: rgb(5, 26, 56);
+    border-top: 1px solid rgb(32, 69, 124);
+    border-bottom: 1px solid rgb(32, 69, 124);
+    text-align: center;
+    margin: 0em 0 5em 0;
+}
+.slideshow-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.slideshow-box img{
+width: 90%;
+}
+.slideshow-box button, .slideshow-box div {
+    display: inline-block;
+    margin-bottom: 1em;
+}
+.slideshow-box button{
+    margin: 1.5em;
+}
+
+
+
+
+/*----------- FOOTER --------------*/
+footer {
+    text-align: center;
+    font-weight: bold;
+    font-size: 0.9em;
+}
+
+hr {
+    border: 1px solid rgba(211, 211, 211, 0.418);
+}
+
+.foot-logo-box {
+    display: block;
+    padding: 1.5em;
+}
+
+.foot-info-box {
+    padding: 1em;
+    padding-bottom: 1.6em;
+}

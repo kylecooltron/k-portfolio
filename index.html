@@ -1,0 +1,322 @@
+<!-- Kyle Coulon's Portfolio Website -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="description" content="Kyle Coulon's Online Portfolio" />
+    <meta name="author" content="Kyle Coulon" />
+    <title>Kyle's Portfolio</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+
+    <!-- STYLE SHEETS -->
+    <link href="css/normalize.css" rel="stylesheet" />
+    <link href="css/small.css" rel="stylesheet" />
+    <link href="css/medium.css" rel="stylesheet" />
+    <link href="css/large.css" rel="stylesheet" />
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Quicksand:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="favicon.ico" />
+  </head>
+
+  <body>
+    <div class="body-back">
+      <!-- HEADER HERE -->
+      <header>
+        <img src="images/logo.png" alt="Kyle Coulon's portfolio Logo" />
+        <h1>Kyle Coulon's</h1>
+      </header>
+
+      <!-- NAVIGATION HERE -->
+      <div class="navbar">
+        <nav>
+          <ul class="navigation">
+            <li><a class="ham" href="javascript:;">☰</a></li>
+            <li class="active">
+              <a id="nav-portfolio" href="index.html">Portfolio</a>
+            </li>
+            <li><hr /></li>
+            <li><a id="nav-about" href="#">About</a></li>
+            <li><hr /></li>
+            <li>
+              <a id="nav-linkedin" href="#"
+                ><img
+                  src="images/linkedin.png"
+                  alt="linkedin logo link to linkedin profile"
+              /></a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <!-- CONTENT HERE -->
+      <main>
+        <div id="portfolio-title-container">
+          <div id="port-gradient-back"></div>
+          <h1 class="text-center huge-title">Portfolio</h1>
+        </div>
+
+        <!-- Coding section -->
+        <div class="content">
+          <div id="sect-coding-background"></div>
+
+          <div id="sect-coding-backtext">
+            <div>
+              //for every path of this canvas <br />
+              for (var j = 0; j < canvas_list[i][2].length; j++) {<br />
+              <br />
+              //set starting draw position<br />
+              startx = canvas_list[i][2][j][0][0] * canv_width;<br />
+              starty = canvas_list[i][2][j][0][1] * canv_height;<br />
+              this_ctx.moveTo(startx,starty);<br />
+              <br />
+              // reset drawing amount for this line path<br />
+              let dist_left_to_draw = canvas_list[i][3];<br />
+              <br />
+              //for every set of points in this individual path<br />
+              for (var k = 0; k < canvas_list[i][2][j].length; k++) { <br />
+              <br />
+              //if we still have some distance to go for this path<br />
+              if(dist_left_to_draw > 0){<br />
+              <br />
+              //get the next point<br />
+              nextx = canvas_list[i][2][j][k][0] * canv_width;<br />
+              nexty = canvas_list[i][2][j][k][1] * canv_height;<br />
+              //find the difference between last point and this next one<br />
+              let difference = Math.abs(startx-nextx) +
+              Math.abs(starty-nexty);<br />
+              // if we have already drawn past this point<br />
+              if(dist_left_to_draw > difference){<br />
+              // subtract its distance<br />
+              dist_left_to_draw -= difference;<br />
+              }else{ // draw the remaining distance<br />
+            </div>
+          </div>
+
+          <section id="section-coding">
+            <div class="right-grid">
+              <div>
+                <p>Skill x Skill x Skill Skill x Skill x SkillSkill x Skill</p>
+              </div>
+
+              <div class="text-right">
+                <h2>CODING</h2>
+              </div>
+
+              <div>
+                <figure>
+                  <img src="images/placeholder.jpg" alt="placeholder image" />
+                  <figcaption>Example project</figcaption>
+                </figure>
+              </div>
+
+              <div>
+                <h3>Languages:</h3>
+                <ul>
+                  <li>HTML 5</li>
+                  <li>CSS</li>
+                  <li>Javascript</li>
+                  <li>Python</li>
+                  <li>C#</li>
+                </ul>
+              </div>
+
+              <div>
+                <figure>
+                  <img src="images/placeholder.jpg" alt="placeholder image" />
+                  <figcaption>Example project 2</figcaption>
+                </figure>
+              </div>
+
+              <div>
+                <p>
+                  This is a description of the above work. (EX-P2) Paragraph
+                  about some of my work. Look how good it is. Wow that's an
+                  awesome image! please keep telling me more. This paragraph has
+                  a lot of words.
+                </p>
+              </div>
+
+              <div>
+                <h3>Experience</h3>
+                <p>
+                  This is a paragraph about my work and my experience as a
+                  programmer. I get to flex about how I've been doing this a
+                  long time and am ready for a job. I have been making game for
+                  years. I am doing well. Yeah.
+                </p>
+              </div>
+
+              <div>
+                <figure>
+                  <img src="images/placeholder.jpg" alt="placeholder image" />
+                  <figcaption>Example project 3</figcaption>
+                </figure>
+              </div>
+
+              <div>
+                <p>
+                  This is a description of the above work. (EX-P3) Paragraph
+                  about some of my work. Look how good it is. Wow that's an
+                  awesome image! please keep telling me more. This paragraph has
+                  a lot of words.
+                </p>
+              </div>
+              <div>
+                <h3>Schooling:</h3>
+                <p>
+                  This is a paragraph about how I'm currently studying with BYUI
+                  Online for a degree in applied technology. I am on course to
+                  get my Web Develeopment Certificate in four weeks. I have been
+                  impressing all my professors.
+                </p>
+              </div>
+
+              <div>
+                <p>
+                  For more information about me, check out the About Me page.
+                </p>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <div class="content">
+          <div id="git-repo-slideshow">
+            <h3>Git Hub Repositories</h3>
+            <div class="slideshow-box">
+              <button>◄</button>
+              <div>
+                <img src="images/placeholder.jpg" alt="placeholder image" />
+              </div>
+              <button>►</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Graphics section -->
+        <div class="content">
+          <div id="sect-graphics-background"></div>
+
+          <section id="section-graphics">
+            <div class="left-grid">
+              <div class="text-right">
+                <p>Skill x Skill x Skill Skill x Skill x SkillSkill x Skill</p>
+              </div>
+
+              <div class="text-left">
+                <h2>GRAPHICS</h2>
+              </div>
+
+              <div>
+                <figure>
+                  <img src="images/placeholder.jpg" alt="placeholder image" />
+                  <figcaption>Example project</figcaption>
+                </figure>
+              </div>
+
+              <div>
+                <h3>Languages:</h3>
+                <ul>
+                  <li>HTML 5</li>
+                  <li>CSS</li>
+                  <li>Javascript</li>
+                  <li>Python</li>
+                  <li>C#</li>
+                </ul>
+              </div>
+
+              <div>
+                <figure>
+                  <img src="images/placeholder.jpg" alt="placeholder image" />
+                  <figcaption>Example project 2</figcaption>
+                </figure>
+              </div>
+
+              <div>
+                <p>
+                  This is a description of the above work. (EX-P2) Paragraph
+                  about some of my work. Look how good it is. Wow that's an
+                  awesome image! please keep telling me more. This paragraph has
+                  a lot of words.
+                </p>
+              </div>
+
+              <div>
+                <h3>Experience</h3>
+                <p>
+                  This is a paragraph about my work and my experience as a
+                  programmer. I get to flex about how I've been doing this a
+                  long time and am ready for a job. I have been making game for
+                  years. I am doing well. Yeah.
+                </p>
+              </div>
+
+              <div>
+                <figure>
+                  <img src="images/placeholder.jpg" alt="placeholder image" />
+                  <figcaption>Example project 3</figcaption>
+                </figure>
+              </div>
+
+              <div>
+                <p>
+                  This is a description of the above work. (EX-P3) Paragraph
+                  about some of my work. Look how good it is. Wow that's an
+                  awesome image! please keep telling me more. This paragraph has
+                  a lot of words.
+                </p>
+              </div>
+              <div>
+                <h3>Schooling:</h3>
+                <p>
+                  This is a paragraph about how I'm currently studying with BYUI
+                  Online for a degree in applied technology. I am on course to
+                  get my Web Develeopment Certificate in four weeks. I have been
+                  impressing all my professors.
+                </p>
+              </div>
+
+              <div>
+                <p>"Kyle is one of my greatest students"</p>
+                <p>
+                  <small>- Sister Burdett <em>BYU Professor</em></small>
+                </p>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+
+      <!-- FOOTER HERE -->
+      <footer>
+        <div class="foot-logo-box">
+          <img src="images/logo.png" alt="Smith River Commerce Logo" />
+          <div>
+            <em>kylejcoulon@gmail.com</em>
+            <p>+1 (385) 254-5964</p>
+            <div>Springville, Utah</div>
+          </div>
+        </div>
+        <hr />
+        <div class="foot-info-box">
+          &copy; <span id="year">year</span> &bull; Kyle Coulon's Portfolio |
+          Kyle Coulon | Last modification:
+          <span id="modified">last modified</span>
+        </div>
+        <!-- JAVASCRIPT -->
+        <script src="js/portfolio-script.js"></script>
+        <script src="js/linepath-script.js"></script>
+        <script src="js/storescroll-script.js"></script>
+      </footer>
+    </div>
+  </body>
+</html>
