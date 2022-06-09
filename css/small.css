@@ -189,7 +189,7 @@ main img{
 #portfolio-title-container h1{
 margin-bottom: 0.3em;
 transform: translateY(calc(var(--scroll-y, 0) * -0.3px));
-
+animation: appear 0.5s ease-out;
 }
 
 #portfolio-title-container canvas{
@@ -282,7 +282,7 @@ transform: translateY(calc(var(--scroll-y, 0) * -0.3px));
 }
 #sect-coding-backtext div{
 
-    color:rgb(20, 42, 75);
+    color:rgb(14, 35, 65);
     font-size: calc(0.5vw + 0.9em);
     font-weight:bold;
     line-height: 1.4em;
