@@ -71,13 +71,6 @@
           <span class="spaced-horiz" id="skill-x2">x</span>
           <span id="skill-problemsolver">Problem Solver</span>
         </p>
-        <p class="p-lessmargin vert-align-middle" id="skill-sentence-mirror">
-          <span id="skill-webdev">Web Developer</span>
-          <span class="spaced-horiz" id="skill-x1">x</span>
-          <span id="skill-artist">Artist</span>
-          <span class="spaced-horiz" id="skill-x2">x</span>
-          <span id="skill-problemsolver">Problem Solver</span>
-        </p>
 
         <!-- Coding section -->
         <div class="content">
@@ -86,7 +79,7 @@
           <div id="sect-coding-backtext">
             <div>
               //for every path of this canvas <br />
-              for (var j = 0; j < canvas_list[i][2].length; j++) {<br />
+              for (var j = 0; j &lt; canvas_list[i][2].length; j++) {<br />
               <br />
               //set starting draw position<br />
               startx = canvas_list[i][2][j][0][0] * canv_width;<br />
@@ -97,7 +90,7 @@
               let dist_left_to_draw = canvas_list[i][3];<br />
               <br />
               //for every set of points in this individual path<br />
-              for (var k = 0; k < canvas_list[i][2][j].length; k++) { <br />
+              for (var k = 0; k &lt; canvas_list[i][2][j].length; k++) { <br />
               <br />
               //if we still have some distance to go for this path<br />
               if(dist_left_to_draw > 0){<br />
@@ -119,7 +112,7 @@
           <section id="section-coding">
             <div class="right-grid">
               <div>
-                <p class="p-lessmargin vert-align-middle">.</p>
+                <p class="p-lessmargin vert-align-middle">KYLE.</p>
               </div>
               <div class="text-right code-title-clip">
                 <h2>CODING <br /><small>EXPERIENCE</small></h2>
@@ -153,13 +146,65 @@
                 </ul>
               </div>
 
-              <div>
-                <figure>
-                  <img src="images/web-state500.jpg" alt="placeholder image" />
-                  <figcaption>
-                    State of the Art - First Personal Website
-                  </figcaption>
-                </figure>
+              <div id="interactive-example-2">
+                <div>
+                  <ul>
+                    <li>
+                      <h3>Interactive Example</h3>
+                    </li>
+                    <li>
+                      <label for="oval">Oval</label>
+                      <input
+                        id="oval"
+                        type="range"
+                        class="slider"
+                        onchange="sliderChange(this.id)"
+                        min="1"
+                        max="100"
+                        value="50"
+                        oninput="this.nextElementSibling.value = this.value"
+                      />
+                      <output>50</output>
+                    </li>
+                    <li>
+                      <label for="spin">Spin</label>
+                      <input
+                        id="spin"
+                        type="range"
+                        class="slider"
+                        onchange="sliderChange(this.id)"
+                        min="-50"
+                        max="50"
+                        value="20"
+                        oninput="this.nextElementSibling.value = this.value"
+                      />
+                      <output>0</output>
+                    </li>
+                    <li>
+                      <label for="spiral">Spiral</label>
+                      <input
+                        id="spiral"
+                        type="range"
+                        class="slider"
+                        onchange="sliderChange(this.id)"
+                        min="1"
+                        max="130"
+                        value="20"
+                        oninput="this.nextElementSibling.value = this.value"
+                      />
+                      <output>50</output>
+                    </li>
+                    <li>
+                      <button onclick="startPainting()" style="width: 80px">
+                        GO!
+                      </button>
+                    </li>
+                  </ul>
+                </div>
+
+                <canvas id="exm2Canvas" width="500" height="500">
+                  Your browser does not support the HTML canvas tag.
+                </canvas>
               </div>
 
               <div>
@@ -349,6 +394,7 @@
         <script src="js/portfolio-script.js"></script>
         <script src="js/linepath-script.js"></script>
         <script src="js/storescroll-script.js"></script>
+        <script src="js/pendulum-script.js"></script>
       </footer>
     </div>
   </body>
