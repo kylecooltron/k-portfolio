@@ -15,6 +15,15 @@ html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
 }
 
 
+
+/*
+font-family: 'Electrolize', sans-serif;
+font-family: 'Playfair Display', serif;
+font-family: 'Press Start 2P', cursive;
+font-family: 'Quicksand', sans-serif;
+*/
+
+
 /*----------- BODY --------------*/
 
 body {
@@ -147,6 +156,26 @@ nav ul li.active a {
 
 /*----------- MAIN --------------*/
 
+
+/* applies to whole page */
+main {
+    padding: 0;
+    min-height: 10rem;
+}
+
+main img{
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.8);
+}
+
+figure p {
+    margin-top: 5em;
+}
+
+a {
+    color:rgb(8, 239, 255)
+}
+    
+
 /* reused */
 .text-center{
     text-align:center;
@@ -157,9 +186,11 @@ nav ul li.active a {
 .text-left{
     text-align: left;
 }
-
+.text-shadow {
+    text-shadow: 0 3px 10px rgb(0 0 0 / 0.8);
+}
 .huge-title{
-    font-size: 4em;
+    font-size: 5.5em;
 }
 
 .content {
@@ -167,17 +198,30 @@ nav ul li.active a {
     position: relative;
     overflow: hidden;
 }
+.info-text{
+    margin-top: 1em;
+    font-size: medium;
+    color:rgb(158, 249, 255)
+}
+
+.p-lessmargin {
+    margin-top: 0.1em;
+}
+
+.spaced-horiz{
+    margin: 0 calc(0.1em + 3vw) 0 calc(0.1em + 3vw);
+    font-size: 12px;
+    vertical-align:10%;
+    opacity: 0.5;
+}
+.vert-align-middle{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+
 
 /* specific */
-
-main {
-    padding: 0;
-    min-height: 10rem;
-}
-
-main img{
-    box-shadow: 0 3px 10px rgb(0 0 0 / 0.8);
-}
 
 #portfolio-title-container {
     margin: 1em 0  3em 0;
@@ -211,10 +255,80 @@ animation: appear 0.5s ease-out;
     z-index: -1;
 }
 
-@keyframes appear {
-0% { opacity: 0;}
-100% {aopacity:100;}
+
+#skill-sentence {
+    color: rgb(255, 226, 97);
+    text-align: center;
+    width: 100%;
+    margin-top: calc(-3em + 10vw);
+    margin-bottom: 0;
+    position: relative;
+    z-index: 10;
+    font-size: calc(0.7em + 0.5vw);
 }
+#skill-sentence-mirror {
+    text-align: center;
+    width: 100%;
+    margin-top: -0.1em;
+    position: relative;
+    z-index: 10;
+    font-size: calc(0.7em + 0.5vw);
+    transform: scaleY(-1);
+    
+    
+    
+
+}
+
+
+
+#skill-sentence-mirror #skill-x1, #skill-sentence-mirror #skill-x2,
+#skill-sentence-mirror #skill-problemsolver, #skill-sentence-mirror #skill-artist,
+#skill-sentence-mirror #skill-webdev
+{
+        background: -webkit-linear-gradient( rgba(51, 51, 51, 0) 40% , rgba(92, 102, 240, 0.5) 80%, rgba(239, 255, 97, 0) 78%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+}
+
+#skill-webdev{
+    animation: delay-appear 3s ease-out;
+}
+
+#skill-artist{
+    animation: delay-appear 6s ease-out;
+}
+#skill-x1{
+    animation: delay-appear-half 5s ease-out;
+}
+
+#skill-problemsolver{
+    animation: delay-appear 9s ease-out;
+}
+#skill-x2{
+    animation: delay-appear-half 8s ease-out;
+}
+
+
+@keyframes delay-appear-half {
+    0% { opacity: 0;}
+    50% { opacity: 0;}
+    100% {opacity:0.5;}
+}
+
+@keyframes delay-appear {
+    0% { opacity: 0;}
+    50% { opacity: 0;}
+    100% {opacity:1;}
+}
+
+@keyframes appear {
+    0% { opacity: 0;}
+    100% {opacity:1;}
+}
+
+
+
 
 
 
@@ -223,15 +337,13 @@ animation: appear 0.5s ease-out;
     width: 100%;
 }
 .content h2{
-    font-size: 2em;
+    font-size: 1.5em;
 }
-.content p {
-    margin-top: 0.1em;
-}
-
 .content  figure{
     margin: 8%;
 }
+
+
 
 /* right grid */
 .right-grid {
@@ -242,9 +354,10 @@ animation: appear 0.5s ease-out;
 }
 
 .right-grid div:nth-child(1){ /*Aside*/
-    margin-top: -1em;
-    font-size: 0.9em;
-    margin-bottom: 1.5em;
+    margin-left:  calc(-3em + 10vw);
+    margin-top: calc(-2em + 7vw);
+    font-size: calc(0.6em + 0.9vw);
+    color:#204d77;
 }
 
 .right-grid div:nth-child(11){ /*For more information*/
@@ -288,6 +401,35 @@ animation: appear 0.5s ease-out;
     line-height: 1.4em;
     transform: rotate(-25deg);
 }
+
+#section-coding img:hover{
+border: 1px solid rgba(255, 255, 255, 0.39);
+border-radius: 5px;
+}
+
+
+.code-title-clip {
+    background: url(/images/codingtextback.jpg) repeat center center;
+    background-size: cover;
+    color: #fff;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -moz-background-clip:text;
+    background-clip:text; 
+    animation: scrollbackground 4s linear;
+    animation-iteration-count: infinite;
+}
+@keyframes scrollbackground {
+    0%, 25% { background-position-x: 0;}
+    75%, 100% {background-position-x: 550px;}
+    }
+.code-title-clip h2 {
+    color:rgb(146, 202, 255);
+    font-family: 'Press Start 2P', cursive;
+    font-size: 2em;
+    margin-top: 1em;
+}
+
 
 
 
