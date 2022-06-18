@@ -57,6 +57,8 @@ header {
  width: 100%;
  padding-bottom: 1em;
  max-width: 90rem;
+justify-content: center;
+
 }
 
 header img {
@@ -82,6 +84,7 @@ nav {
     z-index: 100;
     display: flex;
     justify-content: right;
+
 }
 
 nav ul {
@@ -92,7 +95,7 @@ nav ul {
 
 nav ul li a {
     display: block;
-    color: #eee;
+    color: rgb(255, 255, 255);
     padding: .5rem 1.5em;
     text-decoration: none;
     text-align: right;
@@ -122,7 +125,9 @@ nav ul li a:hover {
 }
 nav ul li.active a {
     background: linear-gradient(90deg, rgba(38, 204, 255, 0) 15%, rgb(63, 193, 236));
-    color: #fff;
+    color: rgb(154, 215, 255);
+    font-weight: bold;
+    cursor:default;
 }
 
 /* animate horizontal rules to slide over when menu is opened */
@@ -159,6 +164,7 @@ nav ul li.active a {
 
 /* applies to whole page */
 main {
+
     padding: 0;
     min-height: 10rem;
 }
@@ -224,7 +230,7 @@ a {
 /* specific */
 
 #portfolio-title-container {
-    margin: 1em 0  3em 0;
+    margin: 4em 0  3em 0;
     padding: 5em 0 5em 0;
     position: relative;
     z-index: 1;
@@ -305,6 +311,89 @@ animation: appear 0.5s ease-out;
 }
 
 
+/* modal pop-up image container*/
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 100; /* Sit on top */
+    padding-top: 150px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.2); /* Black w/ opacity */
+  }
+
+  #myModalContainer{
+    width: 90%;
+    height: 70%;
+    text-align: center;
+    border: 1px solid rgb(16, 36, 102);
+    background-color: #2a5088;
+    border-radius: 1em;
+    box-shadow: 3px 3px 13px rgb(4, 18, 44);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Modal Content (image) */
+  .modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+  }
+  
+  /* Caption of Modal Image */
+  #modal-caption {
+    margin: 3em;
+    display: block;
+    width: 80%;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+  }
+  
+  /* Add Animation */
+  .modal-content, #modal-caption, #myModalContainer {  
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.4s;
+    animation-name: zoom;
+    animation-duration: 0.4s;
+  }
+  
+  @-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)} 
+    to {-webkit-transform:scale(1)}
+  }
+  
+  @keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+  }
+  
+  /* The Close Button */
+    .close {
+    color: #f1f1f1;
+    font-size: 30px;
+    font-weight: bold;
+    transition: 0.3s;
+    text-align: right;
+    margin: 0.8em 1em 0 0;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
 
 
 
@@ -326,36 +415,86 @@ animation: appear 0.5s ease-out;
 .right-grid {
     display: grid;
     grid-template-columns: 1fr;
-    padding: 1rem 4%;
-    grid-gap: 2em;
+    padding: 1rem 2%;
+    grid-gap: 1em;
+    margin-top: 6em;
 }
 
-.right-grid div:nth-child(1){ /*Aside*/
-    /*
-    margin-left:  calc(-3em + 10vw);
-    margin-top: calc(-2em + 7vw);
-    font-size: calc(0.6em + 0.9vw);
-    */
-    color:#204d77;
+
+.language-grid-top img
+{
+max-width: 500px;
 }
 
-.right-grid div:nth-child(2){ /*CODE*/
-    margin-top: 2em;
-    }
-    
-.right-grid div:nth-child(11){ /*For more information*/
-    display: none;
+.title-space-below
+{
+margin-bottom: 6em;
 }
 
-.right-grid div:nth-child(11) p{
+.language-title h3, #other-langs-title{
+    color:rgb(187, 168, 59);
+    font-size: 1.5em;
+    text-shadow: 1px 3px 2px rgb(0, 0, 0);
+}
+
+
+.lang-grid 
+{
     padding: 1em;
+    border-radius: 0.5em;
+}
+.lang-grid img
+{
+    cursor: pointer;
+}
+.lang-grid button
+{
+    background-color: #0f345e;
+    border: 1px solid rgb(255, 255, 255);
+    color:rgb(86, 159, 255);
+    border-radius: 8px;
+    padding: 0.2em 1em 0.2em 1em;
+    font-size: 0.9em;
+    cursor: pointer;
+}
+.lang-grid button:hover
+{
+    background-color: #25548a;
+    border: 1px solid rgb(173, 229, 255);
+    color:rgb(255, 255, 255);
+}
+.lang-grid button:active
+{
+    background-color: #4bbef3;
 }
 
+.language-grid-top
+{
+    background: linear-gradient(rgba(255, 255, 255, 0.4), rgba(162, 211, 252, 0.23) 5%, #9198e500);
+}
+.language-grid-right
+{
+    background: linear-gradient(rgba(127, 176, 250, 0.436), rgba(76, 141, 238, 0.336) 5%, #9198e500);
+}
+.language-grid-left
+{
+    background: linear-gradient(rgba(127, 176, 250, 0.436), rgba(76, 173, 238, 0.336) 5%, #9198e500);
+}
+
+
+.py-proj-grid{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+.other-langs-grid{
+    display: grid;
+    grid-template-columns: 1fr;
+}
 
 
 /* section coding */
 
-.code-title-clip {
+#code-title-clip {
     background: url(/images/codingtextback.jpg) repeat center center;
     background-size: cover;
     color: #fff;
@@ -373,7 +512,7 @@ animation: appear 0.5s ease-out;
     80%, 100% {background-position-x: 550px;}
 }
 
-.code-title-clip h2 {
+#code-title-clip h2 {
     color:rgb(146, 202, 255);
     font-family: 'Press Start 2P', cursive;
     font-size: 2em;
@@ -412,8 +551,9 @@ animation: appear 0.5s ease-out;
 
 #section-coding img:hover{
 border: 1px solid rgba(255, 255, 255, 0.39);
-border-radius: 5px;
 }
+
+
 
 #interactive-example-2 
 {
@@ -421,10 +561,17 @@ border-radius: 5px;
     align-items: center;
     justify-items: center;
     border-radius: 1em;
-    color:rgb(2, 8, 17);
+    color:rgb(248, 238, 91);
     font-weight: bold;
     margin: 1em;
-    background-color: #498bc9;
+    border: 1px solid white;
+    font-weight: lighter;
+    font-size: 0.9em;
+}
+
+#interactive-example-2 li h3{
+    font-family: 'Quicksand', sans-serif;
+    font-weight: lighter;
 }
 
 #interactive-example-2 output

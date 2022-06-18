@@ -174,6 +174,7 @@ function drawStep(){
 
 function startPainting(){
   resetPainting();
+  stopPainting();
   pstep = window.setInterval(drawStep,10);
 }
 
@@ -191,4 +192,55 @@ function resetPainting(){
 
 function bake(){
     exm2_context.beginPath();
+}
+
+
+// Function to generate random number 
+function randomNumber(min, max) { 
+  return Math.random() * (max - min) + min;
+} 
+
+let random_list = [[84,29,25],[98,16,10],[84,34,66],[23,-32,36],[79,23,26],[83,-25,28],[83,-21,23],[83,-2,37],[83,-14,20],[77,14,23],[95,41,28],[59,-28,19],[49,24,16],[68,4,34],[95,-4,77],[95,-25,46],[59,-40,39],[45,-37,50],[91,-14,19],[66,-22,24]]
+function randomizeParams(){
+
+  let slider_oval = document.getElementById("oval");
+  let slider_spin = document.getElementById("spin");
+  let slider_spiral = document.getElementById("spiral");
+
+  
+
+  if(Math.random() < 0.8){
+
+    let rand_index = Math.round(randomNumber(0,random_list.length-1));
+
+    slider_oval.value = random_list[rand_index][0];
+    slider_spin.value = random_list[rand_index][1];
+    slider_spiral.value  = random_list[rand_index][2];
+
+  }else{
+
+    slider_spin.value = randomNumber(-50,50);
+
+    if(Math.random() > 0.8){
+      slider_oval.value = randomNumber(1,100);
+      slider_spiral.value = randomNumber(1,130);
+    }else{
+      slider_oval.value = randomNumber(10,100);
+      if(Math.random() > 0.64){
+      slider_spiral.value = randomNumber(1,80);
+      }else{
+        slider_spiral.value = randomNumber(10,40);
+      }
+    }
+  }
+
+  document.getElementById("ovalo").value = slider_oval.value;
+  document.getElementById("spino").value = slider_spin.value;
+  document.getElementById("spiralo").value = slider_spiral.value;
+
+  sliderChange("oval");
+  sliderChange("spin");
+  sliderChange("spiral");
+  
+  stopPainting();
 }

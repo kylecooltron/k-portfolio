@@ -59,6 +59,14 @@
 
       <!-- CONTENT HERE -->
       <main>
+        <div id="myModal" class="modal">
+          <div id="myModalContainer">
+            <span class="close">&times;</span>
+            <img id="modal-img" class="modal-content" src="images/logo.png" />
+            <div id="modal-caption"></div>
+          </div>
+        </div>
+
         <div id="portfolio-title-container">
           <div id="port-gradient-back"></div>
           <h1 class="text-center huge-title">Portfolio</h1>
@@ -111,155 +119,242 @@
 
           <section id="section-coding">
             <div class="right-grid">
-              <div>
-                <p class="p-lessmargin vert-align-middle">KYLE.</p>
-              </div>
-              <div class="text-right code-title-clip">
+              <div class="text-right" id="code-title-clip">
                 <h2>CODING <br /><small>EXPERIENCE</small></h2>
               </div>
 
-              <div>
-                <figure>
-                  <img src="images/web-com595.jpg" alt="placeholder image" />
-                  <figcaption>Chamber of Commerce Website</figcaption>
-                </figure>
-                <p class="info-text">
-                  <small
-                    ><em>
-                      Student project for Web Frontend Development - BYU Idaho
-                    </em></small
-                  >
-                  <br />
-                  See <a href="#">Git Repositories</a>
-                  below!
-                </p>
+              <div class="language-title" id="lang-title-htmlcss">
+                <hr />
+                <h3>HTML / CSS</h3>
+                <hr />
+                <p>★★★★☆</p>
+                <p>I am currently enrolled in WDD 230.</p>
               </div>
 
-              <div>
-                <h3>Languages:</h3>
+              <div
+                class="language-grid-top title-space-below lang-grid"
+                id="lang-gridweb"
+              >
+                <div><h3 id="lang-grid-webdev">Web Dev</h3></div>
+
+                <div>
+                  <figure>
+                    <img
+                      id="myImg"
+                      src="images/web-com595.jpg"
+                      alt="placeholder image"
+                      data-bigger-src="http://qnimate.com/wp-content/uploads/2014/03/images2.jpg"
+                    />
+                    <figcaption>Chamber of Commerce Website</figcaption>
+                  </figure>
+                </div>
+
+                <div class="lang-examples-box">
+                  <h4>Websites I've made:</h4>
+                  <ul>
+                    <li>Smith River</li>
+                    <li>State of the Art</li>
+                    <li>Big Raft</li>
+                  </ul>
+                </div>
+                <div>
+                  <p>
+                    I like to design all my own graphics for my student
+                    websites.
+                  </p>
+                </div>
+              </div>
+
+              <div class="language-title">
+                <hr />
+                <h3>Javascript</h3>
+                <hr />
+                <p>★★★☆☆</p>
+                <p>Mostly using vanilla js to make cool things</p>
+              </div>
+
+              <div class="language-grid-right title-space-below lang-grid">
+                <div><h3>Interactive Examples</h3></div>
+
+                <div id="interactive-example-2">
+                  <div>
+                    <ul>
+                      <li>
+                        <h3>Interactive Example</h3>
+                      </li>
+                      <li>
+                        <label for="oval">Oval</label>
+                        <input
+                          id="oval"
+                          type="range"
+                          class="slider"
+                          onchange="sliderChange(this.id)"
+                          min="1"
+                          max="100"
+                          value="50"
+                          oninput="this.nextElementSibling.value = this.value"
+                        />
+                        <output id="ovalo">50</output>
+                      </li>
+                      <li>
+                        <label for="spin">Spin</label>
+                        <input
+                          id="spin"
+                          type="range"
+                          class="slider"
+                          onchange="sliderChange(this.id)"
+                          min="-50"
+                          max="50"
+                          value="20"
+                          oninput="this.nextElementSibling.value = this.value"
+                        />
+                        <output id="spino">0</output>
+                      </li>
+                      <li>
+                        <label for="spiral">Spiral</label>
+                        <input
+                          id="spiral"
+                          type="range"
+                          class="slider"
+                          onchange="sliderChange(this.id)"
+                          min="1"
+                          max="130"
+                          value="20"
+                          oninput="this.nextElementSibling.value = this.value"
+                        />
+                        <output id="spiralo">50</output>
+                      </li>
+                      <li>
+                        <button onclick="randomizeParams()">Randomize</button>
+                        <button onclick="startPainting()">Go!</button>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <canvas id="exm2Canvas" width="500" height="500">
+                    Your browser does not support the HTML canvas tag.
+                  </canvas>
+                </div>
+
+                <div class="lang-examples-box">
+                  <h4>This example is found on:</h4>
+                  <ul>
+                    <li>State of the Art</li>
+                  </ul>
+                </div>
+                <div>
+                  <p>
+                    My experience with game development has me create some of
+                    the website projects.
+                  </p>
+                </div>
+              </div>
+
+              <div class="language-title">
+                <hr />
+                <h3>Python</h3>
+                <hr />
+                <p>★★☆☆☆</p>
+                <p>Classes through BYU Idaho:</p>
                 <ul>
-                  <li>HTML 5</li>
-                  <li>CSS</li>
-                  <li>Javascript</li>
-                  <li>Python</li>
-                  <li>C#</li>
+                  <li>Programming with Functions</li>
+                  <li>Programming with Classes</li>
                 </ul>
               </div>
 
-              <div id="interactive-example-2">
+              <div class="language-grid-left title-space-below lang-grid">
+                <div><h3>Team Projects</h3></div>
                 <div>
-                  <ul>
-                    <li>
-                      <h3>Interactive Example</h3>
-                    </li>
-                    <li>
-                      <label for="oval">Oval</label>
-                      <input
-                        id="oval"
-                        type="range"
-                        class="slider"
-                        onchange="sliderChange(this.id)"
-                        min="1"
-                        max="100"
-                        value="50"
-                        oninput="this.nextElementSibling.value = this.value"
-                      />
-                      <output>50</output>
-                    </li>
-                    <li>
-                      <label for="spin">Spin</label>
-                      <input
-                        id="spin"
-                        type="range"
-                        class="slider"
-                        onchange="sliderChange(this.id)"
-                        min="-50"
-                        max="50"
-                        value="20"
-                        oninput="this.nextElementSibling.value = this.value"
-                      />
-                      <output>0</output>
-                    </li>
-                    <li>
-                      <label for="spiral">Spiral</label>
-                      <input
-                        id="spiral"
-                        type="range"
-                        class="slider"
-                        onchange="sliderChange(this.id)"
-                        min="1"
-                        max="130"
-                        value="20"
-                        oninput="this.nextElementSibling.value = this.value"
-                      />
-                      <output>50</output>
-                    </li>
-                    <li>
-                      <button onclick="startPainting()" style="width: 80px">
-                        GO!
-                      </button>
-                    </li>
-                  </ul>
+                  <figure>
+                    <img src="images/py-goal700.jpg" alt="placeholder image" />
+                    <figcaption>
+                      Goal Planner - Personal Python Project
+                    </figcaption>
+                  </figure>
                 </div>
 
-                <canvas id="exm2Canvas" width="500" height="500">
-                  Your browser does not support the HTML canvas tag.
-                </canvas>
+                <div class="lang-examples-box">
+                  <h4>Recent class projects:</h4>
+                  <ul>
+                    <li>Cycle</li>
+                    <li>Greed</li>
+                  </ul>
+                </div>
+                <div>
+                  <p>Python has come naturally to me.</p>
+                  <p>
+                    "Kyle excells in our class."
+                    <small>- BYU Idaho Professor</small>
+                  </p>
+                </div>
+              </div>
+
+              <div class="title-space-below">
+                <h3>Last Semester's Projects</h3>
+                <div class="py-proj-grid">
+                  <figure>
+                    <img src="images/py-goal700.jpg" alt="placeholder image" />
+                    <figcaption>
+                      Goal Planner - Personal Python Project
+                    </figcaption>
+                  </figure>
+                  <figure>
+                    <img src="images/py-goal700.jpg" alt="placeholder image" />
+                    <figcaption>
+                      Goal Planner - Personal Python Project
+                    </figcaption>
+                  </figure>
+                  <figure>
+                    <img src="images/py-goal700.jpg" alt="placeholder image" />
+                    <figcaption>
+                      Goal Planner - Personal Python Project
+                    </figcaption>
+                  </figure>
+                </div>
               </div>
 
               <div>
-                <p class="p-lessmargin">
-                  State of the Art was my first student project where I got to
-                  make a personal website. It is an educational website that
-                  teaches about procedurally generated art. I used javascript to
-                  create interactive examples that demonstrate the power of
-                  procedural art.
-                </p>
-              </div>
-
-              <div>
-                <h3>Experience</h3>
-                <p class="p-lessmargin">
-                  This is a paragraph about my work and my experience as a
-                  programmer. I get to flex about how I've been doing this a
-                  long time and am ready for a job. I have been making game for
-                  years. I am doing well. Yeah.
-                </p>
-              </div>
-
-              <div>
-                <figure>
-                  <img src="images/py-goal700.jpg" alt="placeholder image" />
-                  <figcaption>
-                    Goal Planner - Personal Python Project
-                  </figcaption>
-                </figure>
-              </div>
-
-              <div>
-                <p class="p-lessmargin">
-                  This is a description of the above work. (EX-P3) Paragraph
-                  about some of my work. Look how good it is. Wow that's an
-                  awesome image! please keep telling me more. This paragraph has
-                  a lot of words.
-                </p>
-              </div>
-              <div>
-                <h3>Schooling:</h3>
-                <p class="p-lessmargin">
-                  This is a paragraph about how I'm currently studying with BYUI
-                  Online for a degree in applied technology. I am on course to
-                  get my Web Develeopment Certificate in four weeks. I have been
-                  impressing all my professors.
-                </p>
-              </div>
-
-              <div>
-                <p class="p-lessmargin">
-                  For more information about me, check out the About Me page.
-                </p>
+                <hr />
+                <h3 id="other-langs-title">Other Languages:</h3>
+                <hr />
+                <div class="other-langs-grid">
+                  <div>
+                    <h4>Lite-C</h4>
+                    Lite-C is a C based language used by 3DGS - no longer
+                    supported
+                  </div>
+                  <figure>
+                    <img src="images/py-goal700.jpg" alt="placeholder image" />
+                    <figcaption>
+                      Goal Planner - Personal Python Project
+                    </figcaption>
+                  </figure>
+                  <figure>
+                    <img src="images/py-goal700.jpg" alt="placeholder image" />
+                    <figcaption>
+                      Goal Planner - Personal Python Project
+                    </figcaption>
+                  </figure>
+                  <div>
+                    <h4>GML</h4>
+                    Game Maker Language is used by Game Maker Studio
+                  </div>
+                  <figure>
+                    <img src="images/py-goal700.jpg" alt="placeholder image" />
+                    <figcaption>
+                      Goal Planner - Personal Python Project
+                    </figcaption>
+                  </figure>
+                  <figure>
+                    <img src="images/py-goal700.jpg" alt="placeholder image" />
+                    <figcaption>
+                      Goal Planner - Personal Python Project
+                    </figcaption>
+                  </figure>
+                </div>
               </div>
             </div>
+            <!-- end right grid -->
           </section>
         </div>
 
@@ -395,6 +490,7 @@
         <script src="js/linepath-script.js"></script>
         <script src="js/storescroll-script.js"></script>
         <script src="js/pendulum-script.js"></script>
+        <script src="js/modimg-script.js"></script>
       </footer>
     </div>
   </body>
