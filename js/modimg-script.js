@@ -7,7 +7,7 @@ var captionText = document.getElementById("modal-caption");
 
 document.addEventListener("click", (e) => {
   const elem = e.target;
-  if (elem.id==="myImg") {
+  if (elem.id==="modalImg") {
     modal.style.display = "block";
     modalImg.src = elem.dataset.biggerSrc || elem.src;
     captionText.innerHTML = elem.alt; 

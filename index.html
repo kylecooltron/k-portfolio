@@ -28,7 +28,7 @@
   </head>
 
   <body>
-    <div class="body-back">
+    <div id="body-background-color">
       <!-- HEADER HERE -->
       <header>
         <img src="images/logo.png" alt="Kyle Coulon's portfolio Logo" />
@@ -36,34 +36,49 @@
       </header>
 
       <!-- NAVIGATION HERE -->
-      <div class="navbar">
-        <nav>
-          <ul class="navigation">
-            <li><a class="ham" href="javascript:;">☰</a></li>
-            <li class="active">
-              <a id="nav-portfolio" href="index.html">Portfolio</a>
-            </li>
-            <li><hr /></li>
-            <li><a id="nav-about" href="#">About</a></li>
-            <li><hr /></li>
-            <li>
-              <a id="nav-linkedin" href="#"
-                ><img
-                  src="images/linkedin.png"
-                  alt="linkedin logo link to linkedin profile"
-              /></a>
-            </li>
-          </ul>
-        </nav>
-      </div>
+      <nav>
+        <ul class="navigation">
+          <li><a class="ham" href="javascript:;">☰</a></li>
+          <li class="active">
+            <a id="nav-portfolio" href="index.html">Portfolio</a>
+          </li>
+          <li><hr /></li>
+          <li><a id="nav-about" href="#">About</a></li>
+          <li><hr /></li>
+          <li>
+            <a id="nav-linkedin" href="#"
+              ><img
+                src="images/linkedin.png"
+                alt="linkedin logo link to linkedin profile"
+            /></a>
+          </li>
+        </ul>
+      </nav>
 
       <!-- CONTENT HERE -->
       <main>
-        <div id="myModal" class="modal">
+        <div id="myModal">
           <div id="myModalContainer">
             <span class="close">&times;</span>
             <img id="modal-img" class="modal-content" src="images/logo.png" />
             <div id="modal-caption"></div>
+            <div>
+              CODE SAMPLE BOX
+              <br />
+              more info
+              <br />
+              more info
+              <br />
+              more info
+              <br />
+              more info
+              <br />
+              more info
+              <br />
+              more info
+              <br />
+              more info
+            </div>
           </div>
         </div>
 
@@ -140,7 +155,7 @@
                 <div>
                   <figure>
                     <img
-                      id="myImg"
+                      id="modalImg"
                       src="images/web-com595.jpg"
                       alt="placeholder image"
                       data-bigger-src="http://qnimate.com/wp-content/uploads/2014/03/images2.jpg"
@@ -152,9 +167,26 @@
                 <div class="lang-examples-box">
                   <h4>Websites I've made:</h4>
                   <ul>
-                    <li>Smith River</li>
-                    <li>State of the Art</li>
-                    <li>Big Raft</li>
+                    <li>
+                      <a
+                        href="https://kylecooltron.github.io/wdd230/chamber/index.html"
+                        >Smith River
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="https://kylecooltron.github.io/state-of-the-art/"
+                      >
+                        State of the Art
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="https://kylecooltron.github.io/big-raft-adventures/"
+                      >
+                        Big Raft
+                      </a>
+                    </li>
                   </ul>
                 </div>
                 <div>
@@ -176,7 +208,7 @@
               <div class="language-grid-right title-space-below lang-grid">
                 <div><h3>Interactive Examples</h3></div>
 
-                <div id="interactive-example-2">
+                <div id="interactive-jsexample">
                   <div>
                     <ul>
                       <li>
@@ -239,7 +271,13 @@
                 <div class="lang-examples-box">
                   <h4>This example is found on:</h4>
                   <ul>
-                    <li>State of the Art</li>
+                    <li>
+                      <a
+                        href="https://kylecooltron.github.io/state-of-the-art/"
+                      >
+                        State of the Art
+                      </a>
+                    </li>
                   </ul>
                 </div>
                 <div>
@@ -266,7 +304,11 @@
                 <div><h3>Team Projects</h3></div>
                 <div>
                   <figure>
-                    <img src="images/py-goal700.jpg" alt="placeholder image" />
+                    <img
+                      id="modalImg"
+                      src="images/py-goal700.jpg"
+                      alt="placeholder image"
+                    />
                     <figcaption>
                       Goal Planner - Personal Python Project
                     </figcaption>
@@ -276,8 +318,16 @@
                 <div class="lang-examples-box">
                   <h4>Recent class projects:</h4>
                   <ul>
-                    <li>Cycle</li>
-                    <li>Greed</li>
+                    <li>
+                      <a href="https://github.com/kylecooltron/cse210-05"
+                        >Cycle
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://github.com/kylecooltron/cse210-04"
+                        >Greed
+                      </a>
+                    </li>
                   </ul>
                 </div>
                 <div>

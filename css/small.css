@@ -1,22 +1,17 @@
 /* CSS for default phone screen size */
-
 /* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
 html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
 /*----------- apply a natural box layout model to all elements --------------*/
 * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
-
-/* DEFINE SOME COLORS */
+/* DEFINE VARIABLES */
 :root {
-    /* colors from my palette */
-    --primary-color: #93BF53;
-    --secondary-color: #0e382f;
+    /* colors from palette */
     --background-color: #051325;
+    /* reused values */
+    --max-body-width: 90rem;
 }
-
-
-
-/*
+/* Google fonts list
 font-family: 'Electrolize', sans-serif;
 font-family: 'Playfair Display', serif;
 font-family: 'Press Start 2P', cursive;
@@ -24,178 +19,199 @@ font-family: 'Quicksand', sans-serif;
 */
 
 
+/* - - - - - - - - - - - - - - - - */
 /*----------- BODY --------------*/
+/* - - - - - - - - - - - - - - - - */
 
 body {
-    font-size: 20px;
-    font-family: 'Quicksand', Verdana, sans-serif;
     background-color: black;
     color: white;
-    max-width: 90rem;
+    font-family: 'Quicksand', Verdana, sans-serif;
+    font-size: 20px;
+    max-width: var(--max-body-width);
 }
 
-
-
-h1, h2, h3, h4{
+h1, h2, h3, h4
+{
     font-family: 'Playfair Display', serif;
     margin: 0;
     padding: 1rem;
 }
 
-.body-back {
+#body-background-color 
+{
     background-color: var(--background-color);
 }
 
+/* - - - - - - - - - - - - - - - - */
 /*----------- HEADER --------------*/
+/* - - - - - - - - - - - - - - - - */
 
-header {
- display: flex;
- z-index: 10;
+header 
+{
  background-color: var(--background-color);
+ display: flex;
+ max-width: var(--max-body-width);
+ padding-bottom: 1em;
  position: absolute;
  top:0;
  width: 100%;
- padding-bottom: 1em;
- max-width: 90rem;
-justify-content: center;
-
+ z-index: 10;
+ justify-content: center;
 }
 
-header img {
+header img 
+{
     object-fit:scale-down;
-    margin-left:1em;
 }
 
-header h1 {
+header h1 
+{
     font-size: 1.2em;
 }
-/*----------- NAVIGATION --------------*/
 
-.navbar {
+/* - - - - - - - - - - - - - - - - */
+/*----------- NAVIGATION --------------*/
+/* - - - - - - - - - - - - - - - - */
+
+
+nav {
+    display: flex;
+    justify-content: right;
+    max-width: var(--max-body-width);
+    overflow:hidden;
     position: fixed;
     top: 0;
     width: 100%;
-    max-width: 90rem;
-    overflow:hidden;
     z-index: 100;
 }
 
-nav {
-    z-index: 100;
-    display: flex;
-    justify-content: right;
-
-}
-
-nav ul {
+nav ul
+{
     list-style-type: none;
     margin: 0;
     max-width: 175px;
+    padding:0;
 }
 
-nav ul li a {
-    display: block;
+nav ul li a 
+{
     color: rgb(255, 255, 255);
+    display: block;
     padding: .5rem 1.5em;
-    text-decoration: none;
     text-align: right;
+    text-decoration: none;
     transition: 0.5s;
 }
 
-nav ul {
-    background: linear-gradient(0deg, rgba(38, 204, 255, 0), rgb(59, 89, 99));
-    background-size: 100% 160px;
-    background-position-y: 48px;
-    background-position-x: 40px;
+nav ul 
+{
+    background-position: 48px 40px;
     background-repeat: no-repeat;
+    background-size: 100% 160px;
+    background: linear-gradient(0deg, rgba(38, 204, 255, 0), rgb(59, 89, 99));
 }
 
-/* hamburger menu item style*/
-.ham {
+/* hamburger menu style*/
+.ham 
+{
+    background: linear-gradient(90deg, rgba(38, 204, 255, 0) 10%, rgb(23, 39, 44));
     font-size: 1.4em;
     padding-right: 1em;
-    background: linear-gradient(90deg, rgba(38, 204, 255, 0) 10%, rgb(23, 39, 44));
 }
-
-/* hover colors */
-nav ul li a:hover {
+nav ul li a:hover 
+{
     background: linear-gradient(90deg, rgba(38, 204, 255, 0) , rgba(38, 204, 255, 1));
     color: black;
     font-weight: bold;
 }
-nav ul li.active a {
+nav ul li.active a 
+{
     background: linear-gradient(90deg, rgba(38, 204, 255, 0) 15%, rgb(63, 193, 236));
     color: rgb(154, 215, 255);
     font-weight: bold;
     cursor:default;
 }
-
+/* responsive hamburger menu */
+.navigation li:first-child 
+{
+	display: block;
+}
+.navigation li 
+{
+    display: none;
+}
+.responsive li 
+{
+	display: block;
+}
 /* animate horizontal rules to slide over when menu is opened */
-.responsive hr:nth-child(1) {
+.responsive hr:nth-child(1) 
+{
     animation: slide-down 0.3s ease-out;
     margin: 0;
-    padding: 30;
 }
-
-@keyframes slide-down {
+@keyframes slide-down 
+{
 0% { transform: translateX(100%);}
 100% {transform: translateX(0%);}
 }
+/* end hamburger */
 
-
-/* Code for responsive hamburger menu ***************/
-.navigation li:first-child {
-	display: block;
-}
-.navigation li {
-    display: none;
-}
-/* the onclick JS toggles the .reponsive class from display none (.navigation li) to display block because the responsive class is added to the end of the class list like this in HTML.
-  <ul class="navigation responsive">
-*/
-.responsive li {
-	display: block;
-}
-/* *************** end hamburger */
-
-
+/* - - - - - - - - - - - - - - - - */
 /*----------- MAIN --------------*/
-
+/* - - - - - - - - - - - - - - - - */
 
 /* applies to whole page */
-main {
-
+main
+{
     padding: 0;
-    min-height: 10rem;
 }
 
-main img{
-    box-shadow: 0 3px 10px rgb(0 0 0 / 0.8);
-}
-
-figure p {
+figure p 
+{
     margin-top: 5em;
 }
 
-a {
-    color:rgb(8, 239, 255)
-}
+a 
+{
+    color:rgb(255, 151, 220);
     
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-decoration-color: hsl(266, 19%, 48%);
+    text-shadow: 1px 1px 3px black;
+}
 
-/* reused */
-.text-center{
+a:hover
+{
+    color:rgb(253, 245, 255);
+    text-shadow: 1px 1px 3px black;
+}   
+
+/* reused classes*/
+.text-center
+{
     text-align:center;
 }
-.text-right{
+
+.text-right
+{
     text-align: right;
 }
-.text-left{
+
+.text-left
+{
     text-align: left;
 }
-.text-shadow {
+
+.text-shadow 
+{
     text-shadow: 0 3px 10px rgb(0 0 0 / 0.8);
 }
-.huge-title{
+
+.huge-title
+{
     font-size: 5.5em;
 }
 
@@ -204,45 +220,65 @@ a {
     position: relative;
     overflow: hidden;
 }
-.info-text{
+
+.content img {
+    width: 100%;
+}
+.content h2{
+    font-size: 1.5em;
+}
+.content  figure{
+    margin: 8%;
+}
+
+.info-text
+{
     margin-top: 1em;
     font-size: medium;
     color:rgb(158, 249, 255)
 }
 
-.p-lessmargin {
+.p-lessmargin 
+{
     margin-top: 0.1em;
 }
 
-.spaced-horiz{
+.spaced-horiz
+{
     margin: 0 calc(0.1em + 3vw) 0 calc(0.1em + 3vw);
     font-size: 12px;
     vertical-align:10%;
     opacity: 0.5;
 }
-.vert-align-middle{
+
+.vert-align-middle
+{
     display: inline-block;
     vertical-align: middle;
 }
 
 
+/*----------- SPECIFIC PARTS OF MAIN --------------*/
 
-/* specific */
+/* portfolio title */
 
-#portfolio-title-container {
+#portfolio-title-container 
+{
     margin: 4em 0  3em 0;
     padding: 5em 0 5em 0;
     position: relative;
     z-index: 1;
 }
 
-#portfolio-title-container h1{
+#portfolio-title-container h1
+{
 margin-bottom: 0.3em;
 transform: translateY(calc(var(--scroll-y, 0) * -0.3px));
 animation: appear 0.5s ease-out;
 }
 
-#portfolio-title-container canvas{
+#portfolio-title-container canvas
+{
     animation: appear 1s ease-out;
     position: absolute;
     width: 100%;
@@ -261,8 +297,10 @@ animation: appear 0.5s ease-out;
     z-index: -1;
 }
 
+/* skill sentence */
 
-#skill-sentence {
+#skill-sentence 
+{
     color: rgb(255, 226, 97);
     text-align: center;
     width: 100%;
@@ -273,7 +311,6 @@ animation: appear 0.5s ease-out;
     font-size: calc(0.7em + 0.5vw);
 }
 
-
 #skill-webdev{
     animation: delay-appear 3s ease-out;
 }
@@ -281,6 +318,7 @@ animation: appear 0.5s ease-out;
 #skill-artist{
     animation: delay-appear 6s ease-out;
 }
+
 #skill-x1{
     animation: delay-appear-half 5s ease-out;
 }
@@ -288,10 +326,10 @@ animation: appear 0.5s ease-out;
 #skill-problemsolver{
     animation: delay-appear 9s ease-out;
 }
+
 #skill-x2{
     animation: delay-appear-half 8s ease-out;
 }
-
 
 @keyframes delay-appear-half {
     0% { opacity: 0;}
@@ -310,108 +348,119 @@ animation: appear 0.5s ease-out;
     100% {opacity:1;}
 }
 
-
 /* modal pop-up image container*/
 
-/* The Modal (background) */
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 100; /* Sit on top */
-    padding-top: 150px; /* Location of the box */
+#myModal /* background */
+{
+    display: none;
+    position: fixed;
+    z-index: 100;
+    padding-top: 10%;
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.2); /* Black w/ opacity */
-  }
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0,0,0); /* fallback color */
+    background-color: rgba(0,0,0,0.5);
+}
 
-  #myModalContainer{
+#myModalContainer /* container box */
+{
     width: 90%;
-    height: 70%;
+    height: 90%;
     text-align: center;
     border: 1px solid rgb(16, 36, 102);
-    background-color: #2a5088;
+    background-color: #2c5a96;
     border-radius: 1em;
     box-shadow: 3px 3px 13px rgb(4, 18, 44);
     margin: 0 auto;
+    padding: 0 0 4em 0;
     display: flex;
     flex-direction: column;
-  }
+    max-width: 800px;
+    overflow: auto;
+}
 
-  /* Modal Content (image) */
-  .modal-content {
+
+#myModalContainer::-webkit-scrollbar {
+    width: 14px;
+}
+
+#myModalContainer::-webkit-scrollbar-track {
+    margin: 2em 0;
+    background-color: #152b49;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.9); 
+    border-radius: 6px;
+}
+
+#myModalContainer::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    background-color: #3f7fd8;
+    -webkit-box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.9); 
+}
+
+
+#modal-img  /* image */
+{
     margin: auto;
     display: block;
-    width: 80%;
-    max-width: 700px;
-  }
-  
-  /* Caption of Modal Image */
-  #modal-caption {
-    margin: 3em;
+    width: 90%;
+    max-width: 500px;
+}
+
+#modal-caption /* caption */
+{
     display: block;
-    width: 80%;
+    width: 100%;
     text-align: center;
     color: #ccc;
     padding: 10px 0;
-  }
+}
   
-  /* Add Animation */
-  .modal-content, #modal-caption, #myModalContainer {  
+#modal-img, #modal-caption, #myModalContainer /* Add Animation */
+{  
     -webkit-animation-name: zoom;
     -webkit-animation-duration: 0.4s;
     animation-name: zoom;
     animation-duration: 0.4s;
-  }
+}
   
-  @-webkit-keyframes zoom {
+@-webkit-keyframes zoom 
+{
     from {-webkit-transform:scale(0)} 
     to {-webkit-transform:scale(1)}
-  }
+}
   
-  @keyframes zoom {
+@keyframes zoom 
+{
     from {transform:scale(0)} 
     to {transform:scale(1)}
-  }
+}
   
-  /* The Close Button */
-    .close {
+.close /* close button */
+{
     color: #f1f1f1;
     font-size: 30px;
     font-weight: bold;
     transition: 0.3s;
     text-align: right;
-    margin: 0.8em 1em 0 0;
-  }
+    margin: 0.4em 0.7em 0.4em 0;
+}
   
-  .close:hover,
-  .close:focus {
+.close:hover,
+.close:focus 
+{
     color: #bbb;
     text-decoration: none;
     cursor: pointer;
-  }
-
-
-
-
-
-/* content applies to both left and right grid */
-.content img {
-    width: 100%;
-}
-.content h2{
-    font-size: 1.5em;
-}
-.content  figure{
-    margin: 8%;
 }
 
+/*----------- RIGHT GRID --------------*/
+/* Current right grids: 
+    - CODING
+    - 
+*/
 
-
-/* right grid */
 .right-grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -420,80 +469,23 @@ animation: appear 0.5s ease-out;
     margin-top: 6em;
 }
 
-
-.language-grid-top img
+.right-grid img
 {
-max-width: 500px;
+    border: 1px solid rgba(121, 121, 121, 0.19);
+    box-shadow: 2px 5px 5px rgb(0 0 0 / 0.8);
+    transition: 0.2s;
+
+    margin: 0.25em 0 0.25em 0;
 }
 
-.title-space-below
+.right-grid img:hover
 {
-margin-bottom: 6em;
+    border: 1px solid rgba(255, 255, 255, 0.59);
+    box-shadow: 6px 10px 15px rgb(0 0 0 / 0.8);
+    margin: 0 0 0.5em 0;
 }
 
-.language-title h3, #other-langs-title{
-    color:rgb(187, 168, 59);
-    font-size: 1.5em;
-    text-shadow: 1px 3px 2px rgb(0, 0, 0);
-}
-
-
-.lang-grid 
-{
-    padding: 1em;
-    border-radius: 0.5em;
-}
-.lang-grid img
-{
-    cursor: pointer;
-}
-.lang-grid button
-{
-    background-color: #0f345e;
-    border: 1px solid rgb(255, 255, 255);
-    color:rgb(86, 159, 255);
-    border-radius: 8px;
-    padding: 0.2em 1em 0.2em 1em;
-    font-size: 0.9em;
-    cursor: pointer;
-}
-.lang-grid button:hover
-{
-    background-color: #25548a;
-    border: 1px solid rgb(173, 229, 255);
-    color:rgb(255, 255, 255);
-}
-.lang-grid button:active
-{
-    background-color: #4bbef3;
-}
-
-.language-grid-top
-{
-    background: linear-gradient(rgba(255, 255, 255, 0.4), rgba(162, 211, 252, 0.23) 5%, #9198e500);
-}
-.language-grid-right
-{
-    background: linear-gradient(rgba(127, 176, 250, 0.436), rgba(76, 141, 238, 0.336) 5%, #9198e500);
-}
-.language-grid-left
-{
-    background: linear-gradient(rgba(127, 176, 250, 0.436), rgba(76, 173, 238, 0.336) 5%, #9198e500);
-}
-
-
-.py-proj-grid{
-    display: grid;
-    grid-template-columns: 1fr;
-}
-.other-langs-grid{
-    display: grid;
-    grid-template-columns: 1fr;
-}
-
-
-/* section coding */
-
+/* background and topmost effects */
 #code-title-clip {
     background: url(/images/codingtextback.jpg) repeat center center;
     background-size: cover;
@@ -505,11 +497,11 @@ margin-bottom: 6em;
     animation: scrollbackground 3s linear;
     animation-iteration-count: infinite;
 }
-
+/* shiny flash across CODING animation */
 @keyframes scrollbackground 
 {
     0%, 15% { background-position-x: 0;}
-    80%, 100% {background-position-x: 550px;}
+    80%, 100% {background-position-x: 200px;}
 }
 
 #code-title-clip h2 {
@@ -518,10 +510,10 @@ margin-bottom: 6em;
     font-size: 2em;
     margin-top: 1em;
 }
-
+/*diagonal gradient background*/
 #sect-coding-background {
     background-image: linear-gradient(155deg, rgba(255, 255, 255, 0) 18.8%, #204d77 calc(18.8% + 2px),rgb(59, 107, 179) 25%, var(--background-color) 55%);
-    width: 90rem;
+    width: var(--max-body-width);
     height: 2900px;
     position:absolute;
     right: 0;
@@ -534,11 +526,11 @@ margin-bottom: 6em;
     overflow: hidden;
     z-index: 10;
 }
-
+/* diagonal code text behind background */
 #sect-coding-backtext{
     position:fixed;
     top: -3em;
-    z-index: -0.9;
+
     overflow: hidden;
 }
 #sect-coding-backtext div{
@@ -549,102 +541,148 @@ margin-bottom: 6em;
     transform: rotate(-25deg);
 }
 
-#section-coding img:hover{
-border: 1px solid rgba(255, 255, 255, 0.39);
+
+/* smaller title styles */
+.title-space-below
+{
+    margin-bottom: 6em;
+}
+
+.language-title h3, #other-langs-title
+{
+    color:rgb(187, 168, 59);
+    font-size: 1.5em;
+    text-shadow: 1px 3px 2px rgb(0, 0, 0);
+}
+
+/* style all lang (computer languages I've learned) grids */
+.lang-grid 
+{
+    padding: 1em;
+    border-radius: 0.5em;
+}
+
+.lang-grid img
+{
+    cursor: pointer;
+}
+
+/* all lang grids button style */
+.lang-grid button
+{
+    background-color: #0f345e;
+    border: 1px solid rgb(255, 255, 255);
+    color:rgb(86, 159, 255);
+    border-radius: 8px;
+    padding: 0.2em 1em 0.2em 1em;
+    font-size: 0.9em;
+    cursor: pointer;
+}
+
+.lang-grid button:hover
+{
+    background-color: #25548a;
+    border: 1px solid rgb(173, 229, 255);
+    color:rgb(255, 255, 255);
+}
+
+.lang-grid button:active
+{
+    background-color: #4bbef3;
+}
+
+/* top (HTML/CSS/first) grid */
+.language-grid-top
+{
+    background: linear-gradient(rgba(255, 255, 255, 0.4), rgba(162, 211, 252, 0.23) 5%, #9198e500);
+}
+
+.language-grid-top img
+{
+    max-width: 500px;
+}
+
+/* right (Javascript/second) grid */
+.language-grid-right
+{
+    background: linear-gradient(rgba(127, 176, 250, 0.436), rgba(76, 141, 238, 0.336) 5%, #9198e500);
+}
+
+/* left (Python/third) grid */
+.language-grid-left
+{
+    background: linear-gradient(rgba(127, 176, 250, 0.436), rgba(76, 173, 238, 0.336) 5%, #9198e500);
 }
 
 
+.lang-examples-box
+{
+    margin: 2em;
+}
 
-#interactive-example-2 
+
+/* extra grid for python projects */
+.py-proj-grid{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+/* extra grid for other languages (GML/Lite-C) */
+.other-langs-grid{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+
+/* interactive Javascript example */
+#interactive-jsexample 
 {
     text-align: center;
     align-items: center;
     justify-items: center;
     border-radius: 1em;
-    color:rgb(248, 238, 91);
+    color:rgb(255, 224, 51);
     font-weight: bold;
     margin: 1em;
     border: 1px solid white;
+    background-color: #17283b;
     font-weight: lighter;
     font-size: 0.9em;
 }
 
-#interactive-example-2 li h3{
+#interactive-jsexample li h3{
     font-family: 'Quicksand', sans-serif;
     font-weight: lighter;
+    font-size: 1.3em;
+    color: rgb(131, 205, 255);
 }
 
-#interactive-example-2 output
+#interactive-jsexample output
 {
 font-size: 0.7em;
 }
+#interactive-jsexample label
+{
+font-size: 0.9em;
+}
 
-#interactive-example-2 canvas{
+#interactive-jsexample canvas{
     margin: 0 1em 1em 1em;
     border: 4px solid black;
     width: 90%;
 }
 
-#interactive-example-2 h3, #interactive-example-2 ul{
+#interactive-jsexample h3, #interactive-jsexample ul{
     padding: 0;
 }
-#interactive-example-2 ul
+#interactive-jsexample ul
 {
     margin-bottom: 0;
 }
-#interactive-example-2 ul li 
+#interactive-jsexample ul li 
 {
     list-style: none; /* removes the bullets! */
     padding: 0.5em;
 }
-
-
-
-
-
-
-
-
-/* section graphics */
-#sect-graphics-background {
-    background-image: linear-gradient(205deg, var(--background-color) 18.8%, #772049 calc(18.8% + 2px),rgb(179, 59, 133) 25%, var(--background-color) 55%);
-    width: 90rem;
-    height: 2900px;
-    position:absolute;
-    left: 0;
-    top: 0;
-}
-
-#section-graphics {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-}
-
-/* left grid */
-.left-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    padding: 1rem 4%;
-    grid-gap: 2em;
-}
-
-.left-grid div:nth-child(1){ /*Aside*/
-    margin-top: -1em;
-    font-size: 0.9em;
-    margin-bottom: 1.5em;
-}
-
-.left-grid div:nth-child(11){ /*For more information*/
-    display: none;
-}
-
-.left-grid div:nth-child(11) p{
-    padding: 1em;
-}
-
-
-
 
 /* git slideshow */
 #git-repo-slideshow {
@@ -669,6 +707,54 @@ width: 90%;
 .slideshow-box button{
     margin: 1.5em;
 }
+
+
+
+/*----------- LEFT GRID --------------*/
+/* Current left grids: 
+    - GRAPHICS
+    - 
+*/
+
+/* left grid */
+.left-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 1rem 4%;
+    grid-gap: 2em;
+}
+
+.left-grid div:nth-child(1){ /*Aside*/
+    margin-top: -1em;
+    font-size: 0.9em;
+    margin-bottom: 1.5em;
+}
+
+.left-grid div:nth-child(11){ /*For more information*/
+    display: none;
+}
+
+.left-grid div:nth-child(11) p{
+    padding: 1em;
+}
+
+/* section graphics background */
+#sect-graphics-background 
+{
+    background-image: linear-gradient(205deg, var(--background-color) 18.8%, #772049 calc(18.8% + 2px),rgb(179, 59, 133) 25%, var(--background-color) 55%);
+    width: var(--max-body-width);
+    height: 2900px;
+    position:absolute;
+    left: 0;
+    top: 0;
+}
+
+#section-graphics {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
 
 
 

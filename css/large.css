@@ -25,6 +25,14 @@ body {
 }
 
 
+/* modal image box */
+#modal-img  /* image */
+{
+    max-width: 700px;
+}
+
+
+
 .right-grid div:nth-child(2){ /*HTML/CSS*/
   grid-column: 3/5;
   grid-row: 2/3;
@@ -70,7 +78,8 @@ body {
 
 .language-grid-top div:nth-child(3)
 {
-  grid-column: 3/4;
+  margin-right: calc(-7em + 14vw);
+  grid-column:3/4;
   grid-row: 2/3;
 }
 

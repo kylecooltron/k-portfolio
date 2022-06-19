@@ -21,6 +21,26 @@ font-size: 18px;
   margin: 0;
 }
 
+
+/* modal image box */
+
+#myModal /* background */
+{
+    padding-top: 1em;
+}
+
+#myModalContainer /* container box */
+{
+    width: 90%;
+    height: 95%;
+}
+
+#modal-img  /* image */
+{
+    max-width: 534px;
+}
+
+
 /* right grid */
 
 #code-title-clip{
