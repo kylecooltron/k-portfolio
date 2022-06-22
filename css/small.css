@@ -622,10 +622,28 @@ animation: appear 0.5s ease-out;
 
 
 /* extra grid for python projects */
-.py-proj-grid{
+.py-proj-grid
+{
     display: grid;
     grid-template-columns: 1fr;
 }
+
+.py-proj-grid div
+{
+    margin: 1em;
+    width: 100%;
+}
+
+.py-proj-grid figcaption
+{
+color:rgb(63, 193, 236);
+font-size: 0.9em;
+margin-left: 1em;
+}
+
+
+
+
 /* extra grid for other languages (GML/Lite-C) */
 .other-langs-grid{
     display: grid;
@@ -683,6 +701,11 @@ font-size: 0.9em;
     list-style: none; /* removes the bullets! */
     padding: 0.5em;
 }
+
+
+
+
+
 
 /* git slideshow */
 #git-repo-slideshow {

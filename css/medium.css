@@ -99,6 +99,13 @@ font-size: 18px;
 .py-proj-grid{
   grid-template-columns: 1fr 1fr;
 }
+.py-proj-grid div
+{
+    margin: 1em;
+    width: 100%;
+}
+
+
 .other-langs-grid{
   display: grid;
   grid-template-columns: 1fr 1fr;
