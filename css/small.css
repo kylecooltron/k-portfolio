@@ -480,11 +480,17 @@ animation: appear 0.5s ease-out;
 
 .right-grid img:hover
 {
-    border: 1px solid rgba(255, 255, 255, 0.59);
+    border-left: 1px solid rgba(125, 202, 170, 0.829);
+    border-right: 1px solid rgba(173, 147, 136, 0.59);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.59);
     box-shadow: 6px 10px 15px rgb(0 0 0 / 0.8);
     margin: 0 0 0.5em 0;
+    cursor: pointer;
 }
 
+input{
+    cursor: pointer;
+}
 /* background and topmost effects */
 #code-title-clip {
     background: url(/images/codingtextback.jpg) repeat center center;
@@ -577,6 +583,23 @@ animation: appear 0.5s ease-out;
     padding: 0.2em 1em 0.2em 1em;
     font-size: 0.9em;
     cursor: pointer;
+    margin: 0.2em;
+}
+
+#stopbutton
+{
+    background-color: #0f141a;
+    border: 1px solid rgb(56, 31, 31);
+    color:rgb(139, 52, 52);
+    font-size: 0.8em;
+    padding: 0.2em 0.5em;
+    margin-left: -2.2em;
+    display: none;
+}
+
+#randomizebutton{
+    font-size: 0.8em;
+    border: 1px solid rgb(95, 103, 121);
 }
 
 .lang-grid button:hover
@@ -628,11 +651,6 @@ animation: appear 0.5s ease-out;
     grid-template-columns: 1fr;
 }
 
-.py-proj-grid div
-{
-    margin: 1em;
-    width: 100%;
-}
 
 .py-proj-grid figcaption
 {
@@ -708,28 +726,93 @@ font-size: 0.9em;
 
 
 /* git slideshow */
+
 #git-repo-slideshow {
     background-color: rgb(5, 26, 56);
     border-top: 1px solid rgb(32, 69, 124);
     border-bottom: 1px solid rgb(32, 69, 124);
     text-align: center;
-    margin: 0em 0 5em 0;
+    margin: 5em 0 5em 0;
+    position: relative;
+    height: 27em;
 }
+
+#git-repo-slideshow h3{
+font-size: 1.4em;
+}
+
+.slideshow-buttons-box {
+    display: inline-block;
+    margin-bottom: 1em;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%);
+    width: 50em;
+    z-index: 1;
+    
+}
+
+.slideshow-buttons-box button{
+    margin: 0 9em;
+    background-color: #04234b;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 5px;
+    padding: 0.8em;
+}
+
+
 .slideshow-box {
     display: flex;
     align-items: center;
-    justify-content: center;
+    
+    position: absolute;
+    top: 6em;
+    height: 20em;
+    width: 2000px;
 }
-.slideshow-box img{
-width: 90%;
+
+.slideshow-box figure{
+    padding: 2.4em;
+    margin: 0;
 }
-.slideshow-box button, .slideshow-box div {
-    display: inline-block;
-    margin-bottom: 1em;
+ 
+.slideshow-box figcaption{
+    font-size: 0.4em;
+    margin-top: 0.6em;
 }
-.slideshow-box button{
-    margin: 1.5em;
+.slideshow-box figure.active figcaption{
+    font-size: 1em;
 }
+
+/* slides opacty */
+.slideshow-box figure{
+    opacity: 0.1;
+}
+
+.slideshow-box figure.semiactive {
+    opacity: 0.5;
+}
+.slideshow-box figure.active {
+    opacity: 1;
+}
+
+/* slides size */
+.slideshow-box figure img{
+    transition: 0.1s;
+    border-radius: 5px;
+    }
+
+.slideshow-box figure.active img{
+width: 20rem;
+border: 1px solid white;
+}
+
+.slideshow-box  figure.semiactive img{
+    width: 10rem;
+}
+
 
 
 

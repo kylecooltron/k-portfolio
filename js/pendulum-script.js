@@ -11,7 +11,6 @@ Created by: Kyle Coulon 2021
 //init variables
 var exm2_canvas = document.getElementById("exm2Canvas");
 var exm2_context = exm2_canvas.getContext("2d");
-
 var pstep; //used to run painstep on interval
 
 //init drawing variables
@@ -175,12 +174,15 @@ function drawStep(){
 function startPainting(){
   resetPainting();
   stopPainting();
+
   pstep = window.setInterval(drawStep,10);
+  document.getElementById("stopbutton").style.display = "inline-block";
 }
 
 function stopPainting(){
   window.clearInterval(pstep);
   bake();
+  stopbutton.style.display = "none";
 }
 
 function resetPainting(){

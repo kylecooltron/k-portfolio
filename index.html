@@ -60,7 +60,12 @@
         <div id="myModal">
           <div id="myModalContainer">
             <span class="close">&times;</span>
-            <img id="modal-img" class="modal-content" src="images/logo.png" />
+            <img
+              id="modal-img"
+              class="modal-content"
+              src="images/logo.png"
+              alt="modal image"
+            />
             <div id="modal-caption"></div>
             <div>
               CODE SAMPLE BOX
@@ -142,7 +147,7 @@
                 <hr />
                 <h3>HTML / CSS</h3>
                 <hr />
-                <p>★★★★☆</p>
+
                 <p>I am currently enrolled in WDD 230.</p>
               </div>
 
@@ -201,7 +206,7 @@
                 <hr />
                 <h3>Javascript</h3>
                 <hr />
-                <p>★★★☆☆</p>
+
                 <p>Mostly using vanilla js to make cool things</p>
               </div>
 
@@ -257,7 +262,16 @@
                         <output id="spiralo">50</output>
                       </li>
                       <li>
-                        <button onclick="randomizeParams()">Randomize</button>
+                        <button
+                          id="randomizebutton"
+                          onclick="randomizeParams()"
+                        >
+                          Randomize
+                        </button>
+                        <br />
+                        <button id="stopbutton" onclick="stopPainting()">
+                          &times;
+                        </button>
                         <button onclick="startPainting()">Go!</button>
                       </li>
                     </ul>
@@ -292,7 +306,7 @@
                 <hr />
                 <h3>Python</h3>
                 <hr />
-                <p>★★☆☆☆</p>
+
                 <p>Classes through BYU Idaho:</p>
                 <ul>
                   <li>Programming with Functions</li>
@@ -423,13 +437,80 @@
 
         <div class="content">
           <div id="git-repo-slideshow">
+            <hr />
             <h3>Git Hub Repositories</h3>
+            <hr />
+            <div class="slideshow-buttons-box">
+              <button id="git-leftbutton">◄</button>
+              <button id="git-rightbutton">►</button>
+            </div>
             <div class="slideshow-box">
-              <button>◄</button>
-              <div>
+              <figure class="git-slide">
                 <img src="images/web-raft500.jpg" alt="placeholder image" />
-              </div>
-              <button>►</button>
+                <figcaption>
+                  <a href="https://github.com/kylecooltron/k-portfolio">
+                    Kyle's Portfolio
+                  </a>
+                </figcaption>
+              </figure>
+              <figure class="git-slide">
+                <img src="images/web-raft500.jpg" alt="placeholder image" />
+                <figcaption>
+                  <a
+                    href="https://github.com/kylecooltron/wdd230/tree/main/chamber"
+                  >
+                    Chamber of Commerce
+                  </a>
+                </figcaption>
+              </figure>
+              <figure class="git-slide semiactive">
+                <img src="images/web-raft500.jpg" alt="placeholder image" />
+                <figcaption>
+                  <a href="https://github.com/kylecooltron/state-of-the-art">
+                    State of the Art
+                  </a>
+                </figcaption>
+              </figure>
+              <figure class="git-slide active">
+                <img src="images/web-raft500.jpg" alt="placeholder image" />
+                <figcaption>
+                  <a href="https://github.com/kylecooltron/big-raft-adventures">
+                    Big Raft Adventures
+                  </a>
+                </figcaption>
+              </figure>
+              <figure class="git-slide semiactive">
+                <img src="images/web-raft500.jpg" alt="placeholder image" />
+                <figcaption>
+                  <a href="https://github.com/kylecooltron/big-raft-adventures">
+                    Blah
+                  </a>
+                </figcaption>
+              </figure>
+              <figure class="git-slide">
+                <img src="images/web-raft500.jpg" alt="placeholder image" />
+                <figcaption>
+                  <a href="https://github.com/kylecooltron/big-raft-adventures">
+                    Big Raft Adventures
+                  </a>
+                </figcaption>
+              </figure>
+              <figure class="git-slide">
+                <img src="images/web-raft500.jpg" alt="placeholder image" />
+                <figcaption>
+                  <a href="https://github.com/kylecooltron/big-raft-adventures">
+                    Big Raft Adventures
+                  </a>
+                </figcaption>
+              </figure>
+              <figure class="git-slide">
+                <img src="images/web-raft500.jpg" alt="placeholder image" />
+                <figcaption>
+                  <a href="https://github.com/kylecooltron/big-raft-adventures">
+                    Big Raft Adventures
+                  </a>
+                </figcaption>
+              </figure>
             </div>
           </div>
         </div>
@@ -554,6 +635,7 @@
         <script src="js/storescroll-script.js"></script>
         <script src="js/pendulum-script.js"></script>
         <script src="js/modimg-script.js"></script>
+        <script src="js/gitslideshow-script.js"></script>
       </footer>
     </div>
   </body>
