@@ -557,6 +557,41 @@ input{
     margin-bottom: 6em;
 }
 
+.py-last-semster h3
+{
+    width: 100%;
+    background: linear-gradient(to right,var(--background-color), rgb(14, 38, 70) 15%, var(--background-color));
+    margin: 1em 0 1em 0;
+}
+
+.py-proj-grid p
+{
+    font-size: 0.9em;
+    margin-left: 1em;
+    color:rgb(189, 189, 189);
+}
+
+.py-proj-grid h4
+{
+    margin: 0;
+    color:rgb(84, 167, 235);
+    font-weight: normal;
+    font-size: 1.1em;
+    font-family: 'Quicksand', sans-serif;
+
+}
+.py-proj-grid figure
+{
+    margin: 0.4em 0.8em;
+}
+
+.py-proj-grid div
+{
+margin: 1em 0.3em;
+}
+
+
+
 .language-title h3, #other-langs-title
 {
     color:rgb(187, 168, 59);

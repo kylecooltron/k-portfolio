@@ -211,6 +211,24 @@ grid-row: 1/2;
 
 
 
+.py-last-semster h3
+{
+    margin: 1em 0 1em 0;
+}
+
+.py-last-semster .py-proj-grid figure
+{
+    margin: 0.4em 0.2em;
+}
+
+.py-last-semster .py-proj-grid div
+{
+    margin: 1em 0.3em;
+}
+
+
+
+
 /*----------- FOOTER --------------*/
     
 .foot-logo-box{
