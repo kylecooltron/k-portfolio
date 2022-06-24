@@ -734,6 +734,7 @@ margin-left: 1em;
 .other-langs-grid{
     display: grid;
     grid-template-columns: 1fr;
+    margin: 2em 0.8em;
 }
 .other-langs-grid div:nth-child(1){ /*Lite-C*/
 color: rgb(166, 235, 203);

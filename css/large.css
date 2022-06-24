@@ -138,7 +138,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr  1fr 1fr 1fr;
   grid-gap: 4em;
-  margin: 0 4em;
+  margin: 3em 4em;
 }
 .other-langs-grid div:nth-child(1){ /*Lite-C*/
   grid-column: 1/4;
@@ -291,7 +291,7 @@
 
 
   .other-langs-grid{
-    margin: 0 8em;
+    margin: 3em 8em;
   }
 
 }
