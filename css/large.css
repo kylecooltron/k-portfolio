@@ -278,6 +278,11 @@
   width: 100%;
 }
 
+.classes-flex
+{
+    display: flex;
+}
+
 
   /*----------- FOOTER --------------*/
 

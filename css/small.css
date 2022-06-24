@@ -552,7 +552,6 @@ input{
     transform: rotate(-25deg);
 }
 
-
 /* smaller title styles */
 .title-space-below
 {
@@ -599,6 +598,11 @@ margin: 1em 0.3em;
     color:rgb(187, 168, 59);
     font-size: 1.5em;
     text-shadow: 1px 3px 2px rgb(0, 0, 0);
+}
+
+.language-title li
+{
+    margin: 0.7em 0.1em;
 }
 
 /* style all lang (computer languages I've learned) grids */
@@ -680,6 +684,26 @@ color: rgb(146, 160, 167);
 }
 
 /* top (HTML/CSS/first) grid */
+
+
+#gpa-span
+{
+font-size: 0.8em;
+font-style: italic;
+color: rgb(175, 228, 235);
+text-shadow: 1px 1px 3px rgb(11, 7, 255);
+}
+
+.classes-flex
+{
+    display: flex;
+}
+.classes-flex p
+{
+    margin: auto 1em;
+}
+
+
 .language-grid-top
 {
     background: linear-gradient(rgba(255, 255, 255, 0.4), rgba(162, 211, 252, 0.23) 5%, #9198e500);

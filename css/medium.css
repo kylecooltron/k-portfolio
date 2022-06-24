@@ -245,6 +245,11 @@ grid-row: 1/2;
     margin: 1em 0.3em;
 }
 
+.classes-flex
+{
+    display: block;
+}
+
 
 
 
