@@ -29,11 +29,13 @@
 
 
   /* modal image box */
-  #modal-img
+  #modal-img {   /* image */
+    max-width: 1280px;
+  }
 
-  /* image */
-    {
-    max-width: 700px;
+  #myModalContainer /* container box */
+  {
+      height: 90%;
   }
 
 
@@ -128,23 +130,43 @@
     grid-column: 1/4;
   }
 
-  .other-langs-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
 
-  .other-langs-grid div:nth-child(1) {
-    /*Lite-C*/
-    grid-column: 1/2;
-    grid-row: 1/2;
-  }
 
-  .other-langs-grid div:nth-child(4) {
-    /*GML*/
-    grid-column: 2/3;
-    grid-row: 1/2;
-  }
+/* other languages grid */
 
+.other-langs-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr  1fr 1fr 1fr;
+  grid-gap: 4em;
+  margin: 0 4em;
+}
+.other-langs-grid div:nth-child(1){ /*Lite-C*/
+  grid-column: 1/4;
+  grid-row: 1/2;
+}
+.other-langs-grid div:nth-child(4){ /*GML*/
+  grid-column: 4/6;
+  grid-row: 1/2;
+}
+
+.other-langs-grid div:nth-child(2){ /*Algorithms*/
+  grid-column: 1/4;
+  grid-row: 2/3;
+}
+.other-langs-grid div:nth-child(3){ /*Data Structures*/
+  grid-column: 4/6;
+  grid-row: 2/4;
+}
+
+.other-langs-grid div:nth-child(5){ /*Networking*/
+  grid-column: 1/3;
+  grid-row: 3/5;
+}
+
+.other-langs-grid div:nth-child(6){ /*Object Oriented Design*/
+  grid-column: 3/6;
+  grid-row: 4/5;
+}
 
 
 
@@ -231,8 +253,8 @@
 
 /* python projects grid */
 
-.py-proj-grid{
-  grid-template-columns: 1fr 1fr;
+.py-proj-grid {
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 .py-proj-grid div
@@ -244,14 +266,16 @@
   grid-column: 1/2;
   grid-row: 1/2;
 }
+
 .py-proj-grid div:nth-child(2){
   grid-column: 2/3;
   grid-row: 1/2;
 }
+
 .py-proj-grid div:nth-child(3){
-  grid-column: 1/3;
-  width: 70%;
-  justify-self: center;
+  grid-column: 3/4;
+  grid-row: 1/2;
+  width: 100%;
 }
 
 
@@ -264,31 +288,11 @@
 /* 64em is also 1028px (if basefont is 16px) */
 @media only screen and (min-width: 80rem) {
 
-  .py-proj-grid {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-  
-  .py-proj-grid div
-  {
-      margin: 0.5em;
-  }
-  
-  .py-proj-grid div:nth-child(1){
-    grid-column: 1/2;
-    grid-row: 1/2;
-  }
-  
-  .py-proj-grid div:nth-child(2){
-    grid-column: 2/3;
-    grid-row: 1/2;
-  }
-  
-  .py-proj-grid div:nth-child(3){
-    grid-column: 3/4;
-    grid-row: 1/2;
-    width: 100%;
-  }
 
+
+  .other-langs-grid{
+    margin: 0 8em;
+  }
 
 }
 
