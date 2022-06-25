@@ -278,6 +278,13 @@
   width: 100%;
 }
 
+.py-proj-grid div:nth-child(4){
+  grid-column: 1/4;
+  grid-row: 2/3;
+  width: 50%;
+  justify-self: center;
+}
+
 .classes-flex
 {
     display: flex;
