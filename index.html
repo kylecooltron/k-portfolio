@@ -64,8 +64,10 @@
               id="modal-img"
               class="modal-content"
               src="images/logo.png"
-              alt="modal image"
+              alt=""
             />
+            Github Link:
+            <a href="#" id="modal-git-link"></a>
             <div id="modal-caption"></div>
           </div>
         </div>
@@ -152,10 +154,11 @@
                 <div>
                   <figure>
                     <img
-                      id="modalImg"
+                      class="modalImg"
                       src="images/web-com595.jpg"
-                      alt="Features: <br> Dynamic weather using API <br> Directory page populated by JSON <br> DOM manipulated elements <br> Sign Up form and other buttons"
+                      alt="Dynamic weather using API <br> Directory page populated by JSON <br> DOM manipulated elements <br> Sign Up form and other buttons"
                       data-bigger-src="images/web-com1280.jpg"
+                      data-git-link="https://kylecooltron.github.io/wdd230/chamber/index.html"
                     />
                     <figcaption>
                       Smith River
@@ -328,20 +331,21 @@
                 <div>
                   <figure>
                     <img
-                      id="modalImg"
+                      class="modalImg"
                       src="images/py-greed.jpg"
-                      alt="placeholder image"
+                      alt="Abstract Classes <br> Keyboard Service <br> Video Service <br> Team Effort"
                       data-bigger-src="images/py-greedmod.jpg"
+                      data-git-link="https://github.com/kylecooltron/cse210-04"
                     />
                     <figcaption>
-                      Goal Planner
-                      <small><em>- Personal Python Project</em></small>
+                      Greed
+                      <small><em>- Team Python Project</em></small>
                     </figcaption>
                   </figure>
                 </div>
 
                 <div class="lang-examples-box">
-                  <h4>Recent class projects:</h4>
+                  <h4>Recent projects:</h4>
                   <ul>
                     <li>
                       <a href="https://github.com/kylecooltron/cse210-05"
@@ -380,22 +384,27 @@
                     <h4>Badge Maker</h4>
                     <figure>
                       <img
-                        id="modalImg"
+                        class="modalImg"
                         src="images/py-badgemaker700.jpg"
-                        alt="placeholder image"
+                        alt="GUI <br> File System <br> List Sorting"
                         data-bigger-src="images/py-badgemakermod.jpg"
+                        data-git-link="https://github.com/kylecooltron/py-projects/tree/master/Badge%20Maker"
                       />
                     </figure>
-                    <p>Program for making employee badges.</p>
+                    <p>
+                      Program for making badges using employee information.
+                      Features a simple save/open system and list sorting.
+                    </p>
                   </div>
                   <div>
                     <h4>Madlib</h4>
                     <figure>
                       <img
-                        id="modalImg"
+                        class="modalImg"
                         src="images/py-madlibs700.jpg"
-                        alt="placeholder image"
+                        alt="String Concatenation <br> Form Elements"
                         data-bigger-src="images/py-madlibsmod.jpg"
+                        data-git-link="https://github.com/kylecooltron/py-projects/tree/master/Adlib"
                       />
                     </figure>
                     <p>Made a Madlib program with a GUI</p>
@@ -404,29 +413,35 @@
                     <h4>Scene Generator</h4>
                     <figure>
                       <img
-                        id="modalImg"
+                        class="modalImg"
                         src="images/py-scene700.jpg"
-                        alt="Functions for drawing gradients, grass, and clouds."
+                        alt="Rendering Shapes <br> Function for drawing gradients <br> Interpolating Colors <br> Randomized Clouds <br> Grass"
                         data-bigger-src="images/py-scenemod.jpg"
+                        data-git-link="https://github.com/kylecooltron/py-projects/tree/master/Scene%20Render"
                       />
                     </figure>
                     <p>
-                      I wrote methods to interpolate color gradients and
-                      generate randomized clouds.
+                      Renders a scene using shapes. I wrote simple methods for
+                      interpolating color gradients and generating randomized
+                      clouds.
                     </p>
                   </div>
                   <div>
-                    <h4>Goal Planner</h4>
+                    <h4>
+                      Goal Planner
+                      <small><em>(Personal Project Idea)</em></small>
+                    </h4>
                     <figure>
                       <img
-                        id="modalImg"
+                        class="modalImg"
                         src="images/py-goal700.jpg"
-                        alt="Functions for drawing gradients, grass, and clouds."
+                        alt="Personal Project Idea <br> Multi-screen GUI <br> Keeps track of users <br> Saves data in organized way"
                         data-bigger-src="images/py-goalmod.jpg"
+                        data-git-link="https://github.com/kylecooltron/py-projects/tree/master/Goal%20Planner"
                       />
                     </figure>
                     <p>
-                      This was my personal project last semester. Uses .pkl
+                      This was my personal project last semester. Uses (.pkl)
                       files to store user information and keep track of life
                       goals.
                     </p>
@@ -440,7 +455,7 @@
                 <hr />
                 <div class="other-langs-grid">
                   <div>
-                    <h4>Lite-C</h4>
+                    <h3>Lite-C</h3>
                     Lite-C is a C based language used by
                     <a href="http://www.3dgamestudio.com/">3DGS</a> <br />
                     <small>(no longer supported)</small>
@@ -454,10 +469,13 @@
                       />
                       <figcaption>
                         Lava Maze Game
+
                         <small>
-                          - The player wanders through an infinite maze as the
-                          screen scrolls down faster and faster.</small
-                        >
+                          <div class="extra-margin-top">
+                            The player wanders through an infinite maze as the
+                            screen scrolls down faster and faster.
+                          </div>
+                        </small>
                       </figcaption>
                     </figure>
                   </div>
@@ -471,14 +489,16 @@
                       <figcaption>
                         Pattern Memorization App
                         <small>
-                          - This project was designed to have a professional
-                          look and user experience.</small
-                        >
+                          <div class="extra-margin-top">
+                            This project was designed to have a professional
+                            look and user experience.
+                          </div>
+                        </small>
                       </figcaption>
                     </figure>
                   </div>
                   <div>
-                    <h4>GML</h4>
+                    <h3>GML</h3>
                     Game Maker Language is used by
                     <a href="https://gamemaker.io/en">Game Maker Studio</a>
                   </div>
@@ -492,10 +512,11 @@
                       <figcaption>
                         Simple Online Shooter
                         <small>
-                          - I made all the models and animations from scratch.
-                          Dead-reckoning was used to predict player
-                          movement.</small
-                        >
+                          <div class="extra-margin-top">
+                            I made all the models and animations from scratch.
+                            Dead-reckoning was used to predict player movement.
+                          </div>
+                        </small>
                       </figcaption>
                     </figure>
                   </div>
@@ -509,10 +530,12 @@
                       <figcaption>
                         Home-made Animator <br />
                         <small>
-                          This project was used to create animated models for
-                          one of my games. I used quaternions for rotations, and
-                          inheritance to enable model parts to be connected by
-                          joints.
+                          <div class="extra-margin-top">
+                            This project was used to create animated models for
+                            one of my games. I used quaternions for rotations,
+                            and inheritance to enable model parts to be
+                            connected by joints.
+                          </div>
                         </small>
                       </figcaption>
                     </figure>
@@ -574,7 +597,7 @@
                   <a
                     href="https://github.com/kylecooltron/py-projects/tree/master/Adlib"
                   >
-                    Adblib Python
+                    Madlib Python
                   </a>
                 </figcaption>
               </figure>

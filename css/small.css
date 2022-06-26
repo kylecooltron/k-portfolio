@@ -374,14 +374,21 @@ animation: appear 0.5s ease-out;
     border-radius: 1em;
     box-shadow: 3px 3px 13px rgb(0, 0, 0);
     margin: 0 auto;
-    padding: 0 0 4em 0;
+    padding: 0 0 1em 0;
     display: flex;
     flex-direction: column;
     max-width: 800px;
     overflow: auto;
 }
-
-
+.other-langs-grid figure small .extra-margin-top
+{
+    margin-top: 0.5em;
+    color: rgb(161, 198, 219);
+}
+.other-langs-grid h3
+{
+    color: rgb(100, 192, 253);
+}
 #myModalContainer::-webkit-scrollbar {
     width: 14px;
 }
@@ -404,7 +411,7 @@ animation: appear 0.5s ease-out;
 {
     margin: auto;
     display: block;
-    width: 100%;
+    width: 90%;
     max-width: 500px;
     padding: 0.5em;
 }
@@ -417,8 +424,21 @@ animation: appear 0.5s ease-out;
     color: #ccc;
     padding: 10px 10px;
     font-size: 0.9em;
+    line-height: 1.4em;
 }
+
+#modal-git-link
+{
+    display: block;
+    width: 100%;
+    text-align: center;
+    color: rgb(34, 158, 207);
+    padding: 10px 10px;
+    font-size: 0.7em;
+    text-decoration: none;
   
+}
+
 #modal-img, #modal-caption, #myModalContainer /* Add Animation */
 {  
     -webkit-animation-name: zoom;
