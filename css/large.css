@@ -291,6 +291,16 @@
 }
 
 
+.video-grid
+{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 2em;
+    
+}
+
+
+
   /*----------- FOOTER --------------*/
 
 }
@@ -300,7 +310,11 @@
 /* 64em is also 1028px (if basefont is 16px) */
 @media only screen and (min-width: 80rem) {
 
-
+  .video-grid iframe{
+    width: 560px;
+    height: 315px;
+  }
+  
 
   .other-langs-grid{
     margin: 3em 8em;
