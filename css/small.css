@@ -49,12 +49,11 @@ h1, h2, h3, h4
 
 header 
 {
- background-color: var(--background-color);
+
  display: flex;
  max-width: var(--max-body-width);
- padding-bottom: 1em;
  position: absolute;
- top:0;
+ top:2em;
  width: 100%;
  z-index: 10;
  justify-content: center;
@@ -262,9 +261,16 @@ a:hover
 
 /* portfolio title */
 
+#port-title-back
+{
+    padding: 2em 0 0 0;
+    background: linear-gradient(var(--background-color), rgba(255, 255, 255, 0));
+    z-index: 1;
+    position: relative;
+}
 #portfolio-title-container 
 {
-    margin: 4em 0  3em 0;
+    margin: 1em 0  3em 0;
     padding: 5em 0 5em 0;
     position: relative;
     z-index: 1;
@@ -406,10 +412,26 @@ animation: appear 0.5s ease-out;
     -webkit-box-shadow: inset 0 0 4px rgba(0, 183, 255, 0.9); 
 }
 
-#gif{
+
+
+#gif
+{
     width: 300px;
+    border: 1px solid rgb(196, 45, 196);
+    border-radius: 6px;
+    margin-top: 2em;
 }
 
+#video-title-color
+{
+    font-size: 1.5em;
+    text-shadow: 1px 3px 2px rgb(0, 0, 0);
+    color: rgb(192, 97, 144);
+}
+iframe
+{
+    border: 1px solid rgb(119, 22, 70);
+}
 #modal-img  /* image */
 {
     margin: auto;
@@ -501,13 +523,14 @@ animation: appear 0.5s ease-out;
 
 .lang-grid img,  .py-proj-grid img
 {
-    border: 1px solid rgb(11, 124, 124);
+    border: 1px solid rgb(180, 88, 177);
     box-shadow: 2px 5px 5px rgb(0 0 0 / 0.8);
     transition: 0.2s;
+    border-radius: 8px;
 }
 
 .other-langs-grid img{
-    border-radius: 1em;
+    border: 8px solid rgb(14, 31, 56);
 }
 
 
@@ -654,7 +677,7 @@ margin: 1em 0.3em;
 .lang-grid button
 {
     background-color: #0f345e;
-    border: 1px solid rgb(255, 255, 255);
+    border: 1px solid rgb(119, 34, 105);
     color:rgb(86, 159, 255);
     border-radius: 8px;
     padding: 0.2em 1em 0.2em 1em;
@@ -907,10 +930,16 @@ font-size: 1.4em;
     background-color: #04234b;
     color: rgb(255, 255, 255);
     border: none;
-    border-radius: 5px;
+   
     padding: 0.8em;
+    border: 1px solid rgb(77, 17, 85);
 }
-
+.slideshow-buttons-box button:hover{
+  border: 1px solid rgb(122, 42, 133);
+}
+.slideshow-buttons-box button:active{
+    border: 1px solid white;
+  }
 
 .slideshow-box {
     display: flex;
@@ -991,6 +1020,31 @@ border: 1px solid white;
 
 .left-grid div:nth-child(11) p{
     padding: 1em;
+}
+
+.left-border{
+    border: 6px solid rgba(46, 86, 173, 0.164);
+}
+
+.left-grid div:nth-child(8) figure{
+    text-align: center;
+}
+
+.left-grid div:nth-child(8){
+    display: flex;
+
+    align-items: flex-end;
+}
+
+.left-grid #eyeball-img
+{
+    width: 80%;
+    padding-bottom: 1em;
+}
+.left-grid figcaption
+{
+    font-size: medium;
+    color: rgb(250, 139, 241);
 }
 
 /* section graphics background */
