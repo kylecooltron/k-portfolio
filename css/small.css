@@ -293,6 +293,11 @@ animation: appear 0.5s ease-out;
     left: 0;
     z-index: -1;
 }
+
+
+
+
+
 #port-gradient-back {
     background: linear-gradient(var(--background-color) 30%, rgb(9, 26, 46) 50%, var(--background-color) 70%, #00000000);
     position: absolute;
@@ -1000,6 +1005,29 @@ border: 1px solid white;
     - 
 */
 
+
+#graphics-title-container 
+{
+    position: relative;
+    z-index: 1;
+}
+
+
+
+#graphics-title-container canvas
+{
+    animation: appear 1s ease-out;
+    position: absolute;
+    width:300px;
+    height: 300%;
+    top: 50%;
+    left: 0;
+    z-index: -1;
+    transform: translate(-20%,-50%);
+}
+
+
+
 /* left grid */
 .left-grid {
     display: grid;
@@ -1101,4 +1129,28 @@ hr {
 .foot-info-box {
     padding: 1em;
     padding-bottom: 1.6em;
+}
+
+#footer-logo-img{
+margin: 0 4.6em 0 3.6em;
+}
+
+
+#thankyou-title-container 
+{
+    position: relative;
+    z-index: 1;
+    padding: 1em;
+}
+
+
+#thankyou-title-container canvas
+{
+    animation: appear 1s ease-out;
+    position: absolute;
+    width:100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
 }
