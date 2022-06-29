@@ -250,15 +250,17 @@ a:hover
 .graphics-skills
 {
     color: rgb(221, 197, 92);
-    font-size: calc(0.05em + 1vw);
+    font-size: calc(0.4em + 0.7vw);
     letter-spacing: 0.1em;
+    margin-top: 11vw;
 }
+
 .spaced-horiz-small
 {
  
     margin: 0 calc(0.05em + 1vw) 0 calc(0.05em + 1vw);
-    font-size: 18px;
-    vertical-align:10%;
+    font-size: calc(0.5em + 0.7vw);
+    vertical-align:5%;
     opacity: 0.5;
 }
 
@@ -1034,20 +1036,6 @@ border: 1px solid white;
 
 
 
-#graphics-title-container canvas
-{
-    animation: appear 1s ease-out;
-    position: absolute;
-    width:300px;
-    height: 250%;
-    top: 50%;
-    left: 0;
-    z-index: -1;
-    transform: translate(-20%,-50%);
-}
-
-
-
 /* left grid */
 .left-grid {
     display: grid;
@@ -1262,6 +1250,21 @@ color:rgb(191, 194, 199)
 {
     font-size: 18vw;
 }
+
+#graphics-title-container canvas
+{
+    animation: appear 1s ease-out;
+    position: absolute;
+    width:300px;
+    height: 175%;
+    top: 50%;
+    left: 0;
+    z-index: -1;
+    transform: translate(-20%,-50%);
+}
+
+
+
 /* media query for normal screens */
 @media only screen and (min-width: 28rem) {
     .huge-title
@@ -1277,6 +1280,25 @@ color:rgb(191, 194, 199)
     .slideshow-buttons-box {
         top: 50%;
     }
+
+    .video-grid iframe{
+        width: 448px;
+        height: 252px;
+      }
+
+      
+    #graphics-title-container canvas
+    {
+        animation: appear 1s ease-out;
+        position: absolute;
+        width:300px;
+        height: 250%;
+        top: 50%;
+        left: 0;
+        z-index: -1;
+        transform: translate(-20%,-50%);
+    }
+
 }
 /* end thin screen section */
 
@@ -1305,9 +1327,6 @@ hr {
     font-size: small;
 }
 
-#footer-logo-img{
-margin: 0 4.6em 0 3.6em;
-}
 
 
 #thankyou-title-container 
@@ -1329,4 +1348,13 @@ margin: 0 4.6em 0 3.6em;
     z-index: -1;
 }
 
+#footer-logo-img
+{
+    margin: 0 3.6em 1em 3.6em;
+}
 
+
+#footer-email-box
+{
+  margin: 2em 0 0 0.3em ;
+}
