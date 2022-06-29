@@ -250,6 +250,21 @@ a:hover
     opacity: 0.5;
 }
 
+.graphics-skills
+{
+    color: rgb(221, 197, 92);
+    font-size: calc(0.05em + 1vw);
+    letter-spacing: 0.1em;
+}
+.spaced-horiz-small
+{
+ 
+    margin: 0 calc(0.05em + 1vw) 0 calc(0.05em + 1vw);
+    font-size: 18px;
+    vertical-align:10%;
+    opacity: 0.5;
+}
+
 .vert-align-middle
 {
     display: inline-block;
@@ -323,23 +338,23 @@ animation: appear 0.5s ease-out;
 }
 
 #skill-webdev{
-    animation: delay-appear 3s ease-out;
+    animation: delay-appear 2s ease-out;
 }
 
 #skill-artist{
-    animation: delay-appear 6s ease-out;
+    animation: delay-appear 5s ease-out;
 }
 
 #skill-x1{
-    animation: delay-appear-half 5s ease-out;
+    animation: delay-appear-half 4s ease-out;
 }
 
 #skill-problemsolver{
-    animation: delay-appear 9s ease-out;
+    animation: delay-appear 8s ease-out;
 }
 
 #skill-x2{
-    animation: delay-appear-half 8s ease-out;
+    animation: delay-appear-half 7s ease-out;
 }
 
 @keyframes delay-appear-half {
@@ -573,7 +588,7 @@ input{
 @keyframes scrollbackground 
 {
     0%, 15% { background-position-x: 0;}
-    80%, 100% {background-position-x: 200px;}
+    80%, 100% {background-position-x: 100px;}
 }
 
 #code-title-clip h2 {
@@ -769,6 +784,7 @@ font-size: 0.8em;
 font-style: italic;
 color: rgb(175, 228, 235);
 text-shadow: 1px 1px 3px rgb(11, 7, 255);
+margin-left: -0.3em;
 }
 
 .classes-flex
@@ -1019,7 +1035,7 @@ border: 1px solid white;
     animation: appear 1s ease-out;
     position: absolute;
     width:300px;
-    height: 300%;
+    height: 250%;
     top: 50%;
     left: 0;
     z-index: -1;
@@ -1115,6 +1131,112 @@ text-align: center;
 
 
 
+/* portfolio title about page*/
+
+#portfolio-title-container-about
+{
+    margin: -1.4em 0  1em 0;
+    padding: 3em 0 3em 0;
+    position: relative;
+    z-index: 1;
+}
+
+
+#portfolio-title-container-about h1
+{
+margin-bottom: 0.1em;
+transform: translateY(calc(var(--scroll-y, 0) * -0.3px));
+animation: appear 0.5s ease-out;
+font-size: 2em;
+}
+
+#portfolio-title-container-about canvas
+{
+    animation: appear 1s ease-out;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+
+.about-me-grid
+{
+    width: 90%;
+    background: linear-gradient(rgba(255, 255, 255, 0.01), rgba(162, 211, 252, 0.1) 25%, #9198e500);
+    border-radius: 1em;
+    margin: 3em auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    grid-gap: 0;
+    padding: 3em 0;
+    font-size: 0.9em;
+}
+
+.about-me-title
+{
+    margin: 0.5em 0.6em;
+    font-size: 1.7rem;
+}
+.about-me-grid div
+{
+    margin: 1em 2em;
+}
+
+.about-me-grid img
+{
+    border-radius: 1em;
+    width: 100%;
+    max-width: 363px;
+}
+.about-me-parag
+{
+    margin: 1em 1em;
+    color: rgb(223, 223, 223);
+}
+.about-links
+{
+    font-size: medium;
+    margin: 1em 0.5em;
+
+    letter-spacing: 0.05em;
+    line-height: 1.5em;
+    color: rgb(211, 207, 207);
+}
+
+.about-me-highlight
+{
+    color:rgb(112, 161, 201);
+    font-weight: bold;
+    background-color: #07121f3b;
+    padding: 1.5em;
+    border-radius: 1em;
+    font-size: 0.95em;
+}
+.about-me-school
+{
+    color:rgb(45, 111, 173);
+}
+.about-me-highlight em
+{
+color:#47729b;
+}
+.about-me-highlight a
+{
+color:rgb(185, 233, 255);
+margin-left: 0.5em;
+}
+
+.about-me-highlight h4{
+    font-family: 'Quicksand', sans-serif;
+padding: 0 0 0.5em 0;
+font-size: 1em;
+color:rgb(191, 194, 199)
+
+}
 
 /*----------- FOOTER --------------*/
 footer {

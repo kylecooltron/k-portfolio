@@ -23,6 +23,7 @@ document.addEventListener("click", (e) => {
 
     gitHubLink.href = elem.dataset.gitLink || "#";
     gitHubLink.innerHTML = elem.dataset.gitLink || "";
+    gitHubLink.target = "_blank";
   }
 
 })

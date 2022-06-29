@@ -192,7 +192,7 @@
     /*Example Project 1*/
     grid-column: 1/2;
     grid-row: 2/3;
-    margin-bottom: 3em;
+    margin-bottom: 1em;
     width: 100%;
     margin-right: auto;
   }
@@ -299,6 +299,22 @@
     
 }
 
+
+
+.about-me-grid
+{
+    grid-template-columns: 1fr 1fr;
+}
+.about-me-grid img
+{
+grid-row: 2/3;
+grid-column: 1/2;
+}
+
+.about-me-grid .about-links
+{
+align-self: center;
+}
 
 
   /*----------- FOOTER --------------*/

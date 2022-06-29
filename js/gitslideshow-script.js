@@ -8,7 +8,7 @@ const slide_left_button = document.querySelector('#git-leftbutton');
 const slideshowbox = document.querySelector('.slideshow-box');
 const slidebox_xstart = -208;
 
-slidebox_x = -890;
+slidebox_x = -906;
 slidebox_x_smooth = slidebox_x;
 
 myInterval = 0;
@@ -73,29 +73,57 @@ function move_slides(direction){
       }
   
 
+      var s_small = 225;
+      var s_large = 256;
+
+      // FIND A DIFFERENT WAY OF DOING THIS: - - - -
       if(direction > 0){
         if(i < arrayLength-1){
-          if(i == 0 || i == arrayLength-2){
-            slidebox_x -= direction * 240;
+          if(i==0 || i == arrayLength-1){
+            slidebox_x -= direction * s_large;
           }else{
-            slidebox_x -= direction * 221;
-          }
+            if( i <= 3){
+              if( i <= 1){
+              slidebox_x -= direction * 215;
+              }else{
+                if( i <= 2){
+                slidebox_x -= direction * s_small;
+                }else{
+                  slidebox_x -= direction * 210; 
+                }
+              }
+            }else{
+              if(i >= arrayLength-2){
+                slidebox_x -= direction * s_large;
+              }else{
+                slidebox_x -= direction * 210;
+              }
+            }
+        }
         }else{
           slidebox_x = slidebox_xstart;
         }
       }
       if(direction < 0){
         if(i > 0){
-          if(i == 1 || i == arrayLength-1){
-            slidebox_x -= direction * 240;
+          if(i==1 || i == arrayLength-1){
+            slidebox_x -= direction * s_large;
           }else{
-            slidebox_x -= direction * 221;
-          }
+            if( i >= arrayLength-4){
+              slidebox_x -= direction * 210;
+            }else{
+              if(i <= 2){
+                slidebox_x -= direction * 215;
+              }else{
+                slidebox_x -= direction * s_small;
+              }
+            }
+        }
         }else{
           slidebox_x = -1793;
         }
       }
-
+      // - - - - - - - - - - - - - - BAD CODE ^
 
       set_slidebox_x();
       if(myInterval != 0){

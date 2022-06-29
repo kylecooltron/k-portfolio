@@ -180,7 +180,7 @@ grid-row: 1/2;
 
 .left-grid div:nth-child(3){ /*Example Project 1*/
   grid-column: 1/2;
-  margin-bottom: 3em;
+  margin-bottom: 2em;
   width: 140%;
   width: 140%;
   margin-right: -40%;
