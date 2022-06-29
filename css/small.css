@@ -237,8 +237,19 @@ a:hover
 .p-lessmargin 
 {
     margin-top: 0.1em;
+    margin-bottom: 0.1em;
 }
-
+.p-hardlymargin 
+{
+    text-align: center;
+    margin-top: 0em;
+    padding: 0;
+}
+.quotecolor
+{
+    color:rgb(121, 186, 248);
+    padding: 1em 1em 0em 1em;
+}
 .spaced-horiz
 {
     margin: 0 calc(0.1em + 3vw) 0 calc(0.1em + 3vw);
