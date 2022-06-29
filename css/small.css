@@ -209,10 +209,7 @@ a:hover
     text-shadow: 0 3px 10px rgb(0 0 0 / 0.8);
 }
 
-.huge-title
-{
-    font-size: 5.5em;
-}
+
 
 .content {
     width: 100%;
@@ -936,7 +933,6 @@ font-size: 0.9em;
     text-align: center;
     margin: 5em 0 5em 0;
     position: relative;
-    height: 27em;
 }
 
 #git-repo-slideshow h3{
@@ -948,7 +944,6 @@ font-size: 1.4em;
     margin-bottom: 1em;
     position: absolute;
     left: 50%;
-    top: 50%;
     transform: translateX(-50%);
     width: 50em;
     z-index: 1;
@@ -956,7 +951,6 @@ font-size: 1.4em;
 }
 
 .slideshow-buttons-box button{
-    margin: 0 9em;
     background-color: #04234b;
     color: rgb(255, 255, 255);
     border: none;
@@ -964,6 +958,7 @@ font-size: 1.4em;
     padding: 0.8em;
     border: 1px solid rgb(77, 17, 85);
 }
+
 .slideshow-buttons-box button:hover{
   border: 1px solid rgb(122, 42, 133);
 }
@@ -1247,6 +1242,47 @@ color:rgb(191, 194, 199)
 
 }
 
+
+
+
+
+
+
+/* for special case very thin screens (default)*/
+.slideshow-buttons-box button{
+    margin: 0 3em;
+}
+#git-repo-slideshow {
+    height: 32em;
+}
+.slideshow-buttons-box {
+    top: 84%;
+}
+.huge-title
+{
+    font-size: 18vw;
+}
+/* media query for normal screens */
+@media only screen and (min-width: 28rem) {
+    .huge-title
+    {
+        font-size: 5.5em;
+    }
+    .slideshow-buttons-box button{
+        margin: 0 9em;
+    }
+    #git-repo-slideshow {
+        height: 27em;
+    }
+    .slideshow-buttons-box {
+        top: 50%;
+    }
+}
+/* end thin screen section */
+
+
+
+
 /*----------- FOOTER --------------*/
 footer {
     text-align: center;
@@ -1292,3 +1328,5 @@ margin: 0 4.6em 0 3.6em;
     left: 0;
     z-index: -1;
 }
+
+
