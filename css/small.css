@@ -970,6 +970,7 @@ font-size: 1.4em;
    
     padding: 0.8em;
     border: 1px solid rgb(77, 17, 85);
+    cursor: pointer;
 }
 
 .slideshow-buttons-box button:hover{
