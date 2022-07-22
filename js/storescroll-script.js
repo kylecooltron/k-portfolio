@@ -30,11 +30,26 @@ const debounce = (fn) => {
 const storeScroll = () => {
   scroll_Y = window.scrollY;
 
-  if(scroll_Y > 1000){
-    document.getElementById("sect-coding-backtext").style.display = "none";
-  }else{
-    document.getElementById("sect-coding-backtext").style.display = "block";
+  const coding_backtext = document.getElementById("sect-coding-backtext");
+  const graphics_backtext = document.getElementById("sect-graphics-backtext");
+  
+  if(coding_backtext){
+    if(scroll_Y > 1000){
+      coding_backtext.style.display = "none";
+    }else{
+      coding_backtext.style.display = "block";
+    }
   }
+
+  if(graphics_backtext){
+    if(scroll_Y > 1200){
+      graphics_backtext.style.display = "none";
+    }else{
+      graphics_backtext.style.display = "block";
+    }
+  }
+
+
 
   document.documentElement.style.setProperty('--scroll-y', scroll_Y);
 

@@ -108,13 +108,16 @@ nav ul
     background-position: 48px 40px;
     background-repeat: no-repeat;
     background-size: 100% 160px;
-    background: linear-gradient(0deg, rgba(38, 204, 255, 0), rgb(59, 89, 99));
+    /* background: linear-gradient(0deg, rgba(38, 204, 255, 0), rgb(59, 89, 99)); */
+    background-color: rgb(6, 36, 61);
+    border-left: 1px solid rgb(102, 137, 177);
+    border-bottom: 1px solid rgb(63, 116, 177);
 }
 
 /* hamburger menu style*/
 .ham 
 {
-    background: linear-gradient(90deg, rgba(38, 204, 255, 0) 10%, rgb(23, 39, 44));
+    /* background: linear-gradient(90deg, rgba(38, 204, 255, 0) 10%, rgb(23, 39, 44)); */
     font-size: 1.4em;
     padding-right: 1em;
 }
@@ -126,7 +129,7 @@ nav ul li a:hover
 }
 nav ul li.active a 
 {
-    background: linear-gradient(90deg, rgba(38, 204, 255, 0) 15%, rgb(63, 193, 236));
+    /* background: linear-gradient(90deg, rgba(38, 204, 255, 0) 15%, rgb(63, 193, 236)); */
     color: rgb(154, 215, 255);
     font-weight: bold;
     cursor:default;
@@ -320,11 +323,51 @@ animation: appear 0.5s ease-out;
 }
 
 
+#portfolio-title-container-graphics
+{
+    margin: 1em 0  3em 0;
+    padding: 5em 0 5em 0;
+    position: relative;
+    z-index: 1;
+}
+
+#portfolio-title-container-graphics h1
+{
+margin-bottom: 0.3em;
+transform: translateY(calc(var(--scroll-y, 0) * -0.3px));
+animation: appear 0.5s ease-out;
+}
+
+#portfolio-title-container-graphics canvas
+{
+    /* animation: appear 1s ease-out; */
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0.3;
+}
 
 
 
-#port-gradient-back {
+
+
+#port-gradient-back 
+{
     background: linear-gradient(var(--background-color) 30%, rgb(9, 26, 46) 50%, var(--background-color) 70%, #00000000);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+#port-gradient-back-graphics 
+{
+    background: linear-gradient(var(--background-color) 20%, rgba(5, 36, 61, 0.562) 50%, var(--background-color) 80%, #00000000);
     position: absolute;
     width: 100%;
     height: 100%;
@@ -551,6 +594,12 @@ iframe
     margin: 0.25em 0 0.25em 0;
 }
 
+.right-grid-margin
+{
+    margin-top: -3em;
+}
+
+
 .lang-grid img,  .py-proj-grid img
 {
     border: 1px solid rgb(180, 88, 177);
@@ -628,9 +677,11 @@ input{
 #sect-coding-backtext{
     position:fixed;
     top: -3em;
-
+   
     overflow: hidden;
+    height: 2000px;
 }
+
 #sect-coding-backtext div{
     color:rgb(14, 35, 65);
     font-size: calc(0.5vw + 0.9em);
@@ -638,6 +689,26 @@ input{
     line-height: 1.4em;
     transform: rotate(-25deg);
 }
+
+#sect-graphics-backtext{
+    position:fixed;
+    top: 0;
+    max-width: var(--max-body-width);
+    height: 2000px;
+    width: 100%;
+    overflow: hidden;
+}
+#sect-graphics-backtext img{
+    color:rgb(14, 35, 65);
+    font-size: calc(0.5vw + 0.9em);
+    font-weight:bold;
+    line-height: 1.4em;
+    /* transform:  translate(0, 8em); */
+    height: 1000px;
+
+    object-fit: cover;
+}
+
 
 /* smaller title styles */
 .title-space-below
@@ -690,6 +761,11 @@ margin: 1em 0.3em;
 .language-title li
 {
     margin: 0.7em 0.1em;
+}
+
+.top-title
+{
+    margin: 2em 1em 1em;
 }
 
 /* style all lang (computer languages I've learned) grids */
@@ -940,12 +1016,13 @@ font-size: 0.9em;
 /* git slideshow */
 
 #git-repo-slideshow {
-    background-color: rgb(5, 26, 56);
+    background-color: rgba(3, 18, 37, 0.596);
     border-top: 1px solid rgb(32, 69, 124);
     border-bottom: 1px solid rgb(32, 69, 124);
     text-align: center;
     margin: 5em 0 5em 0;
     position: relative;
+    z-index: 2;
 }
 
 #git-repo-slideshow h3{
@@ -1053,8 +1130,9 @@ border: 1px solid white;
     display: grid;
     grid-template-columns: 1fr;
     padding: 1rem 4%;
-    grid-gap: 2em;
+    grid-gap: 1em;
 }
+
 
 .left-grid div:nth-child(1){ /*Aside*/
     margin-top: -1em;
@@ -1062,13 +1140,24 @@ border: 1px solid white;
     margin-bottom: 1.5em;
 }
 
+.left-grid div:nth-child(2){ /*Graphics title*/
+    margin-top: 2em;
+
+}
+
 .left-grid div:nth-child(11){ /*For more information*/
     display: none;
+  
 }
 
 .left-grid div:nth-child(11) p{
     padding: 1em;
 }
+
+.left-grid div:nth-child(13){
+margin-top: -3em;
+}
+
 
 .left-border{
     border: 6px solid rgba(46, 86, 173, 0.164);
@@ -1080,9 +1169,10 @@ border: 1px solid white;
 
 .left-grid div:nth-child(8){
     display: flex;
-
     align-items: flex-end;
+    margin-top: -2em;
 }
+
 
 .left-grid div:nth-child(5){
     display: flex;
@@ -1104,7 +1194,7 @@ border: 1px solid white;
 /* section graphics background */
 #sect-graphics-background 
 {
-    background-image: linear-gradient(205deg, var(--background-color) 18.8%, #772049 calc(18.8% + 2px),rgb(179, 59, 133) 25%, var(--background-color) 55%);
+    background-image: linear-gradient(205deg, rgba(0,0,0,0) 18.8%, #772049 calc(18.8% + 2px),rgb(179, 59, 133) 25%, var(--background-color) 55%);
     width: var(--max-body-width);
     height: 2900px;
     position:absolute;
@@ -1164,6 +1254,10 @@ font-size: 2em;
     left: 0;
     z-index: -1;
 }
+
+
+
+
 
 
 .about-me-grid
@@ -1242,8 +1336,33 @@ color:rgb(191, 194, 199)
 
 }
 
+/* Link at bottom of page between portfolios */
 
+.link-other-box
+{
+    background-color: #030f1d;
+    padding: 0.5em 1em;
+    margin: 2em 0 2em;
+    vertical-align:middle;
+}
 
+.link-other-box a
+{
+    /* font-family: 'Press Start 2P', cursive; */
+    text-decoration: none;
+    margin: 0 0.4em;
+    padding: 0.7em 0 0.3em 0;
+    display: block;
+    white-space: nowrap;
+    font-weight: bolder;
+    color: rgb(8, 245, 245);
+    letter-spacing: 0.1em;
+}
+
+.link-other-box a:hover
+{
+color: rgb(223, 149, 223);
+}
 
 
 
@@ -1362,7 +1481,7 @@ hr {
 
 #footer-logo-img
 {
-    margin: 0 3.6em 1em 3.6em;
+    margin: 0 3.4em 1em 3.6em;
 }
 
 

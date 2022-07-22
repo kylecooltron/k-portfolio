@@ -1,0 +1,300 @@
+<!-- Kyle Coulon's Portfolio Website -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="description" content="Kyle Coulon's Online Portfolio" />
+    <meta name="author" content="Kyle Coulon" />
+    <title>Kyle's Portfolio</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+
+    <!-- STYLE SHEETS -->
+    <link href="css/normalize.css" rel="stylesheet" />
+    <link href="css/small.css" rel="stylesheet" />
+    <link href="css/medium.css" rel="stylesheet" />
+    <link href="css/large.css" rel="stylesheet" />
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Electrolize&family=Playfair+Display&family=Press+Start+2P&family=Quicksand:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="favicon.ico" />
+  </head>
+
+  <body>
+    <div id="body-background-color">
+      <!-- HEADER HERE -->
+      <header>
+        <img src="images/logo.png" alt="Kyle Coulon's portfolio Logo" />
+        <h1>Kyle Coulon's</h1>
+      </header>
+
+      <!-- NAVIGATION HERE -->
+      <nav>
+        <ul class="navigation">
+          <li><a class="ham" href="javascript:;">☰</a></li>
+          <li>
+            <a id="nav-portfolio" href="index.html">Projects</a>
+          </li>
+          <li><hr /></li>
+          <li class="active">
+            <a id="nav-graphics" href="graphics.html">Graphics</a>
+          </li>
+          <li><hr /></li>
+          <li><a id="nav-about" href="about.html">About</a></li>
+          <li><hr /></li>
+          <li>
+            <a
+              id="nav-linkedin"
+              href="https://www.linkedin.com/in/kyle-coulon/"
+              target="_blank"
+              ><img
+                src="images/linkedin.png"
+                alt="linkedin logo link to linkedin profile"
+            /></a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- CONTENT HERE -->
+      <main>
+        <div id="myModal">
+          <div id="myModalContainer">
+            <span class="close">&times;</span>
+            <img
+              id="modal-img"
+              class="modal-content"
+              src="images/logo.png"
+              alt=""
+            />
+            Github Link:
+            <a href="#" id="modal-git-link"></a>
+            <div id="modal-caption"></div>
+          </div>
+        </div>
+        <div id="port-title-back">
+          <div id="portfolio-title-container-graphics">
+            <div id="port-gradient-back-graphics"></div>
+            <h1 class="text-center huge-title">Portfolio</h1>
+          </div>
+        </div>
+
+        <p class="p-lessmargin vert-align-middle" id="skill-sentence">
+          <span id="skill-webdev">Paintings</span>
+          <span class="spaced-horiz" id="skill-x1">x</span>
+          <span id="skill-artist">3D Models</span>
+          <span class="spaced-horiz" id="skill-x2">x</span>
+          <span id="skill-problemsolver">Game Sprites</span>
+        </p>
+
+        <div class="content">
+
+          <div id="sect-graphics-backtext">
+            <div>
+     <img src="images/linespng.png" alt="">
+            </div>
+          </div>
+
+
+        <!-- Graphics section -->
+        <div class="content">
+          <div id="sect-graphics-background"></div>
+
+          <section id="section-graphics">
+
+            <div class="left-grid">
+              <div class="text-right">
+                <p class="p-lessmargin graphics-skills">
+                </p>
+              </div>
+
+              <div class="text-left" id="graphics-title-container">
+                <h2>GRAPHICS</h2>
+              </div>
+
+              <div>
+                <figure>
+                  <img
+                    class="left-border"
+                    src="images/graphics-img14.jpg"
+                    alt="placeholder image"
+                  />
+                  <figcaption>Cabo San Lucas</figcaption>
+                </figure>
+              </div>
+
+              <div>
+                <h3>Software:</h3>
+                <ul>
+                  <li>Photoshop</li>
+                  <li>Illustrator</li>
+                  <li>Z-brush</li>
+                  <li>Blender</li>
+                </ul>
+              </div>
+
+              <div>
+                <figure>
+                  <img
+                    src="images/graphics-img12.jpg"
+                    alt="placeholder image"
+                  />
+                  <figcaption>Pen Style</figcaption>
+                </figure>
+              </div>
+
+              <div></div>
+
+              <div>
+                <h4>Experience</h4>
+                <p class="p-lessmargin">
+                  I use a variety of softwares to create graphics for game
+                  projects and videos. My artistic abilities transfer well into
+                  most mediums.
+                </p>
+
+                <img
+                  id="gif"
+                  src="images/rapotoranimation.gif"
+                  alt="placeholder image"
+                />
+              </div>
+
+              <div>
+                <figure>
+                  <img
+                    id="eyeball-img"
+                    src="images/graphics-img11.png"
+                    alt="placeholder image"
+                  />
+                  <figcaption>Vector Graphics</figcaption>
+                </figure>
+              </div>
+
+              <div></div>
+              <div></div>
+
+              <div></div>
+
+              <div></div>
+
+              <div>
+                <p class="p-lessmargin">Modeling and animation</p>
+                <figure>
+                  <img src="images/graphics-img2.jpg" alt="placeholder image" />
+                  <figcaption>Abstract 3D</figcaption>
+                </figure>
+              </div>
+
+              <div>
+                <p class="p-lessmargin">Painting</p>
+                <figure>
+                  <img
+                    src="images/graphics-paint-2.jpg"
+                    alt="placeholder image"
+                  />
+                  <figcaption>Landscape Paintings</figcaption>
+                </figure>
+              </div>
+
+              <div>
+                <p class="p-lessmargin">Drawing</p>
+                <figure>
+                  <img
+                    src="images/graphics-img13.jpg"
+                    alt="placeholder image"
+                  />
+                  <figcaption>Sketches and Illustrations</figcaption>
+                </figure>
+              </div>
+            </div>
+
+            <div>
+          
+              <h3 id="video-title-color">Video Effects:</h3>
+              <hr />
+              <div class="video-grid">
+                <div>
+                  <iframe
+                    width="336"
+                    height="189"
+                    src="https://www.youtube.com/embed/MGxTS5ipYhQ?vq=hd720"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                  ></iframe>
+                  <p>Homemade special effects reel.</p>
+                </div>
+                <div>
+                  <iframe
+                    width="336"
+                    height="189"
+                    src="https://www.youtube.com/embed/Vo3lcZBkoMQ?vq=hd720"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                  ></iframe>
+                  <p>
+                    Intro made for <br />
+                    <a
+                      href="https://www.youtube.com/c/BenHardyCars"
+                      target="_blank"
+                    >
+                      Ben Hardy's Youtube Channel
+                    </a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+        <hr>
+        <div class="link-other-box">
+          <p class="text-center">Check out my<a href="index.html">✭ CODING PROJECTS ✭</a></p>
+        </div>
+      </main>
+
+      <!-- FOOTER HERE -->
+      <footer>
+        
+        <div class="foot-logo-box">
+          <img
+            id="footer-logo-img"
+            src="images/logo.png"
+            alt="Smith River Commerce Logo"
+          />
+          <div class="text-center" id="thankyou-title-container">
+            <h2>Thanks for visiting!</h2>
+          </div>
+          <div id="footer-email-box">
+            <em>kylejcoulon@gmail.com</em>
+            <br />
+            <br />
+            <div>Springville, Utah</div>
+          </div>
+        </div>
+        <hr />
+        <div class="foot-info-box">
+          &copy; <span id="year">year</span> &bull; Kyle Coulon's Portfolio |
+          Last modification:
+          <span id="modified">last modified</span>
+        </div>
+        <!-- JAVASCRIPT -->
+        <script src="js/portfolio-script.js"></script>
+        <script src="js/linepath-script.js"></script>
+        <script src="js/storescroll-script.js"></script>
+        <script src="js/pendulum-script.js"></script>
+        <script src="js/modimg-script.js"></script>
+        <script src="js/gitslideshow-script.js"></script>
+      </footer>
+    </div>
+  </body>
+</html>

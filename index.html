@@ -40,7 +40,11 @@
         <ul class="navigation">
           <li><a class="ham" href="javascript:;">☰</a></li>
           <li class="active">
-            <a id="nav-portfolio" href="index.html">Portfolio</a>
+            <a id="nav-portfolio" href="index.html">Projects</a>
+          </li>
+          <li><hr /></li>
+          <li>
+            <a id="nav-graphics" href="graphics.html">Graphics</a>
           </li>
           <li><hr /></li>
           <li><a id="nav-about" href="about.html">About</a></li>
@@ -126,213 +130,150 @@
             </div>
           </div>
 
+
           <section id="section-coding">
             <div class="right-grid">
               <div class="text-right" id="code-title-clip">
                 <h2>CODING <br /><small>EXPERIENCE</small></h2>
               </div>
+            </div>
+            <!-- PYTHON -->
+            <div class="language-title top-title">
+              <hr />
+              <p>Most of these programs and websites are student projects.</p>
+              <hr />
 
-              <div class="language-title" id="lang-title-htmlcss">
-                <hr />
-                <h3>HTML / CSS</h3>
-                <hr />
-                <div class="classes-flex">
-                  <p>
-                    Classes through
-                    <a href="https://www.byui.edu/" target="_blank">BYU Idaho</a
-                    >:
-                  </p>
-                  <p id="gpa-span">GPA 4.0</p>
-                </div>
-                <ul>
-                  <li>WDD 130 - Web Fundamentals</li>
-                  <li>WDD 230 - Web Frontend development</li>
-                </ul>
+              <div class="classes-flex">
+                <p>
+                  I'm currently Attending
+                  <a href="https://www.byui.edu/" target="_blank">BYU Idaho</a
+                  >:
+                </p>
+                <p id="gpa-span">GPA 4.0</p>
               </div>
+              
+              <ul>
+                <li>Expected Bachelors of Applied Technology</li>
+                <li>Studying Full-Stack Development</li>
+              </ul>
+            </div>
+          </section>
 
-              <div
-                class="language-grid-top title-space-below lang-grid"
-                id="lang-gridweb"
-              >
-                <div><h3 id="lang-grid-webdev">Web Dev</h3></div>
 
-                <div>
-                  <figure>
-                    <img
-                      class="modalImg"
-                      src="images/web-com595.jpg"
-                      alt="Dynamic weather using API <br> Directory page populated by JSON <br> DOM manipulated elements <br> Sign Up form and other buttons"
-                      data-bigger-src="images/web-com1280.jpg"
-                      data-git-link="https://github.com/kylecooltron/wdd230/tree/main/chamber"
-                    />
-                    <figcaption>
-                      Smith River
-                      <small><em>- Chamber of Commerce Website</em></small>
-                    </figcaption>
-                  </figure>
-                </div>
-
-                <div class="lang-examples-box">
-                  <h4>Websites I've made:</h4>
-                  <ul>
-                    <li>
-                      <a
-                        href="https://kylecooltron.github.io/wdd230/chamber/index.html"
-                        target="_blank"
-                        >Smith River
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="https://kylecooltron.github.io/state-of-the-art/"
-                        target="_blank"
-                      >
-                        State of the Art
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="https://kylecooltron.github.io/big-raft-adventures/"
-                        target="_blank"
-                      >
-                        Big Raft
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-                <div>
-                  <p>
-                    I like to design all my own graphics for my student
-                    websites.
-                  </p>
-                </div>
+          
+            <div id="git-repo-slideshow">
+            
+              <h3>Git Hub Repositories</h3>
+              <hr />
+              <div class="slideshow-buttons-box">
+                <button id="git-leftbutton">◄</button>
+                <button id="git-rightbutton">►</button>
               </div>
-
-              <div class="language-title">
-                <hr />
-                <h3>Javascript</h3>
-                <hr />
-
-                I've dabbled with
-                <a id="angular" href="https://angularjs.org/" target="_blank"
-                  >Angular</a
-                >, and I'm starting to learn
-                <a id="nodejs" href="https://nodejs.org/en/" target="_blank"
-                  >Node.js</a
-                >
-
-                <br />
-                <br />
-                <div class="info-text-smaller">
-                  CSE 121B - JavaScript Language
-                  <ul>
-                    <li>Using API's</li>
-                    <li>Async</li>
-                    <li>JSON</li>
-                  </ul>
-                </div>
-              </div>
-
-              <div class="language-grid-right title-space-below lang-grid">
-                <div><h3>Interactive Elements</h3></div>
-
-                <div id="interactive-jsexample">
-                  <div>
-                    <ul>
-                      <li>
-                        <h3 class="animated-float">Interactive Example</h3>
-                      </li>
-                      <li>
-                        <label for="oval">Oval</label>
-                        <input
-                          id="oval"
-                          type="range"
-                          class="slider"
-                          onchange="sliderChange(this.id)"
-                          min="1"
-                          max="100"
-                          value="50"
-                          oninput="this.nextElementSibling.value = this.value"
-                        />
-                        <output id="ovalo">50</output>
-                      </li>
-                      <li>
-                        <label for="spin">Spin</label>
-                        <input
-                          id="spin"
-                          type="range"
-                          class="slider"
-                          onchange="sliderChange(this.id)"
-                          min="-50"
-                          max="50"
-                          value="20"
-                          oninput="this.nextElementSibling.value = this.value"
-                        />
-                        <output id="spino">0</output>
-                      </li>
-                      <li>
-                        <label for="spiral">Spiral</label>
-                        <input
-                          id="spiral"
-                          type="range"
-                          class="slider"
-                          onchange="sliderChange(this.id)"
-                          min="1"
-                          max="130"
-                          value="20"
-                          oninput="this.nextElementSibling.value = this.value"
-                        />
-                        <output id="spiralo">50</output>
-                      </li>
-                      <li>
-                        <button id="stopbutton" onclick="stopPainting()">
-                          &times;
-                        </button>
-                        <button
-                          id="randomizebutton"
-                          onclick="randomizeParams()"
-                        >
-                          Randomize
-                        </button>
-
-                        <button onclick="startPainting()">Go!</button>
-                      </li>
-                    </ul>
-                  </div>
-
-                  <canvas id="exm2Canvas" width="500" height="500">
-                    Your browser does not support the HTML canvas tag.
-                  </canvas>
-                </div>
-
-                <div class="lang-examples-box">
-                  <div id="javascript-example-link">
-                    <p>
-                      This example was made for my personal website last
-                      semester:
-                    </p>
-
+              <div class="slideshow-box">
+                <figure class="git-slide">
+                  <img src="images/git-w-port.jpg" alt="placeholder image" />
+                  <figcaption>
                     <a
-                      href="https://kylecooltron.github.io/state-of-the-art/"
+                      href="https://github.com/kylecooltron/k-portfolio"
+                      target="_blank"
+                    >
+                      Kyle's Portfolio
+                    </a>
+                  </figcaption>
+                </figure>
+                <figure class="git-slide">
+                  <img src="images/web-com595.jpg" alt="placeholder image" />
+                  <figcaption>
+                    <a
+                      href="https://github.com/kylecooltron/wdd230/tree/main/chamber"
+                      target="_blank"
+                    >
+                      Chamber of Commerce
+                    </a>
+                  </figcaption>
+                </figure>
+                <figure class="git-slide semiactive">
+                  <img src="images/git-w-state.jpg" alt="placeholder image" />
+                  <figcaption>
+                    <a
+                      href="https://github.com/kylecooltron/state-of-the-art"
                       target="_blank"
                     >
                       State of the Art
                     </a>
-                  </div>
-                </div>
-                <div>
-                  <p>
-                    My experience with game development helps me create interactive websites.
-                  </p>
-                </div>
+                  </figcaption>
+                </figure>
+                <figure class="git-slide active">
+                  <img src="images/web-raft500.jpg" alt="placeholder image" />
+                  <figcaption>
+                    <a
+                      href="https://github.com/kylecooltron/big-raft-adventures"
+                      target="_blank"
+                    >
+                      Big Raft Adventures
+                    </a>
+                  </figcaption>
+                </figure>
+                <figure class="git-slide semiactive">
+                  <img src="images/git-w-madlib.jpg" alt="placeholder image" />
+                  <figcaption>
+                    <a
+                      href="https://github.com/kylecooltron/py-projects/tree/master/Adlib"
+                      target="_blank"
+                    >
+                      Madlib Python
+                    </a>
+                  </figcaption>
+                </figure>
+                <figure class="git-slide">
+                  <img src="images/git-w-badge.jpg" alt="placeholder image" />
+                  <figcaption>
+                    <a
+                      href="https://github.com/kylecooltron/py-projects/tree/master/Badge%20Maker"
+                      target="_blank"
+                    >
+                      Badge Maker Python
+                    </a>
+                  </figcaption>
+                </figure>
+                <figure class="git-slide">
+                  <img src="images/git-w-goal.jpg" alt="placeholder image" />
+                  <figcaption>
+                    <a
+                      href="https://github.com/kylecooltron/py-projects/tree/master/Goal%20Planner"
+                      target="_blank"
+                    >
+                      Goal Planner Python
+                    </a>
+                  </figcaption>
+                </figure>
+                <figure class="git-slide">
+                  <img src="images/git-w-scene.jpg" alt="placeholder image" />
+                  <figcaption>
+                    <a
+                      href="https://github.com/kylecooltron/py-projects/tree/master/Scene%20Render"
+                      target="_blank"
+                    >
+                      Scene Render
+                    </a>
+                  </figcaption>
+                </figure>
               </div>
+            </div>
+         
 
+
+          <section id="section-coding">
+            <div class="right-grid right-grid-margin">
+              <div class="text-right" id="code-title-clip">
+              </div>
+              <!-- PYTHON -->
               <div class="language-title">
-                <hr />
+              
                 <h3>Python</h3>
                 <hr />
 
-                <p>Classes through BYU Idaho:</p>
+                <p>Classes completed through BYU Idaho:</p>
                 <ul>
                   <li>CSE 111 - Programming with Functions</li>
                   <li>CSE 210 - Programming with Classes</li>
@@ -477,6 +418,205 @@
                 </div>
               </div>
 
+
+
+              <!-- JAVASCRIPT -->
+              <div class="language-title">
+                <hr />
+                <h3>Javascript</h3>
+                <hr />
+
+                I've dabbled with
+                <a id="angular" href="https://angularjs.org/" target="_blank"
+                  >Angular</a
+                >, and I'm starting to learn
+                <a id="nodejs" href="https://nodejs.org/en/" target="_blank"
+                  >Node.js</a
+                >
+
+                <br />
+                <br />
+                <div class="info-text-smaller">
+                  CSE 121B - JavaScript Language
+                  <ul>
+                    <li>Using API's</li>
+                    <li>Async</li>
+                    <li>JSON</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="language-grid-right title-space-below lang-grid">
+                <div><h3>Interactive Elements</h3></div>
+
+                <div id="interactive-jsexample">
+                  <div>
+                    <ul>
+                      <li>
+                        <h3 class="animated-float">Interactive Example</h3>
+                      </li>
+                      <li>
+                        <label for="oval">Oval</label>
+                        <input
+                          id="oval"
+                          type="range"
+                          class="slider"
+                          onchange="sliderChange(this.id)"
+                          min="1"
+                          max="100"
+                          value="50"
+                          oninput="this.nextElementSibling.value = this.value"
+                        />
+                        <output id="ovalo">50</output>
+                      </li>
+                      <li>
+                        <label for="spin">Spin</label>
+                        <input
+                          id="spin"
+                          type="range"
+                          class="slider"
+                          onchange="sliderChange(this.id)"
+                          min="-50"
+                          max="50"
+                          value="20"
+                          oninput="this.nextElementSibling.value = this.value"
+                        />
+                        <output id="spino">0</output>
+                      </li>
+                      <li>
+                        <label for="spiral">Spiral</label>
+                        <input
+                          id="spiral"
+                          type="range"
+                          class="slider"
+                          onchange="sliderChange(this.id)"
+                          min="1"
+                          max="130"
+                          value="20"
+                          oninput="this.nextElementSibling.value = this.value"
+                        />
+                        <output id="spiralo">50</output>
+                      </li>
+                      <li>
+                        <button id="stopbutton" onclick="stopPainting()">
+                          &times;
+                        </button>
+                        <button
+                          id="randomizebutton"
+                          onclick="randomizeParams()"
+                        >
+                          Randomize
+                        </button>
+
+                        <button onclick="startPainting()">Go!</button>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <canvas id="exm2Canvas" width="500" height="500">
+                    Your browser does not support the HTML canvas tag.
+                  </canvas>
+                </div>
+
+                <div class="lang-examples-box">
+                  <div id="javascript-example-link">
+                    <p>
+                      This example was made for my personal website last
+                      semester:
+                    </p>
+
+                    <a
+                      href="https://kylecooltron.github.io/state-of-the-art/"
+                      target="_blank"
+                    >
+                      State of the Art
+                    </a>
+                  </div>
+                </div>
+                <div>
+                  <p>
+                    My experience with game development helps me create interactive websites.
+                  </p>
+                </div>
+              </div>
+              <!-- HTML CSS -->
+              <div class="language-title" id="lang-title-htmlcss">
+                <hr />
+                <h3>HTML / CSS</h3>
+                <hr />
+                <div class="classes-flex">
+                  <p>
+                    Classes completed through
+                    BYU Idaho:
+                  </p>
+               
+                </div>
+                <ul>
+                  <li>WDD 130 - Web Fundamentals</li>
+                  <li>WDD 230 - Web Frontend development</li>
+                </ul>
+              </div>
+
+              <div
+                class="language-grid-top title-space-below lang-grid"
+                id="lang-gridweb">
+                <div><h3 id="lang-grid-webdev">Web Dev</h3></div>
+
+                <div>
+                  <figure>
+                    <img
+                      class="modalImg"
+                      src="images/web-com595.jpg"
+                      alt="Dynamic weather using API <br> Directory page populated by JSON <br> DOM manipulated elements <br> Sign Up form and other buttons"
+                      data-bigger-src="images/web-com1280.jpg"
+                      data-git-link="https://github.com/kylecooltron/wdd230/tree/main/chamber"
+                    />
+                    <figcaption>
+                      Smith River
+                      <small><em>- Chamber of Commerce Website</em></small>
+                    </figcaption>
+                  </figure>
+                </div>
+
+                <div class="lang-examples-box">
+                  <h4>Websites I've made:</h4>
+                  <ul>
+                    <li>
+                      <a
+                        href="https://kylecooltron.github.io/wdd230/chamber/index.html"
+                        target="_blank"
+                        >Smith River
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="https://kylecooltron.github.io/state-of-the-art/"
+                        target="_blank"
+                      >
+                        State of the Art
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="https://kylecooltron.github.io/big-raft-adventures/"
+                        target="_blank"
+                      >
+                        Big Raft
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <p>
+                    I like to design all my own graphics for my student
+                    websites.
+                  </p>
+                </div>
+              </div>
+
+
+
+              <!-- OTHER LANGUAGES -->
               <div>
                 <hr />
                 <h3 id="other-langs-title">Other Languages:</h3>
@@ -580,269 +720,17 @@
           </section>
         </div>
 
-        <div class="content">
-          <div id="git-repo-slideshow">
-            <hr />
-            <h3>Git Hub Repositories</h3>
-            <hr />
-            <div class="slideshow-buttons-box">
-              <button id="git-leftbutton">◄</button>
-              <button id="git-rightbutton">►</button>
-            </div>
-            <div class="slideshow-box">
-              <figure class="git-slide">
-                <img src="images/git-w-port.jpg" alt="placeholder image" />
-                <figcaption>
-                  <a
-                    href="https://github.com/kylecooltron/k-portfolio"
-                    target="_blank"
-                  >
-                    Kyle's Portfolio
-                  </a>
-                </figcaption>
-              </figure>
-              <figure class="git-slide">
-                <img src="images/web-com595.jpg" alt="placeholder image" />
-                <figcaption>
-                  <a
-                    href="https://github.com/kylecooltron/wdd230/tree/main/chamber"
-                    target="_blank"
-                  >
-                    Chamber of Commerce
-                  </a>
-                </figcaption>
-              </figure>
-              <figure class="git-slide semiactive">
-                <img src="images/git-w-state.jpg" alt="placeholder image" />
-                <figcaption>
-                  <a
-                    href="https://github.com/kylecooltron/state-of-the-art"
-                    target="_blank"
-                  >
-                    State of the Art
-                  </a>
-                </figcaption>
-              </figure>
-              <figure class="git-slide active">
-                <img src="images/web-raft500.jpg" alt="placeholder image" />
-                <figcaption>
-                  <a
-                    href="https://github.com/kylecooltron/big-raft-adventures"
-                    target="_blank"
-                  >
-                    Big Raft Adventures
-                  </a>
-                </figcaption>
-              </figure>
-              <figure class="git-slide semiactive">
-                <img src="images/git-w-madlib.jpg" alt="placeholder image" />
-                <figcaption>
-                  <a
-                    href="https://github.com/kylecooltron/py-projects/tree/master/Adlib"
-                    target="_blank"
-                  >
-                    Madlib Python
-                  </a>
-                </figcaption>
-              </figure>
-              <figure class="git-slide">
-                <img src="images/git-w-badge.jpg" alt="placeholder image" />
-                <figcaption>
-                  <a
-                    href="https://github.com/kylecooltron/py-projects/tree/master/Badge%20Maker"
-                    target="_blank"
-                  >
-                    Badge Maker Python
-                  </a>
-                </figcaption>
-              </figure>
-              <figure class="git-slide">
-                <img src="images/git-w-goal.jpg" alt="placeholder image" />
-                <figcaption>
-                  <a
-                    href="https://github.com/kylecooltron/py-projects/tree/master/Goal%20Planner"
-                    target="_blank"
-                  >
-                    Goal Planner Python
-                  </a>
-                </figcaption>
-              </figure>
-              <figure class="git-slide">
-                <img src="images/git-w-scene.jpg" alt="placeholder image" />
-                <figcaption>
-                  <a
-                    href="https://github.com/kylecooltron/py-projects/tree/master/Scene%20Render"
-                    target="_blank"
-                  >
-                    Scene Render
-                  </a>
-                </figcaption>
-              </figure>
-            </div>
-          </div>
+        
+
+        <hr>
+        <div class="link-other-box">
+          <p class="text-center">Check out my<a href="graphics.html">✭ GRAPHICS PORTFOLIO ✭</a></p>
         </div>
 
-        <!-- Graphics section -->
-        <div class="content">
-          <div id="sect-graphics-background"></div>
-
-          <section id="section-graphics">
-            <div class="left-grid">
-              <div class="text-right">
-                <p class="p-lessmargin graphics-skills">
-                  Paintings
-                  <span class="spaced-horiz-small">x</span> 3D Models
-                  <span class="spaced-horiz-small">x</span> Game Sprites
-                </p>
-              </div>
-
-              <div class="text-left" id="graphics-title-container">
-                <h2>GRAPHICS</h2>
-              </div>
-
-              <div>
-                <figure>
-                  <img
-                    class="left-border"
-                    src="images/graphics-img14.jpg"
-                    alt="placeholder image"
-                  />
-                  <figcaption>Cabo San Lucas</figcaption>
-                </figure>
-              </div>
-
-              <div>
-                <h3>Software:</h3>
-                <ul>
-                  <li>Photoshop</li>
-                  <li>Illustrator</li>
-                  <li>Z-brush</li>
-                  <li>Blender</li>
-                </ul>
-              </div>
-
-              <div>
-                <figure>
-                  <img
-                    src="images/graphics-img12.jpg"
-                    alt="placeholder image"
-                  />
-                  <figcaption>Pen Style</figcaption>
-                </figure>
-              </div>
-
-              <div></div>
-
-              <div>
-                <h4>Experience</h4>
-                <p class="p-lessmargin">
-                  I use a variety of softwares to create graphics for game
-                  projects and videos. My artistic abilities transfer well into
-                  most mediums.
-                </p>
-
-                <img
-                  id="gif"
-                  src="images/rapotoranimation.gif"
-                  alt="placeholder image"
-                />
-              </div>
-
-              <div>
-                <figure>
-                  <img
-                    id="eyeball-img"
-                    src="images/graphics-img11.png"
-                    alt="placeholder image"
-                  />
-                  <figcaption>Vector Graphics</figcaption>
-                </figure>
-              </div>
-
-              <div></div>
-              <div></div>
-
-              <div></div>
-
-              <div></div>
-
-              <div>
-                <p class="p-lessmargin">Modeling and animation</p>
-                <figure>
-                  <img src="images/graphics-img2.jpg" alt="placeholder image" />
-                  <figcaption>Abstract 3D</figcaption>
-                </figure>
-              </div>
-
-              <div>
-                <p class="p-lessmargin">Painting</p>
-                <figure>
-                  <img
-                    src="images/graphics-paint-2.jpg"
-                    alt="placeholder image"
-                  />
-                  <figcaption>Landscape Paintings</figcaption>
-                </figure>
-              </div>
-
-              <div>
-                <p class="p-lessmargin">Drawing</p>
-                <figure>
-                  <img
-                    src="images/graphics-img13.jpg"
-                    alt="placeholder image"
-                  />
-                  <figcaption>Sketches and Illustrations</figcaption>
-                </figure>
-              </div>
-            </div>
-
-            <div>
-              <hr />
-              <h3 id="video-title-color">Video Effects:</h3>
-              <hr />
-              <div class="video-grid">
-                <div>
-                  <iframe
-                    width="336"
-                    height="189"
-                    src="https://www.youtube.com/embed/MGxTS5ipYhQ?vq=hd720"
-                    title="YouTube video player"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen
-                  ></iframe>
-                  <p>Homemade special effects reel.</p>
-                </div>
-                <div>
-                  <iframe
-                    width="336"
-                    height="189"
-                    src="https://www.youtube.com/embed/Vo3lcZBkoMQ?vq=hd720"
-                    title="YouTube video player"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen
-                  ></iframe>
-                  <p>
-                    Intro made for <br />
-                    <a
-                      href="https://www.youtube.com/c/BenHardyCars"
-                      target="_blank"
-                    >
-                      Ben Hardy's Youtube Channel
-                    </a>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </section>
-        </div>
       </main>
 
       <!-- FOOTER HERE -->
       <footer>
-        <hr />
         <div class="foot-logo-box">
           <img
             id="footer-logo-img"

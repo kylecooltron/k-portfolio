@@ -59,23 +59,38 @@ Author: Kyle Coulon 2022
               nextx = canvas_list[i][2][j][k][0] * canv_width;
               nexty = canvas_list[i][2][j][k][1] * canv_height;
               //find the difference between last point and this next one
-              let difference = Math.abs(startx-nextx) + Math.abs(starty-nexty);
-              
+              // let difference = Math.abs(startx-nextx) + Math.abs(starty-nexty);
+              let difference = Math.sqrt( Math.pow((startx-nextx), 2) + Math.pow((starty-nexty), 2) );
+
               // if we have already drawn past this point
               if(dist_left_to_draw > difference){
                 // subtract its distance
                 dist_left_to_draw -= difference;
               }else{ // draw the remaining distance
 
-                // set next x/y to correct draw distance
-                if(startx != nextx){ //x line
-                  if(nextx > startx){ nextx = startx + dist_left_to_draw; //positive difference
-                  }else{ nextx = startx - dist_left_to_draw; }//negative difference
-                }else{ //y line
-                  if(nexty > starty){ nexty = starty + dist_left_to_draw; //positive difference
-                  }else{ nexty = starty - dist_left_to_draw; }//negative difference
+                // // set next x/y to correct draw distance
+                // if(startx != nextx){ //x line
+                //   if(nextx > startx){ nextx = startx + dist_left_to_draw; //positive difference
+                //   }else{ nextx = startx - dist_left_to_draw; }//negative difference
+                // }else{ //y line
+                //   if(nexty > starty){ nexty = starty + dist_left_to_draw; //positive difference
+                //   }else{ nexty = starty - dist_left_to_draw; }//negative difference
+                // }
+                function angle(cx, cy, ex, ey) {
+                  var dy = ey - cy;
+                  var dx = ex - cx;
+                  var theta = Math.atan2(dy, dx); // range (-PI, PI]
+                  // theta *= 180 / Math.PI; // rads to degs, range (-180, 180]
+                  //if (theta < 0) theta = 360 + theta; // range [0, 360)
+                  return theta;
                 }
+
+                ang = angle(startx,starty, nextx, nexty)
+                nextx = startx + Math.cos(ang) * dist_left_to_draw;
+                nexty = starty + Math.sin(ang) * dist_left_to_draw;
                 
+
+
               //DRAW RIGHT SIDE
               this_ctx.moveTo(startx,starty);
               this_ctx.lineTo(nextx,nexty);
@@ -92,6 +107,10 @@ Author: Kyle Coulon 2022
               startx = nextx;
               starty = nexty;
             }
+
+
+
+
             }
           }
         }
