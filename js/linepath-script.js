@@ -21,7 +21,7 @@ Author: Kyle Coulon 2022
     if(canvas_list.length > 0){
       
         //for every canvas in the canvas list
-        for (var i = 0; i < canvas_list.length; i++) {
+        for (let i = 0; i < canvas_list.length; i++) {
 
           if(elementInViewport(canvas_list[i][0]) ){
           // this controls how fast lines draw out
@@ -39,7 +39,7 @@ Author: Kyle Coulon 2022
           /* DRAW EACH LINE PROGRESSIVELY */
 
           //for every path of this canvas
-          for (var j = 0; j < canvas_list[i][2].length; j++) {
+          for (let j = 0; j < canvas_list[i][2].length; j++) {
             
             //set starting draw position
             startx = canvas_list[i][2][j][0][0] * canv_width;
@@ -50,7 +50,7 @@ Author: Kyle Coulon 2022
             let dist_left_to_draw = canvas_list[i][3];
 
             //for every set of points in this individual path
-            for (var k = 0; k < canvas_list[i][2][j].length; k++) {  
+            for (let k = 0; k < canvas_list[i][2][j].length; k++) {  
 
               //if we still have some distance to go for this path
               if(dist_left_to_draw > 0){
@@ -77,9 +77,9 @@ Author: Kyle Coulon 2022
                 //   }else{ nexty = starty - dist_left_to_draw; }//negative difference
                 // }
                 function angle(cx, cy, ex, ey) {
-                  var dy = ey - cy;
-                  var dx = ex - cx;
-                  var theta = Math.atan2(dy, dx); // range (-PI, PI]
+                  let dy = ey - cy;
+                  let dx = ex - cx;
+                  let theta = Math.atan2(dy, dx); // range (-PI, PI]
                   // theta *= 180 / Math.PI; // rads to degs, range (-180, 180]
                   //if (theta < 0) theta = 360 + theta; // range [0, 360)
                   return theta;
@@ -124,7 +124,7 @@ Author: Kyle Coulon 2022
   /* GO THROUGH JSON DATA AND CREATE CANVAS'S */
   function outputJson(jsonObject){
   //for every canvas within json 'canvas'
-  for (var i = 0; i < jsonObject['canvas'].length; i++) {
+  for (let i = 0; i < jsonObject['canvas'].length; i++) {
     if(document.getElementById(jsonObject['canvas'][i]["element"])){
       //create a new canvas with correct width, height, backcolor, and parent element selector
       let this_canvas = create_new_canvas(jsonObject['canvas'][i]["width"],jsonObject['canvas'][i]["height"],jsonObject['canvas'][i]["backcolor"],jsonObject['canvas'][i]["element"]);
@@ -169,10 +169,10 @@ Author: Kyle Coulon 2022
   https://stackoverflow.com/questions/123999/how-can-i-tell-if-a-dom-element-is-visible-in-the-current-viewport */
   //check if an element is visible to the viewport
   function elementInViewport(el) {
-    var top = el.offsetTop;
-    var left = el.offsetLeft;
-    var width = el.offsetWidth;
-    var height = el.offsetHeight;
+    let top = el.offsetTop;
+    let left = el.offsetLeft;
+    let width = el.offsetWidth;
+    let height = el.offsetHeight;
     while(el.offsetParent) {
       el = el.offsetParent;
       top += el.offsetTop;

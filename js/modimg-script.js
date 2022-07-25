@@ -2,9 +2,9 @@
 const modal = document.querySelector("#myModal");
 const modalTarget = document.querySelector("#myModalContainer");
 // Get the image and insert it inside the modal - use its "alt" text as a caption
-var modalImg = document.getElementById("modal-img");
-var captionText = document.getElementById("modal-caption");
-var gitHubLink = document.getElementById("modal-git-link");
+const modalImg = document.getElementById("modal-img");
+const captionText = document.getElementById("modal-caption");
+const gitHubLink = document.getElementById("modal-git-link");
 
 
 
@@ -46,7 +46,7 @@ document.addEventListener('keydown', (event) => {
 
 
 // Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
+let span = document.getElementsByClassName("close")[0];
 
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() { 

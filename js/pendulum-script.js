@@ -9,26 +9,26 @@ Created by: Kyle Coulon 2021
 */
 
 //init variables
-var exm2_canvas = document.getElementById("exm2Canvas");
-var exm2_context = exm2_canvas.getContext("2d");
-var pstep; //used to run painstep on interval
+const exm2_canvas = document.getElementById("exm2Canvas");
+const exm2_context = exm2_canvas.getContext("2d");
+let pstep; //used to run painstep on interval
 
 //init drawing variables
-var center_x = exm2_canvas.width/2;
-var center_y = exm2_canvas.height/2;
-var radToDeg = Math.PI / 180;
-var color = "#F2B3E1";
+let center_x = exm2_canvas.width/2;
+let center_y = exm2_canvas.height/2;
+const radToDeg = Math.PI / 180;
+let color = "#F2B3E1";
 
 //init other
-var p_oval = 0.5;
-var p_spin_amount = 0.2;
-var p_spiral_factor = 0.01;
+let p_oval = 0.5;
+let p_spin_amount = 0.2;
+let p_spiral_factor = 0.01;
 
 //init dynamic vars
-var p_angle = 0;
-var p_dist = 250;
-var p_spin = 0;
-var last_x, last_y;
+let p_angle = 0;
+let p_dist = 250;
+let p_spin = 0;
+let last_x, last_y;
 
 // - - - - - - - - - - - - - - functions
 
@@ -42,25 +42,26 @@ function fillCanvas(){
 
 function find_color(x,y){
 
-  var tlrgb = [255, 28, 194];
-  var trrgb = [3, 221, 255];
-  var blrgb = [136, 250, 27];
-  var brrgb = [252, 226, 50];
+  // define colors for the four corners
+  const tlrgb = [255, 28, 194];
+  const trrgb = [3, 221, 255];
+  const blrgb = [136, 250, 27];
+  const brrgb = [252, 226, 50];
   
-  var x_percent = x / exm2_canvas.width;
-  var y_percent = y / exm2_canvas.height;
+  let x_percent = x / exm2_canvas.width;
+  let y_percent = y / exm2_canvas.height;
   
-  var top_edge_color = interpolate_color(tlrgb, trrgb, x_percent);
-  var bottom_edge_color = interpolate_color(blrgb, brrgb, x_percent);
+  let top_edge_color = interpolate_color(tlrgb, trrgb, x_percent);
+  let bottom_edge_color = interpolate_color(blrgb, brrgb, x_percent);
   
-  var new_color = interpolate_color(top_edge_color,bottom_edge_color, y_percent);
+  let new_color = interpolate_color(top_edge_color,bottom_edge_color, y_percent);
   
   return rgbToHex(new_color[0],new_color[1],new_color[2]);
 }
 
 
 function interpolate_color(startcolor, endcolor, percent){
-    var rgb = [];
+    let rgb = [];
     rgb[0] = Math.round(startcolor[0] + (endcolor[0] - startcolor[0]) * percent);
     rgb[1] = Math.round(startcolor[1] + (endcolor[1] - startcolor[1]) * percent);
     rgb[2] = Math.round(startcolor[2] + (endcolor[2] - startcolor[2]) * percent);
@@ -69,7 +70,7 @@ function interpolate_color(startcolor, endcolor, percent){
 
 
 function componentToHex(c) {
-  var hex = c.toString(16);
+  let hex = c.toString(16);
   return hex.length == 1 ? "0" + hex : hex;
 }
 
@@ -97,8 +98,8 @@ function clamp(number, min, max) {
   return Math.max(min, Math.min(number, max));
 }
 function projectPosition(x,y, dir, dist){
-var newx = x + dist * Math.cos(dir * radToDeg );
-var newy = y + dist * Math.sin(dir * radToDeg);
+let newx = x + dist * Math.cos(dir * radToDeg );
+let newy = y + dist * Math.sin(dir * radToDeg);
 return [newx, newy];
 }
 function point_distance(x1,y1, x2,y2){
@@ -109,7 +110,7 @@ return Math.atan2(y2 - y1, x2 - x1) * 180 / Math.PI;
 }
 
 function sliderChange(sliderID){
-var val = document.getElementById(sliderID).value;
+  let val = document.getElementById(sliderID).value;
 switch(sliderID) {
   case "spiral":
 	p_spiral_factor = val * 0.0005;
@@ -124,19 +125,19 @@ switch(sliderID) {
 }
 
 function spinPosition(x,y){
-  var temp_dist = point_distance(center_x,center_y,x,y);
-  var temp_dir = point_direction(center_x,center_y,x,y);
-  var newPosition = projectPosition(center_x,center_y, temp_dir + p_spin, temp_dist);
-  var returnx = newPosition[0];
-  var returny = newPosition[1];
+  let temp_dist = point_distance(center_x,center_y,x,y);
+  let temp_dir = point_direction(center_x,center_y,x,y);
+  let newPosition = projectPosition(center_x,center_y, temp_dir + p_spin, temp_dist);
+  let returnx = newPosition[0];
+  let returny = newPosition[1];
   return [returnx, returny];
 }
 
 function paintStep(){
-  var newPosition = projectPosition(center_x,center_y, p_angle, p_dist);
-  var spinNewPosition = spinPosition(newPosition[0], squish(newPosition[1]));
+  let newPosition = projectPosition(center_x,center_y, p_angle, p_dist);
+  let spinNewPosition = spinPosition(newPosition[0], squish(newPosition[1]));
 
-  var spinLastPosition = spinPosition(last_x,squish(last_y));
+  let spinLastPosition = spinPosition(last_x,squish(last_y));
 
   if(last_x == undefined || last_y == undefined){
     last_x = spinNewPosition[0]; last_y = spinNewPosition[1];

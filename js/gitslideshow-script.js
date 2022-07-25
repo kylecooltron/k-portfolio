@@ -41,8 +41,8 @@ function move_slides(direction){
 
 
 
-  var arrayLength = slide_list.length;
-  for (var i = 0; i < arrayLength; i++) {
+  let arrayLength = slide_list.length;
+  for (let i = 0; i < arrayLength; i++) {
 
     slide = slide_list[i];
 
@@ -73,10 +73,11 @@ function move_slides(direction){
       }
   
 
-      var s_small = 225;
-      var s_large = 256;
+      
 
       // FIND A DIFFERENT WAY OF DOING THIS: - - - -
+      let s_small = 225;
+      let s_large = 256;
       if(direction > 0){
         if(i < arrayLength-1){
           if(i==0 || i == arrayLength-1){
@@ -123,7 +124,7 @@ function move_slides(direction){
           slidebox_x = -1793;
         }
       }
-      // - - - - - - - - - - - - - - BAD CODE ^
+      // - - - - - - - - - - - - - - BAD CODE ^ need to replace
 
       set_slidebox_x();
       if(myInterval != 0){
