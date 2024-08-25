@@ -1,113 +1,105 @@
 <!-- Kyle Coulon's Portfolio Website -->
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="description" content="Kyle Coulon's Online Portfolio" />
-    <meta name="author" content="Kyle Coulon" />
-    <title>Kyle's Portfolio</title>
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, maximum-scale=1"
-    />
 
-    <!-- STYLE SHEETS -->
-    <link href="css/normalize.css" rel="stylesheet" />
-    <link href="css/small.css" rel="stylesheet" />
-    <link href="css/medium.css" rel="stylesheet" />
-    <link href="css/large.css" rel="stylesheet" />
-    <!-- GOOGLE FONTS -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Electrolize&family=Playfair+Display&family=Press+Start+2P&family=Quicksand:wght@300&display=swap"
-      rel="stylesheet"
-    />
-    <!-- FAVICON -->
-    <link rel="shortcut icon" href="favicon.ico" />
-  </head>
+<head>
+  <meta charset="utf-8" />
+  <meta name="description" content="Kyle Coulon's Online Portfolio" />
+  <meta name="author" content="Kyle Coulon" />
+  <title>Kyle's Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-  <body>
-    <div id="body-background-color">
-      <!-- HEADER HERE -->
-      <header>
-        <img src="images/logo.png" alt="Kyle Coulon's portfolio Logo" />
-        <h1>
-          <a class="whitelink" href="about.html">
-            Kyle Coulon's
-          </a>
-        </h1>
-      </header>
+  <!-- STYLE SHEETS -->
+  <link href="css/normalize.css" rel="stylesheet" />
+  <link href="css/small.css" rel="stylesheet" />
+  <link href="css/medium.css" rel="stylesheet" />
+  <link href="css/large.css" rel="stylesheet" />
+  <!-- GOOGLE FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Electrolize&family=Playfair+Display&family=Press+Start+2P&family=Quicksand:wght@300&display=swap"
+    rel="stylesheet" />
+  <!-- FAVICON -->
+  <link rel="shortcut icon" href="favicon.ico" />
+</head>
 
-      <!-- NAVIGATION HERE -->
-      <nav>
-        <ul class="navigation">
-          <li><a class="ham" href="javascript:;">☰</a></li>
-          <li>
-            <a id="nav-portfolio" href="index.html">Projects</a>
-          </li>
-          <li><hr /></li>
-          <li class="active">
-            <a id="nav-graphics" href="graphics.html">Graphics</a>
-          </li>
-          <li><hr /></li>
-          <li><a id="nav-about" href="about.html">About</a></li>
-          <li><hr /></li>
-          <li>
-            <a
-              id="nav-linkedin"
-              href="https://www.linkedin.com/in/kyle-coulon/"
-              target="_blank"
-              ><img
-                src="images/linkedin.png"
-                alt="linkedin logo link to linkedin profile"
-            /></a>
-          </li>
-        </ul>
-      </nav>
+<body>
+  <div id="body-background-color">
+    <!-- HEADER HERE -->
+    <header>
+      <img src="images/logo.png" alt="Kyle Coulon's portfolio Logo" />
+      <h1>
+        <a class="whitelink" href="about.html">
+          Kyle Coulon's
+        </a>
+      </h1>
+    </header>
 
-      <!-- CONTENT HERE -->
-      <main>
-        <div id="myModal">
-          <div id="myModalContainer">
-            <span class="close">&times;</span>
-            <img
-              id="modal-img"
-              class="modal-content"
-              src="images/logo.png"
-              alt=""
-            />
-            Github Link:
-            <a href="#" id="modal-git-link"></a>
-            <div id="modal-caption"></div>
+    <!-- NAVIGATION HERE -->
+    <nav>
+      <ul class="navigation">
+        <li><a class="ham" href="javascript:;">☰</a></li>
+        <li>
+          <a id="nav-portfolio" href="index.html">Projects</a>
+        </li>
+        <li>
+          <hr />
+        </li>
+        <li class="active">
+          <a id="nav-graphics" href="graphics.html">Graphics</a>
+        </li>
+        <li>
+          <hr />
+        </li>
+        <li><a id="nav-about" href="about.html">About</a></li>
+        <li>
+          <hr />
+        </li>
+        <li>
+          <a id="nav-linkedin" href="https://www.linkedin.com/in/kyle-coulon/" target="_blank"><img
+              src="images/linkedin.png" alt="linkedin logo link to linkedin profile" /></a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- CONTENT HERE -->
+    <main>
+      <div id="myModal">
+        <div id="myModalContainer">
+          <span class="close">&times;</span>
+          <img id="modal-img" class="modal-content" src="images/logo.png" alt="" />
+          Github Link:
+          <a href="#" id="modal-git-link"></a>
+          <div id="modal-caption"></div>
+        </div>
+      </div>
+      <div id="port-title-back">
+        <div id="portfolio-title-container-graphics">
+          <div id="port-gradient-back-graphics"></div>
+          <h1 class="text-center huge-title">
+            <a class="whitelink" href="index.html">
+              Portfolio
+            </a>
+          </h1>
+        </div>
+      </div>
+
+      <p class="p-lessmargin vert-align-middle" id="skill-sentence">
+        <span id="skill-webdev">Paintings</span>
+        <span class="spaced-horiz" id="skill-x1">x</span>
+        <span id="skill-artist">3D Models</span>
+        <span class="spaced-horiz" id="skill-x2">x</span>
+        <span id="skill-problemsolver">Game Sprites</span>
+      </p>
+
+      <div class="content">
+
+        <div id="sect-graphics-backtext">
+          <div>
+            <img src="images/linespng.png" alt="">
           </div>
         </div>
-        <div id="port-title-back">
-          <div id="portfolio-title-container-graphics">
-            <div id="port-gradient-back-graphics"></div>
-            <h1 class="text-center huge-title">
-              <a class="whitelink" href="index.html"> 
-                Portfolio
-              </a>
-              </h1>
-          </div>
-        </div>
-
-        <p class="p-lessmargin vert-align-middle" id="skill-sentence">
-          <span id="skill-webdev">Paintings</span>
-          <span class="spaced-horiz" id="skill-x1">x</span>
-          <span id="skill-artist">3D Models</span>
-          <span class="spaced-horiz" id="skill-x2">x</span>
-          <span id="skill-problemsolver">Game Sprites</span>
-        </p>
-
-        <div class="content">
-
-          <div id="sect-graphics-backtext">
-            <div>
-     <img src="images/linespng.png" alt="">
-            </div>
-          </div>
 
 
         <!-- Graphics section -->
@@ -128,11 +120,7 @@
 
               <div>
                 <figure>
-                  <img
-                    class="left-border"
-                    src="images/graphics-img14.jpg"
-                    alt="placeholder image"
-                  />
+                  <img class="left-border" src="images/graphics-img14.jpg" alt="placeholder image" />
                   <figcaption>Cabo San Lucas</figcaption>
                 </figure>
               </div>
@@ -149,10 +137,7 @@
 
               <div>
                 <figure>
-                  <img
-                    src="images/graphics-img12.jpg"
-                    alt="placeholder image"
-                  />
+                  <img src="images/graphics-img12.jpg" alt="placeholder image" />
                   <figcaption>Pen Style</figcaption>
                 </figure>
               </div>
@@ -167,20 +152,12 @@
                   most mediums.
                 </p>
 
-                <img
-                  id="gif"
-                  src="images/rapotoranimation.gif"
-                  alt="placeholder image"
-                />
+                <img id="gif" src="images/rapotoranimation.gif" alt="placeholder image" />
               </div>
 
               <div>
                 <figure>
-                  <img
-                    id="eyeball-img"
-                    src="images/graphics-img11.png"
-                    alt="placeholder image"
-                  />
+                  <img id="eyeball-img" src="images/graphics-img11.png" alt="placeholder image" />
                   <figcaption>Vector Graphics</figcaption>
                 </figure>
               </div>
@@ -203,10 +180,7 @@
               <div>
                 <p class="p-lessmargin">Painting</p>
                 <figure>
-                  <img
-                    src="images/graphics-paint-2.jpg"
-                    alt="placeholder image"
-                  />
+                  <img src="images/graphics-paint-2.jpg" alt="placeholder image" />
                   <figcaption>Landscape Paintings</figcaption>
                 </figure>
               </div>
@@ -214,49 +188,33 @@
               <div>
                 <p class="p-lessmargin">Drawing</p>
                 <figure>
-                  <img
-                    src="images/graphics-img13.jpg"
-                    alt="placeholder image"
-                  />
+                  <img src="images/graphics-img13.jpg" alt="placeholder image" />
                   <figcaption>Sketches and Illustrations</figcaption>
                 </figure>
               </div>
             </div>
 
             <div>
-          
+
               <h3 id="video-title-color">Video Effects:</h3>
               <hr />
               <div class="video-grid">
                 <div>
-                  <iframe
-                    width="336"
-                    height="189"
-                    src="https://www.youtube.com/embed/MGxTS5ipYhQ?vq=hd720"
-                    title="YouTube video player"
-                    frameborder="0"
+                  <iframe width="336" height="189" src="https://www.youtube.com/embed/MGxTS5ipYhQ?vq=hd720"
+                    title="YouTube video player" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen
-                  ></iframe>
+                    allowfullscreen></iframe>
                   <p>Homemade special effects reel.</p>
                 </div>
                 <div>
-                  <iframe
-                    width="336"
-                    height="189"
-                    src="https://www.youtube.com/embed/Vo3lcZBkoMQ?vq=hd720"
-                    title="YouTube video player"
-                    frameborder="0"
+                  <iframe width="336" height="189" src="https://www.youtube.com/embed/JPMMq99C374?si=CFazvdmKOu9EyGXq"
+                    title="YouTube video player" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen
-                  ></iframe>
+                    allowfullscreen></iframe>
                   <p>
-                    Intro made for <br />
-                    <a
-                      href="https://www.youtube.com/c/BenHardyCars"
-                      target="_blank"
-                    >
-                      Ben Hardy's Youtube Channel
+                    Fishing Adventure Videos <br />
+                    <a href="https://www.youtube.com/@fishingtrippy" target="_blank">
+                      My Youtube Channel
                     </a>
                   </p>
                 </div>
@@ -268,44 +226,41 @@
         <div class="link-other-box">
           <p class="text-center">Check out my<a href="index.html">✭ CODING PROJECTS ✭</a></p>
         </div>
-      </main>
+    </main>
 
-      <!-- FOOTER HERE -->
-      <footer>
-        
-        <div class="foot-logo-box">
-          <img
-            id="footer-logo-img"
-            src="images/logo.png"
-            alt="Smith River Commerce Logo"
-          />
-          <div class="text-center" id="thankyou-title-container">
-            <h2>Thanks for visiting!</h2>
-          </div>
-          <div id="footer-email-box">
-            <em>kylejcoulon@gmail.com</em>
-            <br />
-            <br />
-            <div>Springville, Utah</div>
-          </div>
+    <!-- FOOTER HERE -->
+    <footer>
+
+      <div class="foot-logo-box">
+        <img id="footer-logo-img" src="images/logo.png" alt="Smith River Commerce Logo" />
+        <div class="text-center" id="thankyou-title-container">
+          <h2>Thanks for visiting!</h2>
         </div>
-        <hr />
+        <div id="footer-email-box">
+          <em>kylejcoulon@gmail.com</em>
+          <br />
+          <br />
+          <div>Springville, Utah</div>
+        </div>
+      </div>
+      <hr />
+      <br>
+      <a href="about.html">About Me</a>
+      <div class="foot-info-box">
         <br>
-        <a href="about.html">About Me</a>
-        <div class="foot-info-box">
-          <br>
-          &copy; <span id="year">year</span> &bull; Kyle Coulon's Portfolio |
-          Last modification:
-          <span id="modified">last modified</span>
-        </div>
-        <!-- JAVASCRIPT -->
-        <script src="js/portfolio-script.js"></script>
-        <script src="js/linepath-script.js"></script>
-        <script src="js/storescroll-script.js"></script>
-        <script src="js/pendulum-script.js"></script>
-        <script src="js/modimg-script.js"></script>
-        <script src="js/gitslideshow-script.js"></script>
-      </footer>
-    </div>
-  </body>
+        &copy; <span id="year">year</span> &bull; Kyle Coulon's Portfolio |
+        Last modification:
+        <span id="modified">last modified</span>
+      </div>
+      <!-- JAVASCRIPT -->
+      <script src="js/portfolio-script.js"></script>
+      <script src="js/linepath-script.js"></script>
+      <script src="js/storescroll-script.js"></script>
+      <script src="js/pendulum-script.js"></script>
+      <script src="js/modimg-script.js"></script>
+      <script src="js/gitslideshow-script.js"></script>
+    </footer>
+  </div>
+</body>
+
 </html>

@@ -1,708 +1,612 @@
 <!-- Kyle Coulon's Portfolio Website -->
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="description" content="Kyle Coulon's Online Portfolio" />
-    <meta name="author" content="Kyle Coulon" />
-    <title>Kyle's Portfolio</title>
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, maximum-scale=1"
-    />
 
-    <!-- STYLE SHEETS -->
-    <link href="css/normalize.css" rel="stylesheet" />
-    <link href="css/small.css" rel="stylesheet" />
-    <link href="css/medium.css" rel="stylesheet" />
-    <link href="css/large.css" rel="stylesheet" />
-    <!-- GOOGLE FONTS -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Electrolize&family=Playfair+Display&family=Press+Start+2P&family=Quicksand:wght@300&display=swap"
-      rel="stylesheet"
-    />
-    <!-- FAVICON -->
-    <link rel="shortcut icon" href="favicon.ico" />
-  </head>
+<head>
+  <meta charset="utf-8" />
+  <meta name="description" content="Kyle Coulon's Online Portfolio" />
+  <meta name="author" content="Kyle Coulon" />
+  <title>Kyle's Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-  <body>
-    <div id="body-background-color">
+  <!-- STYLE SHEETS -->
+  <link href="css/normalize.css" rel="stylesheet" />
+  <link href="css/small.css" rel="stylesheet" />
+  <link href="css/medium.css" rel="stylesheet" />
+  <link href="css/large.css" rel="stylesheet" />
+  <!-- GOOGLE FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Electrolize&family=Playfair+Display&family=Press+Start+2P&family=Quicksand:wght@300&display=swap"
+    rel="stylesheet" />
+  <!-- FAVICON -->
+  <link rel="shortcut icon" href="favicon.ico" />
+</head>
 
-      <!-- NAVIGATION HERE -->
-      <nav>
-        <ul class="navigation">
-          <li><a class="ham" href="javascript:;">☰</a></li>
-          <li class="active">
-            <a id="nav-portfolio" href="index.html">Projects</a>
-          </li>
-          <li><hr /></li>
-          <li>
-            <a id="nav-graphics" href="graphics.html">Graphics</a>
-          </li>
-          <li><hr /></li>
-          <li><a id="nav-about" href="about.html">About</a></li>
-          <li><hr /></li>
-          <li>
-            <a
-              id="nav-linkedin"
-              href="https://www.linkedin.com/in/kyle-coulon/"
-              target="_blank"
-              ><img
-                src="images/linkedin.png"
-                alt="linkedin logo link to linkedin profile"
-            /></a>
-          </li>
-        </ul>
-      </nav>
+<body>
+  <div id="body-background-color">
 
-      <!-- HEADER HERE -->
-      <header>
-        <img src="images/logo.png" alt="Kyle Coulon's portfolio Logo" />
-        <h1>
-          <a class="whitelink" href="about.html">
-            Kyle Coulon's
-          </a>
-        </h1>
-      </header>
+    <!-- NAVIGATION HERE -->
+    <nav>
+      <ul class="navigation">
+        <li><a class="ham" href="javascript:;">☰</a></li>
+        <li class="active">
+          <a id="nav-portfolio" href="index.html">Projects</a>
+        </li>
+        <li>
+          <hr />
+        </li>
+        <li>
+          <a id="nav-graphics" href="graphics.html">Graphics</a>
+        </li>
+        <li>
+          <hr />
+        </li>
+        <li><a id="nav-about" href="about.html">About</a></li>
+        <li>
+          <hr />
+        </li>
+        <li>
+          <a id="nav-linkedin" href="https://www.linkedin.com/in/kyle-coulon/" target="_blank"><img
+              src="images/linkedin.png" alt="linkedin logo link to linkedin profile" /></a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- HEADER HERE -->
+    <header>
+      <img src="images/logo.png" alt="Kyle Coulon's portfolio Logo" />
+      <h1>
+        <a class="whitelink" href="about.html">
+          Kyle Coulon's
+        </a>
+      </h1>
+    </header>
 
 
 
-      <!-- CONTENT HERE -->
-      <main>
-        <div id="myModal">
-          <div id="myModalContainer">
-            <span class="close">&times;</span>
-            <img
-              id="modal-img"
-              class="modal-content"
-              src="images/logo.png"
-              alt=""
-            />
-            Github Link:
-            <a href="#" id="modal-git-link"></a>
-            <div id="modal-caption"></div>
+    <!-- CONTENT HERE -->
+    <main>
+      <div id="myModal">
+        <div id="myModalContainer">
+          <span class="close">&times;</span>
+          <img id="modal-img" class="modal-content" src="images/logo.png" alt="" />
+          Github Link:
+          <a href="#" id="modal-git-link"></a>
+          <div id="modal-caption"></div>
+        </div>
+      </div>
+      <div id="port-title-back">
+        <div id="portfolio-title-container">
+          <div id="port-gradient-back"></div>
+          <h1 class="text-center huge-title">
+            <a class="whitelink" href="graphics.html">
+              Portfolio
+            </a>
+          </h1>
+        </div>
+      </div>
+
+      <p class="p-lessmargin vert-align-middle" id="skill-sentence">
+        <span id="skill-webdev">Software Developer</span>
+        <span class="spaced-horiz" id="skill-x1">x</span>
+        <span id="skill-artist">Artist</span>
+        <span class="spaced-horiz" id="skill-x2">x</span>
+        <span id="skill-problemsolver">Problem Solver</span>
+      </p>
+
+      <!-- Coding section -->
+      <div class="content">
+        <div id="sect-coding-background"></div>
+
+        <div id="sect-coding-backtext">
+          <div>
+            //for every path of this canvas <br />
+            for (var j = 0; j &lt; canvas_list[i][2].length; j++) {<br />
+            <br />
+            //set starting draw position<br />
+            startx = canvas_list[i][2][j][0][0] * canv_width;<br />
+            starty = canvas_list[i][2][j][0][1] * canv_height;<br />
+            this_ctx.moveTo(startx,starty);<br />
+            <br />
+            // reset drawing amount for this line path<br />
+            let dist_left_to_draw = canvas_list[i][3];<br />
+            <br />
+            //for every set of points in this individual path<br />
+            for (var k = 0; k &lt; canvas_list[i][2][j].length; k++) { <br />
+            <br />
+            //if we still have some distance to go for this path<br />
+            if(dist_left_to_draw > 0){<br />
+            <br />
+            //get the next point<br />
+            nextx = canvas_list[i][2][j][k][0] * canv_width;<br />
+            nexty = canvas_list[i][2][j][k][1] * canv_height;<br />
+            //find the difference between last point and this next one<br />
+            let difference = Math.abs(startx-nextx) +
+            Math.abs(starty-nexty);<br />
+            // if we have already drawn past this point<br />
+            if(dist_left_to_draw > difference){<br />
+            // subtract its distance<br />
+            dist_left_to_draw -= difference;<br />
+            }else{ // draw the remaining distance<br />
           </div>
         </div>
-        <div id="port-title-back">
-          <div id="portfolio-title-container">
-            <div id="port-gradient-back"></div>
-            <h1 class="text-center huge-title">
-              <a class="whitelink" href="graphics.html"> 
-                Portfolio
-              </a>
-            </h1>
-          </div>
-        </div>
 
-        <p class="p-lessmargin vert-align-middle" id="skill-sentence">
-          <span id="skill-webdev">Web Developer</span>
-          <span class="spaced-horiz" id="skill-x1">x</span>
-          <span id="skill-artist">Artist</span>
-          <span class="spaced-horiz" id="skill-x2">x</span>
-          <span id="skill-problemsolver">Problem Solver</span>
-        </p>
 
-        <!-- Coding section -->
-        <div class="content">
-          <div id="sect-coding-background"></div>
-
-          <div id="sect-coding-backtext">
-            <div>
-              //for every path of this canvas <br />
-              for (var j = 0; j &lt; canvas_list[i][2].length; j++) {<br />
-              <br />
-              //set starting draw position<br />
-              startx = canvas_list[i][2][j][0][0] * canv_width;<br />
-              starty = canvas_list[i][2][j][0][1] * canv_height;<br />
-              this_ctx.moveTo(startx,starty);<br />
-              <br />
-              // reset drawing amount for this line path<br />
-              let dist_left_to_draw = canvas_list[i][3];<br />
-              <br />
-              //for every set of points in this individual path<br />
-              for (var k = 0; k &lt; canvas_list[i][2][j].length; k++) { <br />
-              <br />
-              //if we still have some distance to go for this path<br />
-              if(dist_left_to_draw > 0){<br />
-              <br />
-              //get the next point<br />
-              nextx = canvas_list[i][2][j][k][0] * canv_width;<br />
-              nexty = canvas_list[i][2][j][k][1] * canv_height;<br />
-              //find the difference between last point and this next one<br />
-              let difference = Math.abs(startx-nextx) +
-              Math.abs(starty-nexty);<br />
-              // if we have already drawn past this point<br />
-              if(dist_left_to_draw > difference){<br />
-              // subtract its distance<br />
-              dist_left_to_draw -= difference;<br />
-              }else{ // draw the remaining distance<br />
+        <section id="section-coding">
+          <div class="right-grid right-grid-more-margin">
+            <div class="text-right" id="code-title-clip">
+              <h2>CODING <br /><small>EXPERIENCE</small></h2>
             </div>
           </div>
+          <div class="language-title top-title">
 
+            <p class="intro-paragraph">Currently employed as a software developer.
+              <br>
+              Seeking new opportunities to expand and contribute to innovative projects.
+            </p>
+            <hr />
 
-          <section id="section-coding">
-            <div class="right-grid">
-              <div class="text-right" id="code-title-clip">
-                <h2>CODING <br /><small>EXPERIENCE</small></h2>
-              </div>
+            <div class="classes-flex">
+              <p>
+                Attending
+                <a href="https://www.byui.edu/" target="_blank">Brigham Young University Idaho</a>:
+              </p>
+              <p id="gpa-span">GPA 4.0</p>
             </div>
-            <!-- PYTHON -->
-            <div class="language-title top-title">
-              <hr />
-              <p>I'm looking for an entry level programming position where I can demonstrate my creativity and problem-solving skills.</p>
-              <hr />
 
-              <div class="classes-flex">
-                <p>
-                  I'm currently Attending
-                  <a href="https://www.byui.edu/" target="_blank">BYU Idaho</a
-                  >:
-                </p>
-                <p id="gpa-span">GPA 4.0</p>
-              </div>
-              
+            <ul>
+              <li>Expected Bachelors of Applied Technology 2025</li>
+            </ul>
+          </div>
+        </section>
+
+        <section id="section-coding">
+          <div class="right-grid right-grid-small-margin">
+            <!-- OTHER LANGUAGES -->
+            <div class="language-title">
+
+              <h3>Professional Experience</h3>
+              <hr />
+              <h4>Canyonwall</h4>
+              <p>Software Developer and Assistant Database Administrator</p>
+
+              <small>August 2022 - Present</small>
+              <br>
+              <br>
+              <h4>Technology:</h4>
               <ul>
-                <li>Expected Bachelors of Applied Technology 2025</li>
-                <li>Emphasis on Full-Stack Development</li>
+                <li>Python</li>
+                <li>Deployment with Git, Docker, Bitbucket, and Jira.</li>
+                <li>Amazon SPAPI, Asana API, and Grafana.</li>
+              </ul>
+              <h4>Accomplishments:</h4>
+              <ul>
+                <li>Created sales forecasting and inventory restock system.</li>
+                <li>Designed and created PyQT5 application for internal teams to interface with database and
+                  trigger automated tasks.</li>
+                <li>Optimized our report generator and testing suite to run multiple times faster.</li>
+                <li>Created canary and aggregate error logging system for bug monitoring and special alerts.</li>
+                <li>Regularly write web-scrapers using HTTP requests and or Selenium.</li>
               </ul>
             </div>
-          </section>
+          </div>
+
+        </section>
 
 
-          
-            <div id="git-repo-slideshow">
-            
-              <h3>
-                <a href="https://github.com/kylecooltron" target="_blank">Git Hub Repositories</a> 
-              </h3>
-              <hr />
-              <div class="slideshow-buttons-box">
-                <button id="git-leftbutton">◄</button>
-                <button id="git-rightbutton">►</button>
-              </div>
-              <div class="slideshow-box">
-                <figure class="git-slide">
-                  <img src="images/git-w-port.jpg" alt="placeholder image" />
-                  <figcaption>
-                    <a href="https://github.com/kylecooltron/k-portfolio" target="_blank" >
-                      Kyle's Portfolio
-                    </a>
-                  </figcaption>
-                </figure>
-                <figure class="git-slide">
-                  <img src="images/web-com595.jpg" alt="placeholder image" />
-                  <figcaption>
-                    <a href="https://github.com/kylecooltron/smith-river-commerce" target="_blank" >
-                      Chamber of Commerce
-                    </a>
-                  </figcaption>
-                </figure>
-                <figure class="git-slide semiactive">
-                  <img src="images/git-w-state.jpg" alt="placeholder image" />
-                  <figcaption>
-                    <a href="https://github.com/kylecooltron/state-of-the-art" target="_blank" >
-                      State of the Art
-                    </a>
-                  </figcaption>
-                </figure>
-                <figure class="git-slide active">
-                  <img src="images/web-raft500.jpg" alt="placeholder image" />
-                  <figcaption>
-                    <a href="https://github.com/kylecooltron/big-raft-adventures" target="_blank" >
-                      Big Raft Adventures
-                    </a>
-                  </figcaption>
-                </figure>
-                <figure class="git-slide semiactive">
-                  <img src="images/git-w-madlib.jpg" alt="placeholder image" />
-                  <figcaption>
-                    <a href="https://github.com/kylecooltron/py-projects/tree/master/Adlib" target="_blank" >
-                      Madlib Python
-                    </a>
-                  </figcaption>
-                </figure>
-                <figure class="git-slide">
-                  <img src="images/git-w-badge.jpg" alt="placeholder image" />
-                  <figcaption>
-                    <a href="https://github.com/kylecooltron/star-cruiser" target="_blank">
-                      Star Cruiser
-                    </a>
-                  </figcaption>
-                </figure>
-                <figure class="git-slide">
-                  <img src="images/git-w-goal.jpg" alt="placeholder image" />
-                  <figcaption>
-                    <a href="https://github.com/kylecooltron/older-py-projects/tree/master/Goal%20Planner" target="_blank" >
-                      Goal Planner Python
-                    </a>
-                  </figcaption>
-                </figure>
-                <figure class="git-slide">
-                  <img src="images/git-w-scene.jpg" alt="placeholder image" />
-                  <figcaption>
-                    <a href="https://github.com/kylecooltron/py-projects/tree/master/Scene%20Render" target="_blank" >
-                      Scene Render
-                    </a>
-                  </figcaption>
-                </figure>
-              </div>
+
+
+
+
+
+        <section id="section-coding">
+          <div class="right-grid right-grid-margin">
+            <div class="text-right code-smaller-padding">
             </div>
-         
+            <!-- PYTHON -->
+            <div class="language-title">
+              <hr />
+              <h3>Javascript</h3>
+              <hr />
 
+              React, Typescript, Async
 
-          <section id="section-coding">
-            <div class="right-grid right-grid-margin">
-              <div class="text-right" id="code-title-clip">
-              </div>
-              <!-- PYTHON -->
-              <div class="language-title">
-              
-                <h3>Python</h3>
-                <hr />
-
-                <p>Classes completed through BYU Idaho:</p>
+              <br />
+              <br />
+              <div class="info-text-smaller">
+                CSE 121B - JavaScript Language
                 <ul>
-                  <li>CSE 111 - Programming with Functions</li>
-                  <li>CSE 210 - Programming with Classes</li>
+                  <li>Using API's</li>
+                  <li>Async</li>
+                  <li>JSON</li>
                 </ul>
               </div>
+            </div>
 
-              <div class="language-grid-left title-space-below lang-grid">
-                <div><h3>Team Projects</h3></div>
+
+            <div class="language-grid-left title-space-below lang-grid">
+              <div>
+                <h3>University Exhibit</h3>
+              </div>
+              <div id="interactive-jsexample">
                 <div>
-                  <figure>
-                    <img
-                      class="modalImg"
-                      src="images/starcruiseranim.gif"
-                      alt="Classes<br>Inheritance<br>Polymorphism"
-                      data-bigger-src="images/py-greedmod.jpg"
-                      data-git-link="https://github.com/kylecooltron/star-cruiser"
-                    />
-                    <figcaption>
-                      <a href="https://github.com/kylecooltron/star-cruiser" target="_blank">
+                  <ul>
+                    <li>
+                      <h3 class="animated-float"><a href="https://lib.byu.edu/" target="_blank">Harold B. Lee
+                          Library</a></h3>
+                    </li>
+                  </ul>
+
+                  <div class="library-img-grid">
+                    <img class="library-img-span-grid" src="images/exhibit-3.png" alt="Exhibit sign in the library." />
+                    <img src="images/exhibit-2.png" alt="Exhibit sign in the library." />
+                    <img src="images/exhibit-1.png" alt="Exhibit sign in the library." />
+
+                  </div>
+
+                </div>
+
+              </div>
+
+              <div class="lang-examples-box">
+                <div id="javascript-example-link">
+                  <p>
+                    I was hired as an independent contractor to make <b>React App</b> for the Latter-day Saint Gamers
+                    exhibit.
+                  </p>
+
+                  <!-- <a href="https://universe.byu.edu/2022/11/29/byu-harold-b-lee-library-honors-game-creators/"
+                    target="_blank">
+                    University News Article
+                  </a> -->
+                  <a href="https://news.lib.byu.edu/2022/10/24/latter-day-gamers/" target="_blank">
+                    <br>
+                    <small>University News Article</small>
+                  </a>
+                </div>
+              </div>
+
+
+
+
+              <div>
+
+                <p>
+                <p class="p-lessmargin quotecolor">
+                  "I really appreciated Kyle’s willingness to mock up the quiz site we wanted to demonstrate that it
+                  could be done and done well. We went with his design and he delivered on all aspects of the project
+                  and was a breeze to work with. I appreciated his problem-solving skills and ability to intuit our
+                  needs for this portion of our exhibit. It has added a level of interactivity that visitors enjoy and
+                  has been working perfectly since installation."
+                </p>
+                <div class="p-hardlymargin">
+                  <small>- Dainan Skeem, <em>BYU Special Collections Department Chair</em></small>
+                </div>
+                </p>
+              </div>
+
+            </div>
+
+            <div></div>
+
+            <!-- JAVASCRIPT -->
+            <div class="language-title">
+
+              <h3>Python</h3>
+              <hr />
+
+              <p>Web-scraping, API's, Data Analytics, Internal Tools.</p>
+              <p>Packages:</p>
+              <p>django, sqlalchemy, selenium, requests, pandas, openpyxl, pyqt5, threading, mypy, unittest</p>
+            </div>
+
+            <div class="language-grid-right title-space-below lang-grid">
+              <div>
+                <h3>Python Projects for School</h3>
+              </div>
+
+              <div>
+                <figure>
+                  <img class="modalImg" src="images/starcruiseranim.gif" alt="Classes<br>Inheritance<br>Polymorphism"
+                    data-bigger-src="images/py-greedmod.jpg"
+                    data-git-link="https://github.com/kylecooltron/star-cruiser" />
+                  <figcaption>
+                    <a href="https://github.com/kylecooltron/star-cruiser" target="_blank">
                       Star Cruiser
                       <small><em>- Python Repository</em></small>
                     </a>
 
-                    </figcaption>
-                  </figure>
-                </div>
-
-                <div class="lang-examples-box">
-                  <h4>Recent projects:</h4>
-                  <ul>
-                    <li>
-                      <a
-                        href="https://github.com/kylecooltron/star-cruiser"
-                        target="_blank">
-                        Star Cruiser
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="https://github.com/kylecooltron/cse210-05"
-                        target="_blank"
-                        >Cycles
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="https://github.com/kylecooltron/cse210-04"
-                        target="_blank"
-                        >Greed
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        href="https://github.com/kylecooltron/cse210-03"
-                        target="_blank"
-                        >Jumper
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-                <div>
-                  <p>
-                    Recently I've been learning about project planning,
-                    abstraction, inheritance, polymorphism, and team
-                    cooperation.
-                  </p>
-                  
-                  <p>
-                    <p class="p-lessmargin quotecolor">
-                      "Kyle has been a solid performer in my class, and I appreciate
-                      his willingness to take the lead on critical team assignments
-                      when others are hesitant to step forward. He does good
-                      consistent work and is always on time. I'm excited to see what
-                      he will accomplish next!"
-                    </p>
-                    <div class="p-hardlymargin">
-                      <small>- Duane Richards, <em>BYUI Professor</em></small>
-                    </div>
-                  </p>
-                </div>
+                  </figcaption>
+                </figure>
               </div>
 
-              <div></div>
 
-              <!-- JAVASCRIPT -->
-              <div class="language-title">
-                <hr />
-                <h3>Javascript</h3>
-                <hr />
 
-                I'm familiar with
-                <a href="https://reactjs.org/" target="_blank">React</a>,
-                 and I'm learning about using Python and PHP for backend.
 
-                <br />
-                <br />
-                <div class="info-text-smaller">
-                  CSE 121B - JavaScript Language
-                  <ul>
-                    <li>Using API's</li>
-                    <li>Async</li>
-                    <li>JSON</li>
-                  </ul>
-                </div>
-              </div>
-
-              <div class="language-grid-right title-space-below lang-grid">
-                <div><h3>Interactive Elements</h3></div>
-
-                <div id="interactive-jsexample">
-                  <div>
-                    <ul>
-                      <li>
-                        <h3 class="animated-float">Interactive Example</h3>
-                      </li>
-                      <li>
-                        <label for="oval">Oval</label>
-                        <input
-                          id="oval"
-                          type="range"
-                          class="slider"
-                          onchange="sliderChange(this.id)"
-                          min="1"
-                          max="100"
-                          value="50"
-                          oninput="this.nextElementSibling.value = this.value"
-                        />
-                        <output id="ovalo">50</output>
-                      </li>
-                      <li>
-                        <label for="spin">Spin</label>
-                        <input
-                          id="spin"
-                          type="range"
-                          class="slider"
-                          onchange="sliderChange(this.id)"
-                          min="-50"
-                          max="50"
-                          value="20"
-                          oninput="this.nextElementSibling.value = this.value"
-                        />
-                        <output id="spino">0</output>
-                      </li>
-                      <li>
-                        <label for="spiral">Spiral</label>
-                        <input
-                          id="spiral"
-                          type="range"
-                          class="slider"
-                          onchange="sliderChange(this.id)"
-                          min="1"
-                          max="130"
-                          value="20"
-                          oninput="this.nextElementSibling.value = this.value"
-                        />
-                        <output id="spiralo">50</output>
-                      </li>
-                      <li>
-                        <button id="stopbutton" onclick="stopPainting()">
-                          &times;
-                        </button>
-                        <button
-                          id="randomizebutton"
-                          onclick="randomizeParams()"
-                        >
-                          Randomize
-                        </button>
-
-                        <button onclick="startPainting()">Go!</button>
-                      </li>
-                    </ul>
-                  </div>
-
-                  <canvas id="exm2Canvas" width="500" height="500">
-                    Your browser does not support the HTML canvas tag.
-                  </canvas>
-                </div>
-
-                <div class="lang-examples-box">
-                  <div id="javascript-example-link">
-                    <p>
-                      My procedural art website features this example:
-                    </p>
-
-                    <a
-                      href="https://kylecooltron.github.io/state-of-the-art/"
-                      target="_blank"
-                    >
-                      State of the Art Site
-                    </a>
-                    <a
-                      href="https://kylecooltron.github.io/state-of-the-art/"
-                      target="_blank"
-                    >
-                    <br>
-                    <small>Repository Link</small>  
-                    </a>
-                  </div>
-                </div>
-                <div>
-                  <p>
-                    Game development has helped me learn how to make things interactive.
-                  </p>
-                </div>
-              </div>
-              <!-- HTML CSS -->
-              <div class="language-title" id="lang-title-htmlcss">
-                <hr />
-                <h3>HTML / CSS</h3>
-                <hr />
-                <div class="classes-flex">
-                  <p>
-                    Classes completed through
-                    BYU Idaho:
-                  </p>
-               
-                </div>
+              <div class="lang-examples-box">
+                <!-- <h4>Recent:</h4> -->
                 <ul>
-                  <li>WDD 130 - Web Fundamentals</li>
-                  <li>WDD 230 - Web Frontend development</li>
+                  <li>
+                    <a href="https://github.com/kylecooltron/star-cruiser" target="_blank">
+                      Star Cruiser
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/kylecooltron/cse210-05" target="_blank">Cycles
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/kylecooltron/cse210-04" target="_blank">Greed
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/kylecooltron/cse210-03" target="_blank">Jumper
+                    </a>
+                  </li>
                 </ul>
               </div>
 
-              <div
-                class="language-grid-top title-space-below lang-grid"
-                id="lang-gridweb">
-                <div><h3 id="lang-grid-webdev">Web Dev</h3></div>
 
-                <div>
-                  <figure>
-                    <img
-                      class="modalImg"
-                      src="images/web-com595.jpg"
-                      alt="Dynamic weather using API <br> Directory page populated by JSON <br> DOM manipulated elements <br> Sign Up form and other buttons"
-                      data-bigger-src="images/web-com1280.jpg"
-                      data-git-link="https://github.com/kylecooltron/smith-river-commerce"
-                    />
-                    <figcaption>
-                      <a href="https://github.com/kylecooltron/smith-river-commerce" target="_blank">
-                        Smith River Commerce
-                      <small><em>- Website Repository</em></small>
-                      </a>
-                      
-                    </figcaption>
-                  </figure>
+              <div>
+
+                <p>
+                <p class="p-lessmargin quotecolor">
+                  "Kyle has been a solid performer in my class, and I appreciate
+                  his willingness to take the lead on critical team assignments
+                  when others are hesitant to step forward. He does good
+                  consistent work and is always on time. I'm excited to see what
+                  he will accomplish next!"
+                </p>
+                <div class="p-hardlymargin">
+                  <small>- Duane Richards, <em>BYUI Professor</em></small>
                 </div>
+                </p>
+              </div>
 
-                <div class="lang-examples-box">
-                  <h4>Websites I've made:</h4>
+
+            </div>
+            <!-- HTML CSS -->
+            <div class="language-title" id="lang-title-htmlcss">
+              <hr />
+              <h3>Other Experience</h3>
+              <hr />
+              <div class="classes-flex">
+                <p>
+                  Classes completed through
+                  BYU Idaho:
+                </p>
+
+              </div>
+              <ul>
+                <li>WDD 130 - Web Fundamentals</li>
+                <li>WDD 230 - Web Frontend development</li>
+                <li>CIT 111 - Introduction to Databa</li>
+                <li>CSE 111 - Programming with Functions</li>
+                <li>CSE 121B - JavaScript Language</li>
+                <li>CSE 210 - Programming with Classes</li>
+                <li>CSE 340 - Web Backend Development</li>
+                <li>WDD 430 - Web Full-Stack Development</li>
+                <li>CIT 240 - Networking</li>
+              </ul>
+              <br>
+              <div class="classes-flex">
+                <p>Certificates:</p>
+              </div>
+              <ul>
+                <li><a target="_blank"
+                    href="https://www.michaelsutter.com/ediploma?fn=diplomastatuscheck&key=0200000029fbf78bd1fca8814293f6b487c02be08420b7e06c65ca5fba4564095030cb0db5d1bbce1047a69fa660fa1eeb5db89dc49eaf799894c6df1b481370f9d8df61">
+                    Web and Computer Programming Certificate - BYU Idaho
+                  </a></li>
+              </ul>
+            </div>
+
+            <div class="language-grid-top title-space-below lang-grid" id="lang-gridweb">
+              <div>
+
+              </div>
+
+
+              <div id="interactive-jsexample">
+                <div>
                   <ul>
                     <li>
-                      <a
-                        href="https://kylecooltron.github.io/smith-river-commerce/"
-                        target="_blank"
-                        >Smith River
-                      </a>
+                      <h3 class="animated-float">Interactive Example</h3>
                     </li>
                     <li>
-                      <a
-                      href="https://kylecooltron.github.io/temple-inn-suites/"
-                      target="_blank"
-                      >Temple Inn & Suites
-                    </a>
+                      <label for="oval">Oval</label>
+                      <input id="oval" type="range" class="slider" onchange="sliderChange(this.id)" min="1" max="100"
+                        value="50" oninput="this.nextElementSibling.value = this.value" />
+                      <output id="ovalo">50</output>
                     </li>
                     <li>
-                      <a
-                        href="https://kylecooltron.github.io/state-of-the-art/"
-                        target="_blank"
-                      >
-                        State of the Art
-                      </a>
+                      <label for="spin">Spin</label>
+                      <input id="spin" type="range" class="slider" onchange="sliderChange(this.id)" min="-50" max="50"
+                        value="20" oninput="this.nextElementSibling.value = this.value" />
+                      <output id="spino">0</output>
                     </li>
                     <li>
-                      <a
-                        href="https://kylecooltron.github.io/big-raft-adventures/"
-                        target="_blank"
-                      >
-                        Big Raft
-                      </a>
+                      <label for="spiral">Spiral</label>
+                      <input id="spiral" type="range" class="slider" onchange="sliderChange(this.id)" min="1" max="130"
+                        value="20" oninput="this.nextElementSibling.value = this.value" />
+                      <output id="spiralo">50</output>
+                    </li>
+                    <li>
+                      <button id="stopbutton" onclick="stopPainting()">
+                        &times;
+                      </button>
+                      <button id="randomizebutton" onclick="randomizeParams()">
+                        Randomize
+                      </button>
+
+                      <button onclick="startPainting()">Go!</button>
                     </li>
                   </ul>
                 </div>
-                <div>
-                  <p>
-                    I like to design my own graphics/images for my student
-                    websites.
-                  </p>
-                </div>
+
+                <canvas id="exm2Canvas" width="500" height="500">
+                  Your browser does not support the HTML canvas tag.
+                </canvas>
               </div>
 
+              <div class="lang-examples-box">
+                <div id="javascript-example-link">
+                  <p>
+                    Personal Projects
+                  </p>
 
-
-              <!-- OTHER LANGUAGES -->
-              <div>
-                <hr />
-                <h3 id="other-langs-title">Other Languages:</h3>
-                <hr />
-                <div class="other-langs-grid">
-                  <div>
-                    <h3>Lite-C</h3>
-                    Lite-C is a C based language used by
-                    <a href="http://www.3dgamestudio.com/" target="_blank"
-                      >3DGS</a
-                    >
-                    <br />
-                    <small>(no longer supported)</small>
-                  </div>
-                  <div>
-                    <figure>
-                      <h4>Algorithms</h4>
-                      <img
-                        src="images/gm-maze700.jpg"
-                        alt="placeholder image"
-                      />
-                      <figcaption>
-                        Lava Maze Game
-
-                        <small>
-                          <div class="extra-margin-top">
-                            The player wanders through an infinite maze as the
-                            lava follows behind faster and faster.
-                          </div>
-                        </small>
-                      </figcaption>
-                    </figure>
-                  </div>
-                  <div>
-                    <figure>
-                      <h4>Game App Design</h4>
-                      <img
-                        src="images/gm-pattern350.jpg"
-                        alt="placeholder image"
-                      />
-                      <figcaption>
-                        Pattern Memorization App
-                        <small>
-                          <div class="extra-margin-top">
-                            This project was designed to have a professional
-                            look and user experience.
-                          </div>
-                        </small>
-                      </figcaption>
-                    </figure>
-                  </div>
-                  <div>
-                    <h3>GML</h3>
-                    Game Maker Language is used by
-                    <a href="https://gamemaker.io/en" target="_blank"
-                      >Game Maker Studio</a
-                    >
-                  </div>
-                  <div>
-                    <figure>
-                      <h4>Networking</h4>
-                      <img
-                        src="images/litec-multi320.jpg"
-                        alt="placeholder image"
-                      />
-                      <figcaption>
-                        Simple Online Shooter
-                        <small>
-                          <div class="extra-margin-top">
-                            I made all the models and animations from scratch.
-                            Dead-reckoning was used to predict player movement.
-                          </div>
-                        </small>
-                      </figcaption>
-                    </figure>
-                  </div>
-                  <div>
-                    <figure>
-                      <h4>Object Oriented Design</h4>
-                      <img
-                        src="images/gm-animator.jpg"
-                        alt="placeholder image"
-                      />
-                      <figcaption>
-                        Home-made Animator <br />
-                        <small>
-                          <div class="extra-margin-top">
-                            This project was used to create animated models for
-                            one of my games. I used quaternions for rotations,
-                            and inheritance to enable model parts to be
-                            connected by joints.
-                          </div>
-                        </small>
-                      </figcaption>
-                    </figure>
-                  </div>
+                  <a href="https://kylecooltron.github.io/state-of-the-art/" target="_blank">
+                    State of the Art Site
+                  </a>
+                  <a href="https://kylecooltron.github.io/state-of-the-art/" target="_blank">
+                    <br>
+                    <small>Repository Link</small>
+                  </a>
                 </div>
+              </div>
+              <div>
+                <p>
+                  Game development has helped me learn how to think outside the box.
+                </p>
               </div>
             </div>
-            <!-- end right grid -->
-          </section>
-        </div>
 
-        
 
-        <hr>
-        <div class="link-other-box">
-          <p class="text-center">Check out my<a href="graphics.html">✭ GRAPHICS PORTFOLIO ✭</a></p>
-        </div>
 
-      </main>
 
-      <!-- FOOTER HERE -->
-      <footer>
-        <div class="foot-logo-box">
-          <img
-            id="footer-logo-img"
-            src="images/logo.png"
-            alt="Smith River Commerce Logo"
-          />
-          <div class="text-center" id="thankyou-title-container">
-            <h2>Thanks for visiting!</h2>
           </div>
-          <div id="footer-email-box">
-            <em>kylejcoulon@gmail.com</em>
-            <br />
-            <br />
-            <div>Springville, Utah</div>
+          <!-- end right grid -->
+
+          <div class="language-title text-center personal-projects">
+            <h3>Other Projects</h3>
+            <hr />
+          </div>
+
+        </section>
+
+        <div id="git-repo-slideshow">
+
+          <div id="git-repo-slideshow-title">
+            <h3>
+              <a href="https://github.com/kylecooltron" target="_blank">Git Hub Repositories</a>
+            </h3>
+            <!-- <hr /> -->
+          </div>
+          <div class="slideshow-buttons-box">
+            <button id="git-leftbutton">◄</button>
+            <button id="git-rightbutton">►</button>
+          </div>
+          <div class="slideshow-box">
+            <figure class="git-slide">
+              <img src="images/git-w-port.jpg" alt="placeholder image" />
+              <figcaption>
+                <a href="https://github.com/kylecooltron/k-portfolio" target="_blank">
+                  Kyle's Portfolio
+                </a>
+              </figcaption>
+            </figure>
+            <figure class="git-slide">
+              <img src="images/web-com595.jpg" alt="placeholder image" />
+              <figcaption>
+                <a href="https://github.com/kylecooltron/smith-river-commerce" target="_blank">
+                  Chamber of Commerce
+                </a>
+              </figcaption>
+            </figure>
+            <figure class="git-slide semiactive">
+              <img src="images/git-w-state.jpg" alt="placeholder image" />
+              <figcaption>
+                <a href="https://github.com/kylecooltron/state-of-the-art" target="_blank">
+                  State of the Art
+                </a>
+              </figcaption>
+            </figure>
+            <figure class="git-slide active">
+              <img src="images/web-raft500.jpg" alt="placeholder image" />
+              <figcaption>
+                <a href="https://github.com/kylecooltron/big-raft-adventures" target="_blank">
+                  Big Raft Adventures
+                </a>
+              </figcaption>
+            </figure>
+            <figure class="git-slide semiactive">
+              <img src="images/git-w-madlib.jpg" alt="placeholder image" />
+              <figcaption>
+                <a href="https://github.com/kylecooltron/py-projects/tree/master/Adlib" target="_blank">
+                  Madlib Python
+                </a>
+              </figcaption>
+            </figure>
+            <figure class="git-slide">
+              <img src="images/git-w-badge.jpg" alt="placeholder image" />
+              <figcaption>
+                <a href="https://github.com/kylecooltron/star-cruiser" target="_blank">
+                  Star Cruiser
+                </a>
+              </figcaption>
+            </figure>
+            <figure class="git-slide">
+              <img src="images/git-w-goal.jpg" alt="placeholder image" />
+              <figcaption>
+                <a href="https://github.com/kylecooltron/older-py-projects/tree/master/Goal%20Planner" target="_blank">
+                  Goal Planner Python
+                </a>
+              </figcaption>
+            </figure>
+            <figure class="git-slide">
+              <img src="images/git-w-scene.jpg" alt="placeholder image" />
+              <figcaption>
+                <a href="https://github.com/kylecooltron/py-projects/tree/master/Scene%20Render" target="_blank">
+                  Scene Render
+                </a>
+              </figcaption>
+            </figure>
           </div>
         </div>
-        <hr />
+      </div>
+
+
+
+      <hr>
+      <div class="link-other-box">
+        <p class="text-center">Check out my<a href="graphics.html">✭ GRAPHICS PORTFOLIO ✭</a></p>
+      </div>
+
+    </main>
+
+    <!-- FOOTER HERE -->
+    <footer>
+      <div class="foot-logo-box">
+        <img id="footer-logo-img" src="images/logo.png" alt="Smith River Commerce Logo" />
+        <div class="text-center" id="thankyou-title-container">
+          <h2>Thanks for visiting!</h2>
+        </div>
+        <div id="footer-email-box">
+          <em>kylejcoulon@gmail.com</em>
+          <br />
+          <br />
+          <div>Springville, Utah</div>
+        </div>
+      </div>
+      <hr />
+      <br>
+      <a href="about.html">About Me</a>
+      <div class="foot-info-box">
         <br>
-        <a href="about.html">About Me</a>
-        <div class="foot-info-box">
-          <br>
-          &copy; <span id="year">year</span> &bull; Kyle Coulon's Portfolio |
-          Last modification:
-          <span id="modified">last modified</span>
-        </div>
-        <!-- JAVASCRIPT -->
-        <script src="js/portfolio-script.js"></script>
-        <script src="js/linepath-script.js"></script>
-        <script src="js/storescroll-script.js"></script>
-        <script src="js/pendulum-script.js"></script>
-        <script src="js/modimg-script.js"></script>
-        <script src="js/gitslideshow-script.js"></script>
-      </footer>
-    </div>
-  </body>
+        &copy; <span id="year">year</span> &bull; Kyle Coulon's Portfolio |
+        Last modification:
+        <span id="modified">last modified</span>
+      </div>
+      <!-- JAVASCRIPT -->
+      <script src="js/portfolio-script.js"></script>
+      <script src="js/linepath-script.js"></script>
+      <script src="js/storescroll-script.js"></script>
+      <script src="js/pendulum-script.js"></script>
+      <script src="js/modimg-script.js"></script>
+      <script src="js/gitslideshow-script.js"></script>
+    </footer>
+  </div>
+</body>
+
 </html>
